@@ -1,0 +1,152 @@
+Blaziel:
+  Type: BLAZE
+  Display: '&c<&lb>BOSS<&rb> &4Blaziel'
+  Health: 2500
+  Damage: 15
+  Faction: Blazeborn
+  AIGoalSelectors:
+  - clear # Clears the mob's base AI
+  - movetowardstarget
+  - meleeattack # Uses melee attacks
+  - randomstroll # Randomly walks
+  - float # Randomly floats
+  AITargetSelectors:
+  - clear # Clears the mob's base AI
+  - players # Firstly targets players
+  - attacker # Targets whatever attacks it
+  - specificfaction Volken # Targets mobs from the faction "good"
+  KillMessages:
+  - '<target.name> had their soul completely devoured'
+  - '<target.name><&sq>s burned in a &c&lBlazing Inferno'
+  - '<target.name> turned into Ashes'
+  Skills:
+  - model{m=blaziel} @self ~onSpawn
+  - setname{name=<caster.name>;delay=2} @self ~onDamaged  
+  - setname{name=<caster.name>;delay=2} @self ~onTimer:10 ?incombat{}
+  - partvisibility{m=blaziel;p=pillar;v=false;em=false} @self ~onSpawn
+  - partvisibility{m=blaziel;p=pillar;v=true;em=false} @self ~onDamaged =%50
+  - partvisibility{m=blaziel;p=shield;v=false;em=false} @self ~onDamaged =%50
+  #- skill{s=BlazielAmbient} @self ~onTimer:5 >50%
+  #- skill{s=BlazielFieryAmbient} @self ~onTimer:5 =<50%
+  #- sound{s=entity.wildfire.hurt} @self ~onDamaged 0.7
+  #- sound{s=entity.wildfire.idle_vocal} ~onTimer:100 0.2 @self 
+  #- sound{s=entity.wildfire.idle} @self ~onTimer:100
+  #  >0 1
+  #- skill{s=FireShockwave} @target ~onTimer:300
+  #- skill{s=BlazielFireball} @target ~onTimer:50 .5
+  #- skill{s=ShieldThrow} @target ~onTimer:60 0.3
+  #- skill{s=BlazielMeleeSpin} @target ~onTimer:40 0.5
+  #- skill{s=SummonWF} @self =50% ~onDamaged
+  #- skill{s=BlazielCharge} @self ~onDamaged
+  #- skill{s=PillarThrow} @target ~onDamaged
+  #- skill{s=Meteor} @target ~onDamaged
+  - skill{s=SpinBalls} @target ~onDamaged
+  DamageModifiers:
+  - FIRE_TICK 0
+  - FIRE 0
+  - PROJECTILE 0.5
+  - EXPLOSION 0
+  - ENTITY_EXPLOSION 0
+  BossBar:
+    Enabled: true
+    Title: '&c<&lb>BOSS<&rb> &4Blaziel'
+    Range: 40
+    Color: RED
+    Style: SEGMENTED_2
+    DarkenSky: true
+  Modules:
+#If enabled, the mob will track damage from different sources and assign more weight to targets that deal more damage (to prevent kite).
+    ThreatTable: true
+#If enabled, the mob will be able to be attacked by multiple players through damage immunity.
+    ImmunityTable: true
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.3
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    Glowing: false
+    KnockbackResistance: 0.9
+    RepeatAllSkills: true
+    DigOutOfGround: true
+    Silent: false
+
+Wildfire:
+  Type: BLAZE
+  Display: '&4Wildfire'
+  Health: 100
+  Damage: 0
+  Faction: Blazeborn
+  AITargetSelectors:
+  - clear # Clears the mob's base AI
+  - players # Firstly targets players
+  - attacker # Targets whatever attacks it
+  - specificfaction Volken # Targets mobs from the faction "good"
+  KillMessages:
+  - '<target.name> had their soul completely devoured'
+  - '<target.name><&sq>s burned in a &cBlazing Inferno'
+  - '<target.name> turned into Ashes'
+  Skills:
+  - setname{name=<caster.name>;delay=2} @self ~onDamaged  
+  - setname{name=<caster.name>;delay=2} @self ~onTimer:10 ?incombat{}
+  - model{mid=wildfire;n=nametag} @self ~onSpawn
+  - skill{s=WildfireShockwave} @target ~onTimer:80 .2
+  - skill{s=SpinSlash} @target ~onDamaged .2
+  - skill{s=WildfireFireball} @target ~onTimer:50 .5
+  - skill{s=WFDeath} @self ~onDeath 1
+  - skill{s=WildfireShieldDown} @self ~onTimer:30 .5
+  DamageModifiers:
+  - FIRE_TICK 0
+  - FIRE 0
+  - PROJECTILE 0.5
+  - EXPLOSION 0.2
+  - ENTITY_EXPLOSION 0.2
+  Modules:
+#If enabled, the mob will track damage from different sources and assign more weight to targets that deal more damage (to prevent kite).
+    ThreatTable: true
+#If enabled, the mob will be able to be attacked by multiple players through damage immunity.
+    ImmunityTable: true
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.2
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    KnockbackResistance: 0.9
+    RepeatAllSkills: false
+    DigOutOfGround: true
+    Silent: false
+    
+blazielshield:
+  Type: Armor_stand
+  Display: ''
+  Skills:
+   - model{m=blazielshield} ~onSpawn @self
+  Options:
+    Invincible: true
+
+blazielshieldreturner:
+  Type: Armor_stand
+  Display: ''
+  Skills:
+    - remove{delay=200} @self ~onSpawn
+    - skill{s=ReturnShield} @Parent ~onSpawn
+  Options:
+    Invincible: true
+    Invisible: true
+    
+blazielpillar:
+  Type: Armor_stand
+  Display: ''
+  Skills:
+   - model{m=blazielpillar} ~onSpawn @self
+  Options:
+    Invincible: true
+    
+blazielpillarreturner:
+  Type: Armor_stand
+  Display: ''
+  Skills:
+    - remove{delay=200} @self ~onSpawn
+    - skill{s=ReturnPillar} @Parent ~onSpawn
+  Options:
+    Invincible: true
+    Invisible: true

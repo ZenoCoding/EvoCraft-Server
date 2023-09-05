@@ -1,0 +1,11 @@
+currentQuests:
+- custom1
+currentStages:
+- 0
+quest-points: 0
+questData:
+  custom1:
+    item-delivery-amounts:
+    - 0
+completed-Quests: none
+lastKnownName: LilNibbles

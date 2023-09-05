@@ -1,0 +1,129 @@
+actions:
+  ApplyPotion:
+    message: <blue>You received potion effects!
+    potion-effect-types:
+    - Speed
+    - Jump
+    potion-effect-durations:
+    - 100
+    - 25
+    potion-effect-amplifiers:
+    - 3
+    - 2
+  NiceFinish:
+    message: <green>Nice work!
+  DeathFail:
+    fail-quest: true
+  GiveRod:
+    message: <green>Here's a rod to get you started!
+    items:
+    - name-fishing_rod:amount-1
+  TimerStart:
+    timer: 40
+  CancelTimer:
+    cancel-timer: true
+  RunCommand:
+    message: <red>Answer to life, the universe, and everything?
+    commands:
+    - tell <player> 42
+  ElmirSenlerReward:
+    clear-inventory: false
+    commands:
+    - si dropitematplayer <player> warped_cube 1
+  RewardArcaneJewel:
+    clear-inventory: false
+    items:
+    - ==: org.bukkit.inventory.ItemStack
+      v: 3105
+      type: AMETHYST_SHARD
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Arcane
+          Jewel"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Holds
+          the true power of a mage."}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"QUEST
+          ITEM"}],"text":""}'
+        - '{"text":""}'
+        - '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"RARE"},{"bold":true,"italic":false,"color":"blue","text":"
+          "}],"text":""}'
+        custom-model-data: 1376617
+        ItemFlags:
+        - HIDE_ENCHANTS
+        - HIDE_ATTRIBUTES
+        - HIDE_UNBREAKABLE
+        Unbreakable: true
+        PublicBukkitValues:
+          superitems:var_type: '[B;-84B,-19B,0B,5B,126B,114B,0B,41B,109B,101B,46B,122B,101B,110B,111B,120B,46B,115B,117B,112B,101B,114B,105B,116B,101B,109B,115B,46B,105B,116B,101B,109B,46B,67B,111B,109B,112B,108B,101B,120B,73B,116B,101B,109B,36B,84B,121B,112B,101B,0B,0B,0B,0B,0B,0B,0B,0B,18B,0B,0B,120B,114B,0B,14B,106B,97B,118B,97B,46B,108B,97B,110B,103B,46B,69B,110B,117B,109B,0B,0B,0B,0B,0B,0B,0B,0B,18B,0B,0B,120B,112B,116B,0B,4B,77B,73B,83B,67B]'
+          superitems:ability: '[B;-84B,-19B,0B,5B,115B,114B,0B,19B,106B,97B,118B,97B,46B,117B,116B,105B,108B,46B,65B,114B,114B,97B,121B,76B,105B,115B,116B,120B,-127B,-46B,29B,-103B,-57B,97B,-99B,3B,0B,1B,73B,0B,4B,115B,105B,122B,101B,120B,112B,0B,0B,0B,0B,119B,4B,0B,0B,0B,0B,120B]'
+          superitems:superitem: arcane_jewel
+          superitems:complexenchants: '[B;-84B,-19B,0B,5B,115B,114B,0B,17B,106B,97B,118B,97B,46B,117B,116B,105B,108B,46B,72B,97B,115B,104B,77B,97B,112B,5B,7B,-38B,-63B,-61B,22B,96B,-47B,3B,0B,2B,70B,0B,10B,108B,111B,97B,100B,70B,97B,99B,116B,111B,114B,73B,0B,9B,116B,104B,114B,101B,115B,104B,111B,108B,100B,120B,112B,63B,64B,0B,0B,0B,0B,0B,0B,119B,8B,0B,0B,0B,16B,0B,0B,0B,0B,120B]'
+          superitems:attributes: '[B;-84B,-19B,0B,5B,115B,114B,0B,19B,106B,97B,118B,97B,46B,117B,116B,105B,108B,46B,65B,114B,114B,97B,121B,76B,105B,115B,116B,120B,-127B,-46B,29B,-103B,-57B,97B,-99B,3B,0B,1B,73B,0B,4B,115B,105B,122B,101B,120B,112B,0B,0B,0B,0B,119B,4B,0B,0B,0B,0B,120B]'
+          superitems:var_rarity: '[B;-84B,-19B,0B,5B,126B,114B,0B,43B,109B,101B,46B,122B,101B,110B,111B,120B,46B,115B,117B,112B,101B,114B,105B,116B,101B,109B,115B,46B,105B,116B,101B,109B,46B,67B,111B,109B,112B,108B,101B,120B,73B,116B,101B,109B,36B,82B,97B,114B,105B,116B,121B,0B,0B,0B,0B,0B,0B,0B,0B,18B,0B,0B,120B,114B,0B,14B,106B,97B,118B,97B,46B,108B,97B,110B,103B,46B,69B,110B,117B,109B,0B,0B,0B,0B,0B,0B,0B,0B,18B,0B,0B,120B,112B,116B,0B,4B,82B,65B,82B,69B]'
+          superitems:glow: 0i
+  RewardSoulStone:
+    clear-inventory: false
+    fail-quest: false
+    items:
+    - ==: org.bukkit.inventory.ItemStack
+      v: 3105
+      type: NETHER_STAR
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"light_purple","text":"Soul
+          Stone"}],"text":""}'
+        lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"A
+          stone imbued with the power of a soul."}],"text":""}'
+        - '{"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ability:
+          Portalizer"},{"bold":true,"italic":false,"color":"yellow","text":" RIGHT
+          CLICK"}],"text":""}'
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Activate
+          an energy crystal, and travel through spacetime."}],"text":""}'
+        - '{"extra":[{"text":" "}],"text":""}'
+        - '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":true,"color":"light_purple","text":"D
+          "},{"bold":true,"italic":false,"obfuscated":false,"color":"light_purple","text":"MYTHIC"},{"bold":true,"italic":false,"obfuscated":true,"color":"light_purple","text":"
+          D"},{"bold":true,"italic":false,"obfuscated":false,"color":"light_purple","text":"
+          "}],"text":""}'
+        custom-model-data: 2052837
+        ItemFlags:
+        - HIDE_ENCHANTS
+        - HIDE_ATTRIBUTES
+        - HIDE_UNBREAKABLE
+        Unbreakable: true
+        PublicBukkitValues:
+          superitems:var_type: '[B;-84B,-19B,0B,5B,126B,114B,0B,41B,109B,101B,46B,122B,101B,110B,111B,120B,46B,115B,117B,112B,101B,114B,105B,116B,101B,109B,115B,46B,105B,116B,101B,109B,46B,67B,111B,109B,112B,108B,101B,120B,73B,116B,101B,109B,36B,84B,121B,112B,101B,0B,0B,0B,0B,0B,0B,0B,0B,18B,0B,0B,120B,114B,0B,14B,106B,97B,118B,97B,46B,108B,97B,110B,103B,46B,69B,110B,117B,109B,0B,0B,0B,0B,0B,0B,0B,0B,18B,0B,0B,120B,112B,116B,0B,4B,77B,73B,83B,67B]'
+          superitems:ability: '[B;-84B,-19B,0B,5B,115B,114B,0B,19B,106B,97B,118B,97B,46B,117B,116B,105B,108B,46B,65B,114B,114B,97B,121B,76B,105B,115B,116B,120B,-127B,-46B,29B,-103B,-57B,97B,-99B,3B,0B,1B,73B,0B,4B,115B,105B,122B,101B,120B,112B,0B,0B,0B,1B,119B,4B,0B,0B,0B,1B,116B,0B,10B,112B,111B,114B,116B,97B,108B,105B,122B,101B,114B,120B]'
+          superitems:superitem: soul_stone
+          superitems:complexenchants: '[B;-84B,-19B,0B,5B,115B,114B,0B,17B,106B,97B,118B,97B,46B,117B,116B,105B,108B,46B,72B,97B,115B,104B,77B,97B,112B,5B,7B,-38B,-63B,-61B,22B,96B,-47B,3B,0B,2B,70B,0B,10B,108B,111B,97B,100B,70B,97B,99B,116B,111B,114B,73B,0B,9B,116B,104B,114B,101B,115B,104B,111B,108B,100B,120B,112B,63B,64B,0B,0B,0B,0B,0B,0B,119B,8B,0B,0B,0B,16B,0B,0B,0B,0B,120B]'
+          superitems:attributes: '[B;-84B,-19B,0B,5B,115B,114B,0B,19B,106B,97B,118B,97B,46B,117B,116B,105B,108B,46B,65B,114B,114B,97B,121B,76B,105B,115B,116B,120B,-127B,-46B,29B,-103B,-57B,97B,-99B,3B,0B,1B,73B,0B,4B,115B,105B,122B,101B,120B,112B,0B,0B,0B,0B,119B,4B,0B,0B,0B,0B,120B]'
+          superitems:var_rarity: '[B;-84B,-19B,0B,5B,126B,114B,0B,43B,109B,101B,46B,122B,101B,110B,111B,120B,46B,115B,117B,112B,101B,114B,105B,116B,101B,109B,115B,46B,105B,116B,101B,109B,46B,67B,111B,109B,112B,108B,101B,120B,73B,116B,101B,109B,36B,82B,97B,114B,105B,116B,121B,0B,0B,0B,0B,0B,0B,0B,0B,18B,0B,0B,120B,114B,0B,14B,106B,97B,118B,97B,46B,108B,97B,110B,103B,46B,69B,110B,117B,109B,0B,0B,0B,0B,0B,0B,0B,0B,18B,0B,0B,120B,112B,116B,0B,6B,77B,89B,84B,72B,73B,67B]'
+          superitems:glow: 0i
+    - ==: org.bukkit.inventory.ItemStack
+      v: 3105
+      type: BREAD
+      amount: 5
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        lore:
+        - '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"COMMON"},{"bold":true,"italic":false,"color":"white","text":"
+          "}],"text":""}'
+        custom-model-data: 9400140
+        ItemFlags:
+        - HIDE_ENCHANTS
+        - HIDE_ATTRIBUTES
+        - HIDE_UNBREAKABLE
+        Unbreakable: true
+        PublicBukkitValues:
+          superitems:var_type: '[B;-84B,-19B,0B,5B,126B,114B,0B,41B,109B,101B,46B,122B,101B,110B,111B,120B,46B,115B,117B,112B,101B,114B,105B,116B,101B,109B,115B,46B,105B,116B,101B,109B,46B,67B,111B,109B,112B,108B,101B,120B,73B,116B,101B,109B,36B,84B,121B,112B,101B,0B,0B,0B,0B,0B,0B,0B,0B,18B,0B,0B,120B,114B,0B,14B,106B,97B,118B,97B,46B,108B,97B,110B,103B,46B,69B,110B,117B,109B,0B,0B,0B,0B,0B,0B,0B,0B,18B,0B,0B,120B,112B,116B,0B,4B,77B,73B,83B,67B]'
+          superitems:ability: '[B;-84B,-19B,0B,5B,115B,114B,0B,19B,106B,97B,118B,97B,46B,117B,116B,105B,108B,46B,65B,114B,114B,97B,121B,76B,105B,115B,116B,120B,-127B,-46B,29B,-103B,-57B,97B,-99B,3B,0B,1B,73B,0B,4B,115B,105B,122B,101B,120B,112B,0B,0B,0B,0B,119B,4B,0B,0B,0B,0B,120B]'
+          superitems:superitem: bread
+          superitems:complexenchants: '[B;-84B,-19B,0B,5B,115B,114B,0B,17B,106B,97B,118B,97B,46B,117B,116B,105B,108B,46B,72B,97B,115B,104B,77B,97B,112B,5B,7B,-38B,-63B,-61B,22B,96B,-47B,3B,0B,2B,70B,0B,10B,108B,111B,97B,100B,70B,97B,99B,116B,111B,114B,73B,0B,9B,116B,104B,114B,101B,115B,104B,111B,108B,100B,120B,112B,63B,64B,0B,0B,0B,0B,0B,0B,119B,8B,0B,0B,0B,16B,0B,0B,0B,0B,120B]'
+          superitems:attributes: '[B;-84B,-19B,0B,5B,115B,114B,0B,19B,106B,97B,118B,97B,46B,117B,116B,105B,108B,46B,65B,114B,114B,97B,121B,76B,105B,115B,116B,120B,-127B,-46B,29B,-103B,-57B,97B,-99B,3B,0B,1B,73B,0B,4B,115B,105B,122B,101B,120B,112B,0B,0B,0B,0B,119B,4B,0B,0B,0B,0B,120B]'
+          superitems:var_rarity: '[B;-84B,-19B,0B,5B,126B,114B,0B,43B,109B,101B,46B,122B,101B,110B,111B,120B,46B,115B,117B,112B,101B,114B,105B,116B,101B,109B,115B,46B,105B,116B,101B,109B,46B,67B,111B,109B,112B,108B,101B,120B,73B,116B,101B,109B,36B,82B,97B,114B,105B,116B,121B,0B,0B,0B,0B,0B,0B,0B,0B,18B,0B,0B,120B,114B,0B,14B,106B,97B,118B,97B,46B,108B,97B,110B,103B,46B,69B,110B,117B,109B,0B,0B,0B,0B,0B,0B,0B,0B,18B,0B,0B,120B,112B,116B,0B,6B,67B,79B,77B,77B,79B,78B]'
+          superitems:glow: 0i

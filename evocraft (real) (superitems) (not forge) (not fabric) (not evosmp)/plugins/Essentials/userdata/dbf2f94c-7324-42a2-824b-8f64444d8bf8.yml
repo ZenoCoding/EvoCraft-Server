@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 72.203.80.97
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1671585567753
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1671586393722
+  login: 1671585069552
+money: '260.5470000000000060'
+last-account-name: bolz__
+logoutlocation:
+  world: ca82709d-4280-42e0-b470-b161f1fb21e6
+  world-name: world
+  x: 1010.9287518570478
+  y: 60.0
+  z: -72.73570838200229
+  yaw: 60.59466552734375
+  pitch: 45.07783889770508
+lastlocation:
+  world: a798a21c-cac4-4496-b685-2f70b3cc85e1
+  world-name: flat
+  x: -157.03935680609058
+  y: 73.0
+  z: -621.4514186964399
+  yaw: 45.98736572265625
+  pitch: 10.936830520629883

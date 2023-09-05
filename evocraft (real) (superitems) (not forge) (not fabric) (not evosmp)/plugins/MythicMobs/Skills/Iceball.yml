@@ -1,0 +1,19 @@
+IceBall:
+  Skills:
+  - projectile{onTick=IB-Tick;StartFOffset=0.5;StartYOffset=1;StopAtEntity=true;StopAtBlock=true;HitNonPlayers=true;v=16;i=1;hR=1;vR=1;oH=IceBallHit;oE=IceBallHit} @target       #use @targetlocation if you want to use this skill as a playerskill in MMOCORE
+  - effect:sound{s=entity.illusioner.cast_spell;v=1;p=0.1} @PlayersInRadius{r=60}
+
+IB-Tick:
+  Skills:
+  - effect:particles{particle=reddust;color=#AEECF3;a=40;hs=0.25;vs=0.25} @origin
+  - effect:particles{particle=reddust;color=#36B4C2;a=20;hs=0.1;vs=0.1} @origin
+  - effect:particles{particle=reddust;color=#12E2F9;a=30;hs=0.15;vs=0.15} @origin
+  - effect:particles{particle=splash;a=2;hs=0.1;vs=0.1} @origin 
+
+IceBallHit:
+  Skills:
+  - effect:particles{particle=splash;a=70;hs=0.25;vs=0.25} @origin
+  - effect:sound{s=entity.squid.squirt;v=0.5;p=0}
+  - damage{a=5} @target
+  - potion{type=SLOW;d=100;level=2} 
+

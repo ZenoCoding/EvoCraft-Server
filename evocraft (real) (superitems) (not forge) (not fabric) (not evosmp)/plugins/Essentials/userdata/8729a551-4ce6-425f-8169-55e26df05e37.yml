@@ -1,0 +1,47 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 73.170.131.173
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1672262187346
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1672341874245
+  login: 1672340664089
+money: '2305.1325089779106569'
+last-account-name: R0ckied
+lastlocation:
+  world: ca82709d-4280-42e0-b470-b161f1fb21e6
+  world-name: world
+  x: -135.26290761514116
+  y: 61.21311009051231
+  z: 158.3372410499219
+  yaw: 129.18392944335938
+  pitch: 16.230897903442383
+homes:
+  home:
+    world: ca82709d-4280-42e0-b470-b161f1fb21e6
+    world-name: world
+    x: -970.745529328413
+    y: 97.0
+    z: -1964.5023039475227
+    yaw: -130.83045959472656
+    pitch: 19.13886260986328
+logoutlocation:
+  world: ca82709d-4280-42e0-b470-b161f1fb21e6
+  world-name: world
+  x: 1500.2985545170684
+  y: 63.0
+  z: 389.2772893645971
+  yaw: 34.060302734375
+  pitch: 50.59829330444336

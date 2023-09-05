@@ -1,0 +1,30 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 81.104.157.81
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1671987702901
+  login: 1671987603592
+money: '0'
+last-account-name: Greelishaa
+logoutlocation:
+  world: ca82709d-4280-42e0-b470-b161f1fb21e6
+  world-name: world
+  x: -46.20822305041128
+  y: 71.0
+  z: 104.99184422069598
+  yaw: -140.88587951660156
+  pitch: 5.7250165939331055

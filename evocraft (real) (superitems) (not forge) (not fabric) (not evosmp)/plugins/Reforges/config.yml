@@ -1,0 +1,143 @@
+#
+# Reforges
+# by Auxilor
+#
+
+discover-recipes: true
+
+gui:
+  rows: 6
+
+  mask:
+    # The way the mask works is by having a list of materials
+    # And then a pattern to use those materials.
+
+    # The pattern is the rows in the GUI
+    # Each line must be 9 long, and the amount of rows should be the amount of rows in the GUI
+    # A zero represents nothing
+    # A 1 represents the first material
+    # A 2 represents the second material
+    # And so on, you can add up to 9.
+
+    materials:
+      - black_stained_glass_pane
+      - magenta_stained_glass_pane
+    pattern:
+      - "011111110"
+      - "012202210"
+      - "012111210"
+      - "010111010"
+      - "011111110"
+      - "011101110"
+  show-allowed:
+    allow-material: lime_stained_glass_pane
+    deny-material: red_stained_glass_pane
+
+    # 1 is a show-allowed slot,
+    # 0 is not.
+    pattern:
+      - "100000001"
+      - "100000001"
+      - "100000001"
+      - "100000001"
+      - "100000001"
+      - "100000001"
+
+  activator-slot:
+    row: 2
+    column: 5
+
+  stone-slot:
+    row: 4
+    column: 7
+
+  item-slot:
+    row: 4
+    column: 3
+
+  close:
+    material: barrier
+    location:
+      row: 6
+      column: 5
+
+  # Placeholders:
+  # %cost% - The economy cost
+  # %xp% - The levels required
+
+  allow:
+    material: anvil
+    name: "&aReforge Item"
+    lore:
+      - '&7Reforges the item on the left, giving'
+      - '&7it a random item modifier that'
+      - '&7boosts its stats.'
+      - ''
+      - '&7Cost'
+      - '&6$%cost%'
+      - ''
+      - '&eClick to reforge!'
+  allow-stone:
+    material: anvil
+    name: "&aReforge Item"
+    lore:
+      - '&7Reforges the item on the left with'
+      - '&7a reforge stone, giving it'
+      - '&7the %stone%&7 reforge to'
+      - '&7boost its stats.'
+      - ''
+      - '&7Cost'
+      - '&6$%cost%'
+      - ''
+      - '&eClick to reforge!'
+  no-item:
+    material: anvil
+    name: "&eReforge Item"
+    lore:
+      - '&7Place an item on the left to'
+      - '&7reforge it! Reforging items adds a'
+      - '&7random modifier to the item that'
+      - '&7grants stat boosts'
+  invalid-item:
+    material: barrier
+    name: "&cError!"
+    lore:
+      - '&7You cannot reforge this item!'
+
+  sound:
+    id: BLOCK_ANVIL_USE
+    pitch: 1
+
+  open-sound:
+    id: BLOCK_ANVIL_PLACE
+    pitch: 0.8
+
+  stone-sound:
+    id: ENTITY_ENDER_DRAGON_HURT
+    pitch: 0.5
+
+  insufficient-money-sound:
+    id: ENTITY_VILLAGER_NO
+    pitch: 0.8
+
+reforge:
+  cost: 7500
+  xp-cost: 0 # In levels
+  use-player-points: false
+
+  cost-exponent: 1.15 # (Reforges done ^ cost exponent) * cost
+
+  show-reforgable: true
+  reforgable-suffix:
+    - ""
+    - "&8This item can be reforged!"
+
+  display-in-lore: true
+  display-in-name: true # Requires paper to be installed on the server
+
+  stone:
+    name: "%reforge%&f Reforge Stone"
+    lore:
+      - "&7Place on the right of the"
+      - "&7reforge menu to apply the"
+      - "%reforge%&7 reforge!"

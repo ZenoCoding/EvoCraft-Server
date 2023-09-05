@@ -1,0 +1,22 @@
+playername: sped_mode
+lang: en_US
+minerate-full-mined: 2188
+minerate:
+  diamond: 0
+  gold: 0
+  iron: 114
+  coal: 16
+  ancient debris: 0
+better-click: 20
+cheats:
+  timer: 3
+  inventorymove: 1
+  fly: 5
+  nuker: 1
+  forcefield: 2
+  airjump: 1
+  step: 0
+  noslowdown: 1
+  spider: 1
+  speed: 2
+creation-time: 1660144401717

@@ -1,0 +1,12 @@
+BypassPermission: false
+#Should the player gets messaged that he can bypass the endbecause the permission. | default: true
+ 
+DisableEnd: true
+#Should players can bypass with AntiEnd.bypass the end prevention. | default: true
+
+PreventMessage: true
+#Should the plugin prevent players from entering the end | default: true
+ 
+SlientStart: false
+#Should the plugin start slient. | default: false
+ 

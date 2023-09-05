@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 76.224.22.230
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1672525900024
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1672527915981
+  login: 1672524704473
+money: '467.22371180789111541'
+last-account-name: smartcookie888
+lastlocation:
+  world: a798a21c-cac4-4496-b685-2f70b3cc85e1
+  world-name: flat
+  x: 171.07499998807907
+  y: 32.0
+  z: -217.92500001192093
+  yaw: 115.18780517578125
+  pitch: 33.14982223510742
+logoutlocation:
+  world: ca82709d-4280-42e0-b470-b161f1fb21e6
+  world-name: world
+  x: 41.04986684921439
+  y: -4.0
+  z: 481.1669250064075
+  yaw: 71.0433349609375
+  pitch: 10.649855613708496

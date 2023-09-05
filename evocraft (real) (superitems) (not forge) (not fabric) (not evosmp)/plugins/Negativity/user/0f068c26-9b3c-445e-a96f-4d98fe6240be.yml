@@ -1,0 +1,14 @@
+playername: Renerate
+lang: en_US
+minerate-full-mined: 514
+minerate:
+  diamond: 0
+  gold: 0
+  iron: 99
+  coal: 121
+  ancient debris: 0
+better-click: 25
+cheats:
+  autoclick: 1
+  forcefield: 2
+creation-time: 1658005246141

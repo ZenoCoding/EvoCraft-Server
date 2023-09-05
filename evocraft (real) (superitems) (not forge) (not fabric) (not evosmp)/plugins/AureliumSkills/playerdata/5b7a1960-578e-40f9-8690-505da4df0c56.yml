@@ -1,0 +1,112 @@
+uuid: 5b7a1960-578e-40f9-8690-505da4df0c56
+skills:
+  farming:
+    level: 8
+    xp: 0.0
+  foraging:
+    level: 8
+    xp: 0.0
+  mining:
+    level: 8
+    xp: 9.6
+  fishing:
+    level: 8
+    xp: 0.0
+  excavation:
+    level: 8
+    xp: 9.6
+  archery:
+    level: 8
+    xp: 22.8
+  defense:
+    level: 1
+    xp: 0.0
+  fighting:
+    level: 8
+    xp: 53.99999999999999
+  endurance:
+    level: 1
+    xp: 0.0
+  agility:
+    level: 8
+    xp: 3666.0000000000005
+  alchemy:
+    level: 8
+    xp: 0.0
+  enchanting:
+    level: 8
+    xp: 0.0
+  sorcery:
+    level: 1
+    xp: 20.0
+  healing:
+    level: 1
+    xp: 0.0
+  forging:
+    level: 1
+    xp: 0.0
+mana: 286.0
+locale: en
+ability_data:
+  xp_convert:
+    xp: 8.813069418980835
+  first_strike:
+    counter: 678
+  charged_shot:
+    cooldown: 0
+    enabled: false
+  absorption:
+    activated: false
+stat_modifiers:
+  '0':
+    name: AureliumSkills.Modifiers.Armor.Boots.Strength
+    stat: strength
+    value: 15.0
+  '1':
+    name: AureliumSkills.Modifiers.Armor.Leggings.Health
+    stat: health
+    value: 22.0
+  '2':
+    name: AureliumSkills.Modifiers.Armor.Boots.Health
+    stat: health
+    value: 15.0
+  '3':
+    name: AureliumSkills.Modifiers.Armor.Boots.Wisdom
+    stat: wisdom
+    value: 15.0
+  '4':
+    name: AureliumSkills.Modifiers.Armor.Chestplate.Wisdom
+    stat: wisdom
+    value: 30.0
+  '5':
+    name: AureliumSkills.Modifiers.Armor.Chestplate.Health
+    stat: health
+    value: 30.0
+  '6':
+    name: AureliumSkills.Modifiers.Armor.Helmet.Strength
+    stat: strength
+    value: 15.0
+  '7':
+    name: AureliumSkills.Modifiers.Armor.Leggings.Wisdom
+    stat: wisdom
+    value: 22.0
+  '8':
+    name: AureliumSkills.Modifiers.Armor.Leggings.Strength
+    stat: strength
+    value: 22.0
+  '9':
+    name: AureliumSkills.Modifiers.Armor.Chestplate.Strength
+    stat: strength
+    value: 30.0
+  '10':
+    name: AureliumSkills.Modifiers.Armor.Helmet.Health
+    stat: health
+    value: 15.0
+  '11':
+    name: AureliumSkills.Modifiers.Item.Wisdom
+    stat: wisdom
+    value: 50.0
+  '12':
+    name: AureliumSkills.Modifiers.Armor.Helmet.Wisdom
+    stat: wisdom
+    value: 15.0

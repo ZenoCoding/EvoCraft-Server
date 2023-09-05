@@ -1,0 +1,27 @@
+playername: skdu
+lang: en_US
+minerate-full-mined: 61354
+minerate:
+  diamond: 0
+  gold: 4
+  iron: 96
+  coal: 218
+  ancient debris: 0
+better-click: 66
+cheats:
+  fastladder: 1
+  autoclick: 1
+  regen: 3
+  forcefield: 1
+  blink: 2
+  noslowdown: 1
+  speed: 1
+  timer: 2
+  inventorymove: 1
+  fly: 2
+  airplace: 4
+  airjump: 1
+  fastplace: 2
+  step: 1
+  spider: 4
+creation-time: 1658877474021

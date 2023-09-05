@@ -1,0 +1,1 @@
+2022-07-23 19:40:45.587: (37ms) 73% FORCEFIELD > Big distance with: zombie. Exact distance: 3.6699999999999675, without thorns. Ping: 37. Player version: V1_19. TPS: [19.999214217207275, 19.999841845117324, 19.999948126978985]

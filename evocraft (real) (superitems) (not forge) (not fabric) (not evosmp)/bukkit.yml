@@ -1,0 +1,39 @@
+settings:
+  allow-end: true
+  warn-on-overload: true
+  permissions-file: permissions.yml
+  update-folder: update
+  plugin-profiling: false
+  connection-throttle: 500
+  query-plugins: true
+  deprecated-verbose: default
+  shutdown-message: EvoCraft is restarting. Please rejoin in a moment. We are sorry
+    for the inconvenience.
+  minimum-api: none
+  use-map-color-cache: true
+spawn-limits:
+  monsters: 20
+  animals: 5
+  water-animals: 3
+  water-ambient: 4
+  water-underground-creature: 5
+  axolotls: 5
+  ambient: 1
+chunk-gc:
+  period-in-ticks: 300
+  load-threshold: 300
+ticks-per:
+  animal-spawns: 400
+  monster-spawns: 4
+  water-spawns: 1
+  water-ambient-spawns: 1
+  water-underground-creature-spawns: 1
+  axolotl-spawns: 1
+  ambient-spawns: 1
+  autosave: 6000
+aliases: now-in-commands.yml
+worlds:
+  world:
+    generator: Terra:OVERWORLD
+  world_the_end:
+    generator: Terra:END

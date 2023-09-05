@@ -1,0 +1,12 @@
+FireRainMob:
+  Mobtype: armor_stand
+  #Display: 'FireRainMob'
+  Health: 50
+  Damage: 0
+  Options:
+    Invisible: true
+    Invincible: true
+    Collidable: false
+  Skills:
+  - skill{s=FireRainSkill} @self ~onSpawn
+  #- remove{delay=500} @self ~onSpawn

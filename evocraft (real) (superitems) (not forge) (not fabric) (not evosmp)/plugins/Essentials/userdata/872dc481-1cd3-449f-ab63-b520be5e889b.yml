@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 167.224.249.189
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1671494708452
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1671495322666
+  login: 1671494412625
+money: '226.799999999999997'
+last-account-name: DisneyCruiser1
+lastlocation:
+  world: a798a21c-cac4-4496-b685-2f70b3cc85e1
+  world-name: flat
+  x: -133.41879407385042
+  y: 78.0
+  z: -464.86456820223725
+  yaw: 167.70001220703125
+  pitch: 34.6500244140625
+logoutlocation:
+  world: a798a21c-cac4-4496-b685-2f70b3cc85e1
+  world-name: flat
+  x: -132.57223726718425
+  y: 78.0
+  z: -463.40923863404583
+  yaw: -62.4000129699707
+  pitch: 45.450008392333984

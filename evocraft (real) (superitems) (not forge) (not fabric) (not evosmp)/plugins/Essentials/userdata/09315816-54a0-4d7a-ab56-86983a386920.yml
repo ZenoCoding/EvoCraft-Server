@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 73.241.154.217
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1671499242502
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1671501172917
+  login: 1671498443673
+money: '954.9817799999999973'
+last-account-name: puzzleCatcher
+lastlocation:
+  world: a798a21c-cac4-4496-b685-2f70b3cc85e1
+  world-name: flat
+  x: -133.58210771053217
+  y: 78.0
+  z: -466.9397449720601
+  yaw: 74.53623962402344
+  pitch: 26.02427864074707
+logoutlocation:
+  world: ca82709d-4280-42e0-b470-b161f1fb21e6
+  world-name: world
+  x: -546.3066148910981
+  y: 62.07326432466507
+  z: 118.0658943262817
+  yaw: -101.02191162109375
+  pitch: 25.606599807739258

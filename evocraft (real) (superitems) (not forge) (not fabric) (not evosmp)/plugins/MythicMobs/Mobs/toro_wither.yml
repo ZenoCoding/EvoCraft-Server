@@ -1,0 +1,149 @@
+toro_wither:
+  Type: PARROT
+  Display: '&8&lWither'
+  Faction: monster
+  Health: 2500
+  Damage: 0
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Modules:
+    ThreatTable: true
+  Options:
+    NoDamageTicks: 1
+    MovementSpeed: 0.4
+    FollowRange: 64
+    KnockbackResistance: 1
+    Silent: true
+    Despawn: true
+    Invincible: false
+    PreventBlockInfection: true
+    PreventOtherDrops: true
+    MaxCombatDistance: 30
+  BossBar:
+    Enabled: true
+    Title: '&8&lWither'
+    Range: 60
+    Color: PURPLE
+    Style: SEGMENTED_10
+  Skills:
+  - randomskill{s=toro_wither_roundhouse,toro_wither_claw,toro_wither_overhead_swipe,toro_wither_shoot,toro_wither_pool,toro_wither_smash} @target ~onTimer:20
+  - skill{s=CancelEventSkill;sync=true} @target ~onAttack
+  - model{mid=toro_wither;n=false;tint=false} @self ~onSpawn
+  - skill{s=toro_wither_gethit} @self ~onDamaged
+  #- skill{s=toro_enderdragon_spawn} @self ~onSpawn
+  - skill{s=toro_wither_death} @self ~onDeath
+
+toro_wither_skull_shoot:
+  Type: CAT
+  Faction: monster
+  Health: 100
+  Options:
+    NoAI: true
+    Silent: true
+    Despawn: false
+    Invincible: true
+    PreventBlockInfection: true
+  Skills:
+  - model{mid=toro_wither_skull;n=false;tint=false} @self ~onSpawn
+
+toro_wither_pool:
+  Type: CAT
+  Faction: monster
+  Health: 1000
+  Options:
+    NoAI: false
+    Silent: true
+    Despawn: true
+    Invincible: true
+    PreventBlockInfection: true
+    PreventOtherDrops: true
+    MaxCombatDistance: 30
+  Skills:
+  - skill{s=toro_wither_pool_spawn} @self ~onSpawn
+  - model{mid=toro_wither_pool;n=false;tint=false} @self ~onSpawn
+
+toro_wither_still:
+  Type: ARMOR_STAND
+  Faction: monster
+  Health: 1000
+  Options:
+    gravity: true
+    Silent: true
+    Despawn: true
+    PreventBlockInfection: true
+    PreventOtherDrops: true
+    MaxCombatDistance: 30
+  Skills:
+  - skill{s=toro_wither_still_spawn} @self ~onSpawn
+  - model{mid=toro_wither_still;n=false;tint=false} @self ~onSpawn
+  - skill{s=toro_wither_still_interact;sync=true} @self ~onDamaged
+  - skill{s=toro_wither_still_interact;sync=true} @self ~onInteract
+  
+
+toro_wither_skull_2ndphase:
+  Type: ARMOR_STAND
+  Faction: monster
+  Health: 1000
+  Options:
+    MovementSpeed: 0.0001
+    gravity: true
+    Silent: true
+    Despawn: true
+    Invincible: true
+    PreventBlockInfection: true
+    PreventOtherDrops: true
+    MaxCombatDistance: 30
+  Skills:
+  - skill{s=toro_wither_2ndphase_spawn} @self ~onTimer:60
+  - model{mid=toro_wither_skull_2ndphase;n=false;tint=false} @self ~onSpawn
+
+#===2nd phase, wither terror
+toro_wither_terror:
+  Type: HUSK
+  Display: '&8&lWither'
+  Faction: monster
+  Health: 2000
+  Damage: 0
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Modules:
+    ThreatTable: true
+  Options:
+    NoDamageTicks: 1
+    MovementSpeed: 0.3
+    FollowRange: 64
+    KnockbackResistance: 1
+    Silent: true
+    Despawn: true
+    Invincible: false
+    PreventBlockInfection: true
+    PreventOtherDrops: true
+    MaxCombatDistance: 30
+  BossBar:
+    Enabled: true
+    Title: '&8&lWither'
+    Range: 60
+    Color: PURPLE
+    Style: SEGMENTED_10
+    DarkenSky: true
+  DamageModifiers:
+  - PROJECTILE 0.1
+  Skills:
+  - skill{s=toro_wither_terror_randomskill} @target ~onTimer:20
+  - skill{s=toro_wither_terror_headoff} @self ~onTimer:1
+  - skill{s=toro_wither_headoff_terror_ticking} @self ~onTimer:5
+  - skill{s=toro_wither_terror_attack;sync=true} @target ~onAttack
+  - model{mid=toro_wither_terror;n=false;tint=false} @self ~onSpawn
+  - skill{s=toro_wither_gethit} @self ~onDamaged
+  - skill{s=toro_wither_terror_spawn} @self ~onSpawn
+  - skill{s=toro_wither_terror_death} @self ~onDeath

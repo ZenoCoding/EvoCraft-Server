@@ -1,0 +1,12 @@
+location: flat:-343.500:-57.267:-508.500
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&c&l⚠ TALK TO ME ⚠'
+    height: 0.3
+  actions: {}

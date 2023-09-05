@@ -1,0 +1,15 @@
+currentQuests:
+- custom3
+currentStages:
+- 0
+quest-points: 0
+questData:
+  custom3:
+    item-delivery-amounts:
+    - 0
+    - 0
+    has-talked-to:
+    - false
+completed-Quests:
+- custom5
+lastKnownName: bobthajoe

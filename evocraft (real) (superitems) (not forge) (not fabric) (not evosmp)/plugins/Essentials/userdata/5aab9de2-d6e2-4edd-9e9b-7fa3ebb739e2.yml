@@ -1,0 +1,48 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 66.231.187.53
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1672366798373
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1673065333581
+  login: 1673065279751
+money: '21097.5893714937333003'
+last-account-name: parafactor
+lastlocation:
+  world: ca82709d-4280-42e0-b470-b161f1fb21e6
+  world-name: world
+  x: 205.67302038244932
+  y: 60.908534600948165
+  z: 1076.7385218729637
+  yaw: -0.27099609375
+  pitch: -10.379271507263184
+homes:
+  home:
+    world: ca82709d-4280-42e0-b470-b161f1fb21e6
+    world-name: world
+    x: -975.3000000119209
+    y: 97.0
+    z: -1966.699999988079
+    yaw: 39.86874771118164
+    pitch: 9.63474178314209
+logoutlocation:
+  world: ca82709d-4280-42e0-b470-b161f1fb21e6
+  world-name: world
+  x: -971.2352737207162
+  y: 50.0
+  z: -1959.132231166696
+  yaw: 3.279449462890625
+  pitch: 27.17925262451172
+nickname: arden

@@ -1,0 +1,36 @@
+FirePixie:
+  Type: VEX
+  Display: '&4FirePixie'
+  Health: 2
+  Damage: 1
+  Armor: 0
+  Options:
+    ApplyInvisibility: true
+    AlwaysShowName: false
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Silent: true
+    PreventRandomEquipment: true
+  DamageModifiers:
+    - PROJECTILE 0.33
+    - ENTITY_ATTACK 1.5
+    - FIRE -4
+    - FIRE_TICK -4
+    - HOT_FLOOR -1
+    - DROWNING 100
+  Skills:
+    - skill{s=FirePixiePosession} @target ~onAttack
+    - ignite{d=30} ~onAttack
+    - effect:particles{p=lava;amount=7;vs=0.1;hs=0.1} @self ~onAttack
+    - effect:particles{p=angryVillager;amount=1;vs=0.1;hs=0.1} @self ~onAttack
+    #Aura:
+    - aura{auraName=VexFire;duration=400;onEnd=FirePixiePosession;onTick=FirePixieTick;interval=1} @self ~onSpawn
+    #Sounds:
+    - effect:sound{s=entity.vex.charge;v=1;p=1} ~onAttack
+    - effect:sound{s=entity.vex.ambient;v=1;p=1} ~onTimer:20
+    - effect:sound{s=entity.vex.death;v=1;p=1} ~onAttack
+    - effect:sound{s=block.end_portal_frame.fill;v=1;p=0} ~onAttack
+    - effect:sound{s=block.end_portal_frame.fill;v=1;p=0} ~onAttack
+    - effect:sound{s=entity.vex.death;v=1;p=1} ~onDeath
+    - remove{delay=400} @self ~onSpawn
+    - suicide{delay=401} @self ~onSpawn

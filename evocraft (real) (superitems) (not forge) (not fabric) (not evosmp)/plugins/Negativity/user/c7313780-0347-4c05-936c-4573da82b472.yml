@@ -1,0 +1,22 @@
+playername: Pl4te
+lang: en_US
+minerate-full-mined: 16706
+minerate:
+  diamond: 4
+  gold: 4
+  iron: 156
+  coal: 214
+  ancient debris: 0
+better-click: 15
+cheats:
+  timer: 5
+  inventorymove: 14
+  fly: 1
+  nuker: 2
+  forcefield: 1
+  airjump: 1
+  fastplace: 1
+  noslowdown: 3
+  spider: 1
+  speed: 6
+creation-time: 1658452741818

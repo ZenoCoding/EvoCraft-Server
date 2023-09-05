@@ -1,0 +1,12 @@
+location: flat:-356.500:-58.000:-510.500
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&7&lRanger Quarters'
+    height: 0.3
+  actions: {}

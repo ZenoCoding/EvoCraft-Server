@@ -1,0 +1,15 @@
+currentQuests: none
+currentStages: none
+quest-points: 35
+completed-Quests:
+- custom1
+- custom2
+completedRedoableQuests:
+- custom2
+completedQuestTimes:
+- 1662405048841
+amountsCompletedQuests:
+- custom2
+amountsCompleted:
+- 1
+lastKnownName: bobderaa

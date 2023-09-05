@@ -1,0 +1,27 @@
+playername: XanyXerus
+lang: en_US
+minerate-full-mined: 31097
+minerate:
+  diamond: 5
+  gold: 0
+  iron: 0
+  coal: 270
+  ancient debris: 0
+better-click: 61
+cheats:
+  fastladder: 1
+  autoclick: 6
+  regen: 11
+  forcefield: 1
+  noslowdown: 1
+  speed: 1
+  timer: 1
+  inventorymove: 6
+  fly: 2
+  airplace: 2
+  airjump: 1
+  step: 0
+  fastplace: 2
+  spider: 1
+  faststairs: 1
+creation-time: 1659069175636

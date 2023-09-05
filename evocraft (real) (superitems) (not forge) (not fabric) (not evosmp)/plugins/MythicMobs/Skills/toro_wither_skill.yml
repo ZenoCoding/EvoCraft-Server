@@ -1,0 +1,760 @@
+toro_wither_still_spawn:
+    Skills:
+        - delay 2
+        - ChangePart{model=toro_wither_still;part=head;newmodel=toro_wither_still;newpart=nothing} @self
+        - ChangePart{model=toro_wither_still;part=left_head;newmodel=toro_wither_still;newpart=nothing} @self
+        - ChangePart{model=toro_wither_still;part=right_head;newmodel=toro_wither_still;newpart=nothing} @self 
+        - ChangePart{model=toro_wither_still;part=jaw;newmodel=toro_wither_still;newpart=nothing} @self
+
+#Skills regarding to placing skulls on the wither base
+toro_wither_still_interact:
+    Skills:
+        - CancelEvent
+        - skill{s=toro_wither_still_skullup} @self
+
+toro_wither_still_skullup:
+    Conditions:
+        - hastag{t=skull3} false
+    TriggerConditions:
+        - holding{m=WITHER_SKELETON_SKULL} true
+    Skills:
+        - takeitem{i=WITHER_SKELETON_SKULL;a=1} @trigger
+        - skill{s=toro_wither_still_skullup_1} @self
+
+toro_wither_still_skullup_1:
+    Conditions:
+        - hastag{t=skull2} CastInstead toro_wither_still_skullup_3
+        - hastag{t=skull1} CastInstead toro_wither_still_skullup_2
+    Skills:
+        - addtag{t=skull1} @self
+        - ChangePart{model=toro_wither_still;part=left_head;newmodel=toro_wither_still;newpart=left_head} @self 
+        - particles{p=reddust;a=40;color=#282828;size=2;hs=1;vs=1} @ModelPart{mid=toro_wither_still;part=left_head}
+        - effect:sound{s=entity.wither.spawn} @self
+
+toro_wither_still_skullup_2:
+    Skills:
+        - addtag{t=skull2} @self
+        - ChangePart{model=toro_wither_still;part=right_head;newmodel=toro_wither_still;newpart=right_head} @self 
+        - particles{p=reddust;a=40;color=#282828;size=2;hs=1;vs=1} @ModelPart{mid=toro_wither_still;part=right_head}
+        - effect:sound{s=entity.wither.spawn} @self
+
+toro_wither_still_skullup_3:
+    Skills:
+        - addtag{t=skull3} @self
+        - ChangePart{model=toro_wither_still;part=head;newmodel=toro_wither_still;newpart=head} @self 
+        - ChangePart{model=toro_wither_still;part=jaw;newmodel=toro_wither_still;newpart=jaw} @self 
+        - particles{p=reddust;a=40;color=#282828;size=2;hs=1;vs=1} @ModelPart{mid=toro_wither_still;part=head}
+        - effect:sound{s=entity.wither.spawn;p=0;v=4} @self
+        - state{s=intro;lerpin=20} @self
+        - effect:sound{s=entity.wither_skeleton.ambient;p=0.2;v=4;repeat=3;repeatInterval=20} @self
+        - delay 120
+        - effect:sound{s=entity.wither_skeleton.ambient;p=0.5;v=4} @self
+        - particles{p=block_crack;m=black_concrete;a=30;hs=1;vs=2} @ModelPart{mid=toro_wither_still;part=right_forearm}
+        - delay 36
+        - effect:sound{s=entity.wither_skeleton.ambient;p=0.3;v=4} @self
+        - particles{p=block_crack;m=black_concrete;a=30;hs=2;vs=1} @ModelPart{mid=toro_wither_still;part=left_forearm}
+        - delay 30
+        - effect:sound{s=entity.wither_skeleton.ambient;p=0.2;v=4;repeat=4;repeatInterval=4} @self
+        - particles{p=block_crack;m=black_concrete;a=50;hs=1;vs=2;repeat=8;repeatInterval=5} @ModelPart{mid=toro_wither_still;part=body}
+        - delay 73
+        - effect:sound{s=entity.wither.ambient;p=0;v=4} @self
+        - particles{p=smoke;a=150;hs=1;vs=1;s=1} @ModelPart{mid=toro_wither_still;part=body}
+        - summon{type=toro_wither} @self
+        - remove @self
+
+
+#=========Wither skills===========       
+toro_wither_gethit:
+    Cooldown: 0.5
+    Skills:
+        - effect:sound{s=entity.wither.hurt} @self
+        - particles{p=block_crack;m=black_concrete;a=30;hs=1;vs=1;s=1} @ModelPart{mid=toro_wither;part=body}
+        - skill{s=toro_wither_gethit_pool} @self 0.3
+
+# Wither has a chance to drops a pool of wither liquid when get hit.
+toro_wither_gethit_pool:
+    Skills:
+        - projectile{bulletType=ITEM;material=black_concrete;oT=toro_wither_pool_proj_tick;oE=toro_wither_pool_proj_end;i=1;v=5;d=400;g=0.3;sB=true;sE=false;syo=8;vO=0.2} @RLNTE{a=1;r=10} 
+
+toro_wither_setAItrue:
+    Skills:
+        - delay 20
+        - setAI{ai=true} @self
+        
+#===wither liquid pool spawn
+toro_wither_pool_spawn:
+    Skills:
+        - effect:sound{s=entity.dolphin.splash;v=6;p=0} @self
+        - jump{v=-10} @self
+        - delay 2
+        - setAI{ai=false} @self
+        - potion{t=wither;l=4;d=80;repeat=24;repeatInterval=10} @PlayersNearOrigin{r=4}
+        - damage{a=1;repeat=24;repeatInterval=10;pk=true;ia=true} @PlayersNearOrigin{r=4}
+        - particles{p=smoke;a=10;hs=2;v=0.2;repeat=48;repeatInterval=5} @origin
+        - delay 240
+        - particles{p=reddust;a=40;color=#282828;size=2;hs=2;vs=0.2} @self
+        - remove @self
+
+#===wither death====
+toro_wither_death:
+    Skills:
+        - setAI{ai=false} @self
+        - state{s=death} @self
+        - effect:sound{s=entity.wither.death;v=5;p=0} @self
+        - particles{p=explosion_large;a=1;hs=1;vs=1;repeat=18;repeatInterval=4} @ModelPart{mid=toro_wither;part=body}
+        - particles{p=reddust;a=20;color=#282828;size=3;hs=3;vs=3;repeat=18;repeatInterval=5} @ModelPart{mid=toro_wither;part=body}
+        - delay 60
+        - particles{p=explosion_huge;a=1;repeat=2;repeatInterval=10} @ModelPart{mid=toro_wither;part=body}
+        - effect:sound{s=entity.generic.explode;v=4;p=0.5;repeat=2;repeatInterval=10} @ModelPart{mid=toro_wither;part=body}
+        - delay 20
+        - particles{p=end_rod;a=100;hs=1;vs=1;s=0.8} @ModelPart{mid=toro_wither;part=body} 
+        - summon{t=toro_wither_skull_2ndphase} @ModelPart{mid=toro_wither;part=head}
+#===Wither shoot skull
+toro_wither_shoot:
+    Conditions:
+        - incombat true
+    TargetConditions:
+        - distance{d=5to35} true
+    Skills:
+        - gcd{ticks=10} @self
+        - state{s=shoot;lerpin=5} @self
+        - effect:sound{s=entity.wither.ambient;v=3;p=1} @self
+        - delay 9
+        - particles{p=smoke;a=20;hs=0.5;vs=0.5;repeat=10;repeatInterval=3} @ModelPart{mid=toro_wither;part=head}
+        - delay 30
+        - effect:sound{s=entity.wither.shoot;v=3;p=0.5} @self
+        - projectile{bulletType=MOB;mob=toro_wither_skull_shoot;oT=toro_wither_shoot_tick;oE=toro_wither_shoot_end;i=1;v=30;g=0;d=200;sB=true;hnp=true;syo=10} @target
+
+toro_wither_shoot_tick:
+    Skills:
+        - particles{p=smoke;a=3;hs=0.2;vs=0.2} @origin{y=-0.6}
+        - particles{p=reddust;a=3;color=#282828;size=2;hs=0.2;vs=0.2} @origin{y=-0.6}
+
+toro_wither_shoot_end:
+    Skills:
+        - damage{a=30} @PlayersNearOrigin{r=6;conditions=[ - haspotioneffect{t=DAMAGE_RESISTANCE;l=100-256} false ]}
+        - particles{p=explosion_huge;a=1} @origin
+        - effect:sound{s=entity.generic.explode;v=4;p=0.5} @origin
+        - skill{s=toro_wither_shoot_knockback} @PlayersNearOrigin{r=6;conditions=[ - haspotioneffect{t=DAMAGE_RESISTANCE;l=100-256} false ]}
+        - particles{p=smoke;a=50;hs=4;vs=0.1} @origin
+        - particles{p=reddust;a=30;color=#282828;size=3;hs=4;vs=0.2} @origin{y=0.5}
+        #- explosion{yield=4} @origin
+
+#===wither pool===
+toro_wither_pool:
+    Conditions:
+        - offgcd
+        - incombat true
+    TargetConditions:
+        - distance{d=0to16} true
+    Skills:
+        - gcd{ticks=100} @self
+        - state{s=wither_pool;lerpin=5} @self
+        - effect:sound{s=entity.wither.ambient;v=3;p=1} @self
+        - delay 31
+        - effect:sound{s=entity.dolphin.splash;v=6;p=1} @self
+        - particles{p=block_crack;m=black_concrete;a=10;hs=0.5;vs=0.5;repeat=11;repeatInterval=2} @ModelPart{mid=toro_wither;part=left_claw}
+        - delay 24
+        - effect:sound{s=entity.dolphin.splash;v=6;p=1} @self
+        - particles{p=block_crack;m=black_concrete;a=10;hs=0.5;vs=0.5;repeat=16;repeatInterval=2} @ModelPart{mid=toro_wither;part=right_claw}
+        - delay 4
+        - projectile{bulletType=ITEM;material=black_concrete;oT=toro_wither_pool_proj_tick;oE=toro_wither_pool_proj_end;i=1;v=10;d=200;sB=true;sE=false;syo=8;sfo=9;vo=0.5;g=0.8;hO=10} @target
+        - delay 28
+        - projectile{bulletType=ITEM;material=black_concrete;oT=toro_wither_pool_proj_tick;oE=toro_wither_pool_proj_end;i=1;v=10;d=200;sB=true;sE=false;syo=8;sfo=6;vo=0.5;g=0.8;hO=-10} @target
+
+toro_wither_pool_proj_tick:
+    Skills:
+        - particles{p=block_crack;m=black_concrete;a=10} @origin
+
+toro_wither_pool_proj_end:
+    Skills:
+        - particles{p=reddust;a=30;color=#282828;size=3;hs=4;vs=0.2} @origin{y=0.5}
+        - summon{type=toro_wither_pool;os=true} @origin
+
+#===wither_claw
+toro_wither_claw:
+    Conditions:
+        - offgcd
+        - incombat true
+    TargetConditions:
+        - distance{d=0to8} true 
+    Skills:
+        - gcd{ticks=60} @self
+        - state{s=claw1;lerpin=5} @self
+        - effect:sound{s=entity.wither.ambient;v=3;p=1} @self
+        - delay 20
+        - lunge{v=0.5} @target
+        - delay 8
+        - skill{s=toro_wither_claw_left_vfx} @self
+        - effect:sound{s=item.armor.equip_leather;v=6;p=0} @self
+        - totem{ch=1;onStart=toro_wither_claw_damage;int=1;hR=3;md=1} @forward{f=3}
+        - delay 16
+        - skill{s=toro_wither_claw_cont} @target
+
+toro_wither_claw_damage:
+    Skills:
+        - particles{p=reddust;a=150;color=#282828;size=3;hs=5;vs=1} @origin
+        - damage{a=50} @PlayersNearOrigin{r=8;conditions=[ - haspotioneffect{t=DAMAGE_RESISTANCE;l=100-256} false ]}
+        - skill{s=toro_wither_claw_knockback} @PlayersNearOrigin{r=8;conditions=[ - haspotioneffect{t=DAMAGE_RESISTANCE;l=100-256} false ]}
+
+toro_wither_claw_left_vfx:
+    Skills:
+        - particles{p=reddust;a=10;color=#282828;size=3;hs=1;vs=1;forwardOffset=1;yOffset=10;sideOffset=10} @self
+        - particles{p=reddust;a=10;color=#282828;size=3;hs=1;vs=1;forwardOffset=3;yOffset=6;sideOffset=8} @self
+        - particles{p=reddust;a=10;color=#282828;size=3;hs=1;vs=1;forwardOffset=5;yOffset=5;sideOffset=6} @self
+        - particles{p=reddust;a=10;color=#282828;size=3;hs=1;vs=1;forwardOffset=6;yOffset=3;sideOffset=3} @self
+        - particles{p=reddust;a=10;color=#282828;size=3;hs=1;vs=1;forwardOffset=7;yOffset=2;sideOffset=0} @self
+        - particles{p=reddust;a=10;color=#282828;size=3;hs=1;vs=1;forwardOffset=6;yOffset=1;sideOffset=-3} @self
+
+# right claw attack (cont skill)
+toro_wither_claw_cont:
+    TargetConditions:
+        - distance{d=0to10} true 
+    Skills:
+        - gcd{ticks=50} @self
+        - state{s=claw2;lerpin=5} @self
+        - effect:sound{s=entity.wither.ambient;v=3;p=1} @self
+        - delay 15
+        - lunge{v=0.5} @target
+        - delay 5
+        - effect:sound{s=item.armor.equip_leather;v=6;p=0} @self
+        - skill{s=toro_wither_claw_right_vfx} @self
+        - totem{ch=1;onStart=toro_wither_claw_damage;int=1;hR=3;md=1} @forward{f=3}
+        - delay 16
+        - skill{s=toro_wither_smash_nogcd} @target
+
+toro_wither_claw_right_vfx:
+    Skills:
+        - particles{p=reddust;a=10;color=#282828;size=3;hs=1;vs=1;forwardOffset=1;yOffset=6;sideOffset=-10} @self
+        - particles{p=reddust;a=10;color=#282828;size=3;hs=1;vs=1;forwardOffset=3;yOffset=5;sideOffset=-8} @self
+        - particles{p=reddust;a=10;color=#282828;size=3;hs=1;vs=1;forwardOffset=5;yOffset=4;sideOffset=-6} @self
+        - particles{p=reddust;a=10;color=#282828;size=3;hs=1;vs=1;forwardOffset=6;yOffset=4;sideOffset=-3} @self
+        - particles{p=reddust;a=10;color=#282828;size=3;hs=1;vs=1;forwardOffset=7;yOffset=3;sideOffset=-0} @self
+        - particles{p=reddust;a=10;color=#282828;size=3;hs=1;vs=1;forwardOffset=6;yOffset=3;sideOffset=3} @self
+
+#===overhead swipe
+toro_wither_overhead_swipe:
+    Conditions:
+        - offgcd
+        - incombat true
+    TargetConditions:
+        - distance{d=5to18} true 
+        - yDiff{diff=<5} true
+    Skills:
+        - jump{v=-0.5;repeat=10;repeatInterval=1} @self
+        - gcd{ticks=40} @self
+        - state{s=overhead_swipe;lerpin=10} @self
+        - delay 10
+        - setAI{ai=false} @self
+        - effect:sound{s=entity.wither.ambient;v=3;p=2} @self
+        - delay 20
+        - setAI{ai=true} @self
+        - effect:sound{s=entity.wither.ambient;v=3;p=0.5} @self
+        - effect:sound{s=item.armor.equip_leather;v=6;p=0} @self
+        - lunge{v=0.4;repeat=17;repeatInterval=1} @target
+        - skill{s=toro_wither_overhead_swipe_totems;repeat=20;repeatInterval=1} @self
+        - delay 17
+        - setAI{ai=false} @self
+        - skill{s=toro_wither_smash_nogcd} @target
+
+
+toro_wither_overhead_swipe_totems:
+    Skills:
+        - totem{ch=1;onStart=toro_wither_overhead_swipe_damage;int=1;hR=3;md=1} @ModelPart{mid=toro_wither;part=left_claw}
+        - totem{ch=1;onStart=toro_wither_overhead_swipe_damage;int=1;hR=3;md=1} @ModelPart{mid=toro_wither;part=right_claw}
+
+toro_wither_overhead_swipe_damage:
+    Skills:
+        - particles{p=reddust;a=20;color=#282828;size=3;hs=1;vs=1} @origin
+        - damage{a=55} @PlayersNearOrigin{r=10;conditions=[ - haspotioneffect{t=DAMAGE_RESISTANCE;l=100-256} false 
+                                                          - crouching false]}
+        - skill{s=toro_wither_swipe_knockback} @PlayersNearOrigin{r=10;conditions=[ - haspotioneffect{t=DAMAGE_RESISTANCE;l=100-256} false 
+                                                                                  - crouching false]}
+
+#===smash
+toro_wither_smash:
+    Conditions:
+        - offgcd
+        - incombat true
+    TargetConditions:
+        - distance{d=0to7} true 
+        - yDiff{diff=<5} true
+    Skills:
+        - gcd{ticks=80} @self
+        - state{s=smash;lerpin=10} @self
+        - setAI{ai=false} @self
+        - delay 34
+        - setAI{ai=true} @self
+        - jump{v=-100} @self
+        - effect:sound{s=item.armor.equip_leather;v=6;p=0} @self
+        - delay 2
+        - particles{p=reddust;a=50;color=#282828;hs=0.5;vs=4} @origin
+        - delay 2
+        - totem{ch=1;onStart=toro_wither_smash_damage;int=1;hR=3;md=1} @selflocation
+        - setAI{ai=false} @self
+        - delay 42
+        - setAI{ai=true} @self
+
+toro_wither_smash_damage:
+    Skills:
+        - effect:sound{s=entity.dolphin.splash;v=6;p=0} @self
+        - projectile{bulletType=ITEM;material=black_concrete;oT=toro_wither_pool_proj_tick;oE=toro_wither_pool_proj_end;i=1;v=9;d=400;g=0.5;sB=true;sE=false;syo=4;vO=2} @RLNTE{a=3;r=15;s=5} 
+        - damage{a=50} @PlayersNearOrigin{r=8;conditions=[ - haspotioneffect{t=DAMAGE_RESISTANCE;l=100-256} false ]}
+        - skill{s=toro_wither_smash_knockback} @PlayersNearOrigin{r=8;conditions=[ - haspotioneffect{t=DAMAGE_RESISTANCE;l=100-256} false ]} 
+        - particlering{p=block_crack;m=black_concrete;a=20;points=16;r=6;hs=0.5;vs=0.5;repeat=1;repeatInterval=5} @origin
+        - particlering{p=reddust;a=20;color=#282828;points=16;r=7;hs=0.5;vs=0.5;repeat=1;repeatInterval=3} @origin
+        - effect:sound{s=entity.generic.explode;v=4;p=0} @origin
+
+toro_wither_smash_nogcd:
+    Conditions:
+        - incombat true
+    TargetConditions:
+        - distance{d=0to8} orElseCast toro_wither_setAItrue
+        - yDiff{diff=<5} orElseCast toro_wither_setAItrue
+    Skills:
+        - gcd{ticks=80} @self
+        - state{s=cont_smash;lerpin=10} @self
+        - setAI{ai=false} @self
+        - delay 34
+        - setAI{ai=true} @self
+        - jump{v=-100} @self
+        - effect:sound{s=item.armor.equip_leather;v=6;p=0} @self
+        - delay 2
+        - particles{p=reddust;a=50;color=#282828;hs=0.5;vs=4} @origin
+        - delay 2
+        - totem{ch=1;onStart=toro_wither_smash_damage;int=1;hR=3;md=1} @selflocation
+        - setAI{ai=false} @self
+        - delay 42
+        - setAI{ai=true} @self
+
+#===wither roundhouse
+toro_wither_roundhouse:
+    Conditions:
+        - offgcd
+        - incombat true
+    TargetConditions:
+        - distance{d=0to10} true 
+        - yDiff{diff=<5} true
+    Skills:
+        - jump{v=-0.5;repeat=10;repeatInterval=1} @self
+        - gcd{ticks=80} @self
+        - state{s=roundhouse;lerpin=10} @self
+        - delay 10
+        - setAI{ai=false} @self
+        - effect:sound{s=entity.wither.ambient;v=3;p=2} @self
+        - delay 24
+        - setAI{ai=true} @self
+        - effect:sound{s=entity.wither.ambient;v=3;p=0.5} @self
+        - skill{s=toro_wither_roundhouse_vfx} @self
+        - lunge{v=0.4;repeat=17;repeatInterval=1} @target
+        - effect:sound{s=item.armor.equip_leather;v=6;p=0} @self
+        - skill{s=toro_wither_roundhouse_damage;repeat=1;repeatInterval=10} @self
+        - delay 7
+        - effect:sound{s=item.armor.equip_leather;v=6;p=0} @self
+        - delay 10
+        - setAI{ai=false} @self
+        - delay 29
+        - setAI{ai=true} @self
+
+toro_wither_roundhouse_damage:
+    Skills:
+        - damage{a=58} @PlayersInRadius{r=14;conditions=[ - haspotioneffect{t=DAMAGE_RESISTANCE;l=100-256} false ]}
+        - skill{s=toro_wither_smash_knockback}  @PlayersInRadius{r=14;conditions=[ - haspotioneffect{t=DAMAGE_RESISTANCE;l=100-256} false ]} 
+        - particlering{p=block_crack;m=black_concrete;a=20;points=16;r=13;hs=1;vs=1} @self
+        - particlering{p=reddust;a=20;color=#282828;points=16;r=13;hs=1;vs=1} @self
+
+toro_wither_roundhouse_vfx:
+    Skills:
+        - particles{p=reddust;a=20;color=#282828;size=3;hs=1;vs=1;forwardOffset=1;yOffset=10;sideOffset=10} @self
+        - particles{p=reddust;a=20;color=#282828;size=3;hs=1;vs=1;forwardOffset=4;yOffset=6;sideOffset=8} @self
+        - particles{p=reddust;a=20;color=#282828;size=3;hs=1;vs=1;forwardOffset=6;yOffset=5;sideOffset=6} @self
+        - particles{p=reddust;a=20;color=#282828;size=3;hs=1;vs=1;forwardOffset=8;yOffset=3;sideOffset=3} @self
+        - particles{p=reddust;a=20;color=#282828;size=3;hs=1;vs=1;forwardOffset=9;yOffset=2;sideOffset=0} @self
+        - particles{p=reddust;a=20;color=#282828;size=3;hs=1;vs=1;forwardOffset=8;yOffset=1;sideOffset=-3} @self
+        - delay 5
+        - particles{p=reddust;a=20;color=#282828;size=3;hs=1;vs=1;forwardOffset=-2;yOffset=0;sideOffset=-10} @self
+        - particles{p=reddust;a=20;color=#282828;size=3;hs=1;vs=1;forwardOffset=-4;yOffset=0;sideOffset=-8} @self
+        - particles{p=reddust;a=20;color=#282828;size=3;hs=1;vs=1;forwardOffset=-6;yOffset=2;sideOffset=-6} @self
+        - particles{p=reddust;a=20;color=#282828;size=3;hs=1;vs=1;forwardOffset=-8;yOffset=2;sideOffset=-3} @self
+        - particles{p=reddust;a=20;color=#282828;size=3;hs=1;vs=1;forwardOffset=-9;yOffset=9;sideOffset=0} @self
+        - particles{p=reddust;a=20;color=#282828;size=3;hs=1;vs=1;forwardOffset=-8;yOffset=12;sideOffset=3} @self
+        - delay 8
+        - particles{p=reddust;a=20;color=#282828;size=3;hs=1;vs=1;forwardOffset=1;yOffset=13;sideOffset=10} @self
+        - particles{p=reddust;a=20;color=#282828;size=3;hs=1;vs=1;forwardOffset=4;yOffset=9;sideOffset=8} @self
+        - particles{p=reddust;a=20;color=#282828;size=3;hs=1;vs=1;forwardOffset=6;yOffset=6;sideOffset=6} @self
+        - particles{p=reddust;a=20;color=#282828;size=3;hs=1;vs=1;forwardOffset=8;yOffset=4;sideOffset=3} @self
+        - particles{p=reddust;a=20;color=#282828;size=3;hs=1;vs=1;forwardOffset=9;yOffset=2;sideOffset=0} @self
+        - particles{p=reddust;a=20;color=#282828;size=3;hs=1;vs=1;forwardOffset=8;yOffset=1;sideOffset=-3} @self
+
+#======++++++++++==========
+#       2nd Phase
+#==========================
+toro_wither_2ndphase_spawn:
+    Conditions:
+        - offgcd
+        - playersinradius{a=>0;r=10} true
+        - onground{} true
+    Skills:
+        - gcd{ticks=9999} @self
+        - state{s=intro} @self
+        - effect:sound{s=entity.wither.spawn;v=6;p=0} @self
+        - totem{ch=1;onStart=toro_wither_2ndphase_vfx;int=1;hR=3;md=1;repeat=3;repeatInterval=20} @RLNTE{a=5;r=25;s=15}
+        - delay 160
+        - particles{p=smoke;a=100;s=1;hs=0.5;vs=0.5} @origin
+        - particles{p=reddust;a=150;color=#282828;size=3;hs=2;vs=2} @origin{y=1}
+        - summon{type=toro_wither_terror} @self
+        - remove @self
+
+toro_wither_2ndphase_vfx:
+    Skills:
+        - missile{oT=toro_wither_2ndphase_vfx_tick;vO=2;v=4;md=150;i=1;in=120;fromorigin=true;sB=false;sE=true} @selflocation
+
+toro_wither_2ndphase_vfx_tick:
+    Skills:
+        - particles{p=reddust;a=1;color=#282828;size=2;hs=0.1;vs=0.1} @origin
+
+#=== terror spawn
+toro_wither_terror_spawn:
+    Skills:
+        - ChangePart{model=toro_wither_terror;part=head_on_hand;newmodel=toro_wither_still;newpart=nothing} @self
+        - ChangePart{model=toro_wither_terror;part=jaw2;newmodel=toro_wither_still;newpart=nothing} @self
+        - gcd{ticks=90} @self
+        - setAI{ai=false} @self
+        - delay 24
+        - effect:sound{s=entity.skeleton_horse.death;v=6;p=0} @self
+        - effect:sound{s=entity.zombie.break_wooden_door;v=4;p=0.6} @self
+        - particlering{p=block_crack;m=black_concrete;a=5;points=16;r=6;hs=0.5;vs=0.5} @ModelPart{mid=toro_wither_terror;part=right_forearm}
+        - delay 20
+        - effect:sound{s=entity.zombie.break_wooden_door;v=4;p=0.5} @self
+        - particlering{p=block_crack;m=black_concrete;a=5;points=16;r=6;hs=0.5;vs=0.5} @ModelPart{mid=toro_wither_terror;part=left_forearm}
+        - delay 30
+        - particlering{p=block_crack;m=black_concrete;a=5;points=16;r=8;hs=0.5;vs=0.5} @ModelPart{mid=toro_wither_terror;part=tail2}
+        - delay 16
+        - setAI{ai=true} @self
+
+# random skill initiators
+toro_wither_terror_attack:
+    Skills:
+        - CancelEvent
+        - skill{s=toro_wither_terror_randomskill} @target
+        
+toro_wither_terror_randomskill:
+    Conditions:
+        - hastag{t=headoff} castInstead toro_wither_terror_headoff_randomskill
+    Skills:
+        - randomskill{s=toro_wither_terror_left_smash,toro_wither_terror_right_smash,toro_wither_terror_right_smash2,toro_wither_terror_left_smash2,toro_wither_terror_shoot} @target
+
+toro_wither_terror_headoff_randomskill:
+    Skills:
+        - randomskill{s=toro_wither_terror_left_smash_headoff,toro_wither_terror_left_smash2_headoff,toro_wither_terror_left_swing_headoff} @target
+
+toro_wither_headoff_terror_ticking:
+    Conditions:
+        - hastag{t=headoff} true
+    Skills:
+        - particles{p=block_crack;m=black_concrete;a=10;hs=0.5;vs=0.5} @ModelPart{mid=toro_wither_terror;part=head}
+        - skill{s=toro_wither_gethit_pool} @self 0.1
+
+#death skill
+toro_wither_terror_death:
+    Skills:
+        - setAI{ai=false} @self
+        - state{s=death} @self
+        - effect:sound{s=entity.skeleton_horse.death;v=6;p=0.2} @self
+        - particles{p=explosion_large;a=1;hs=1;vs=1;repeat=18;repeatInterval=4} @ModelPart{mid=toro_wither_terror;part=body}
+        - particles{p=reddust;a=20;color=#282828;size=3;hs=3;vs=3;repeat=18;repeatInterval=5} @ModelPart{mid=toro_wither_terror;part=body}
+        - delay 80
+        - particles{p=explosion_huge;a=1;repeat=2;repeatInterval=10} @ModelPart{mid=toro_wither_terror;part=body}
+        - effect:sound{s=entity.generic.explode;v=4;p=0.5;repeat=2;repeatInterval=10} @ModelPart{mid=toro_wither_terror;part=body}
+        - delay 40
+        - particles{p=smoke;a=50;repeat=12;repeatInterval=5;hs=3;vs=2;s=0.2} @ModelPart{mid=toro_wither_terror;part=body}
+        - delay 60
+        - particles{p=end_rod;a=100;hs=1;vs=1;s=1} @ModelPart{mid=toro_wither_terror;part=body} 
+        - dropitem{i=NETHER_STAR} @origin{y=5}
+        
+#======= smash1
+toro_wither_terror_left_smash:
+    Conditions:
+        - offgcd
+        - incombat true
+    TargetConditions:
+        - distance{d=0to8} true
+    Skills:
+        - gcd{ticks=80} @self
+        - state{s=left_smash;lerpin=10} @self
+        - setAI{ai=false} @self
+        - delay 30
+        - effect:sound{s=item.armor.equip_leather;v=6;p=0} @self
+        - delay 10
+        - totem{ch=1;onStart=toro_wither_terror_smash_damage;int=1;hR=3;md=1;yOffset=2} @ModelPart{mid=toro_wither_terror;part=left_hand}
+        - delay 22
+        - skill{s=toro_wither_terror_right_swing} @self
+
+toro_wither_terror_right_smash:
+    Conditions:
+        - offgcd
+        - incombat true
+    TargetConditions:
+        - distance{d=0to8} true
+    Skills:
+        - gcd{ticks=50} @self
+        - state{s=right_smash;lerpin=10} @self
+        - setAI{ai=false} @self
+        - delay 30
+        - effect:sound{s=item.armor.equip_leather;v=6;p=0} @self
+        - delay 10
+        - totem{ch=1;onStart=toro_wither_terror_smash_damage;int=1;hR=3;md=1;yOffset=2} @ModelPart{mid=toro_wither_terror;part=right_hand}
+        - delay 22
+        - skill{s=toro_wither_terror_left_swing} @target
+
+toro_wither_terror_smash_damage:
+    Skills:
+        - damage{a=68} @PlayersNearOrigin{r=8;conditions=[ - haspotioneffect{t=DAMAGE_RESISTANCE;l=100-256} false ]}
+        - skill{s=toro_wither_terror_smash_knockback} @PlayersNearOrigin{r=8;conditions=[ - haspotioneffect{t=DAMAGE_RESISTANCE;l=100-256} false ]} 
+        - particlering{p=block_crack;m=black_concrete;a=20;points=16;r=4;hs=0.5;vs=0.5;repeat=1;repeatInterval=5} @origin
+        - particlering{p=reddust;a=20;color=#282828;points=16;r=5;hs=0.5;vs=0.5;repeat=1;repeatInterval=3} @origin
+        - effect:sound{s=entity.generic.explode;v=4;p=0} @self
+        - effect:sound{s=entity.dolphin.splash;v=4;p=0} @self
+
+#====== smash2
+toro_wither_terror_left_smash2:
+    Conditions:
+        - offgcd
+        - incombat true
+    TargetConditions:
+        - distance{d=6to12} true
+    Skills:
+        - gcd{ticks=80} @self
+        - state{s=left_smash2;lerpin=10} @self
+        - setAI{ai=false} @self
+        - delay 30
+        - setAI{ai=true} @self
+        - effect:sound{s=item.armor.equip_leather;v=6;p=0} @self
+        - potion{t=SPEED;l=15;d=6;p=false} @self
+        - delay 6
+        - setAI{ai=false} @self
+        - totem{ch=1;onStart=toro_wither_terror_smash_damage;int=1;hR=3;md=1} @ModelPart{mid=toro_wither_terror;part=left_hand}
+        - delay 22
+        - skill{s=toro_wither_terror_right_swing} @self
+
+toro_wither_terror_right_smash2:
+    Conditions:
+        - offgcd
+        - incombat true
+    TargetConditions:
+        - distance{d=5to12} true
+    Skills:
+        - gcd{ticks=80} @self
+        - state{s=right_smash2;lerpin=10} @self
+        - setAI{ai=false} @self
+        - delay 30
+        - effect:sound{s=item.armor.equip_leather;v=6;p=0} @self
+        - setAI{ai=true} @self
+        - potion{t=SPEED;l=15;d=6;p=false} @self
+        - delay 6
+        - setAI{ai=false} @self
+        - totem{ch=1;onStart=toro_wither_terror_smash_damage;int=1;hR=3;md=1} @ModelPart{mid=toro_wither_terror;part=right_hand}
+        - delay 22
+        - skill{s=toro_wither_terror_left_swing} @self
+
+#======= swings
+toro_wither_terror_left_swing:
+    Conditions:
+        - incombat true
+    TargetConditions:
+        - distance{d=0to8} orElseCast toro_wither_setAItrue
+    Skills:
+        - gcd{ticks=60} @self
+        - state{s=left_swing;lerpin=10} @self
+        - setAI{ai=false} @self
+        - delay 22
+        - setAI{ai=true} @self
+        - potion{t=SPEED;l=24;d=4;p=false} @self
+        - delay 4
+        - setAI{ai=false} @self
+        - totem{ch=1;onStart=toro_wither_terror_swing_damage;int=1;hR=3;md=1;repeat=3;repeatInterval=1} @ModelPart{mid=toro_wither_terror;part=left_hand}
+        - totem{ch=1;onStart=toro_wither_terror_tail_damage;int=1;hR=3;md=1;yoffset=-1} @ModelPart{mid=toro_wither_terror;part=tail2}
+        - delay 32 
+        - setAI{ai=true} @self
+
+toro_wither_terror_right_swing:
+    Conditions:
+        - incombat true
+    TargetConditions:
+        - distance{d=0to8} orElseCast toro_wither_setAItrue
+    Skills:
+        - gcd{ticks=60} @self
+        - state{s=right_swing;lerpin=10} @self
+        - setAI{ai=false} @self
+        - delay 22
+        - setAI{ai=true} @self
+        - potion{t=SPEED;l=24;d=4;p=false} @self
+        - delay 4
+        - setAI{ai=false} @self
+        - totem{ch=1;onStart=toro_wither_terror_swing_damage;int=1;hR=3;md=1;repeat=3;repeatInterval=1} @ModelPart{mid=toro_wither_terror;part=right_hand}
+        - totem{ch=1;onStart=toro_wither_terror_tail_damage;int=1;hR=3;md=1;yoffset=-1} @ModelPart{mid=toro_wither_terror;part=tail2}
+        - delay 32 
+        - setAI{ai=true} @self
+
+toro_wither_terror_swing_damage:
+    Skills:
+        - damage{a=60} @PlayersNearOrigin{r=8;conditions=[ - haspotioneffect{t=DAMAGE_RESISTANCE;l=100-256} false ]}
+        - skill{s=toro_wither_terror_swing_knockback} @PlayersNearOrigin{r=8;conditions=[ - haspotioneffect{t=DAMAGE_RESISTANCE;l=100-256} false ]} 
+        - particles{p=block_crack;m=black_concrete;a=100;hs=4;vs=0.5;repeat=1;repeatInterval=5} @origin
+        - particles{p=reddust;a=60;color=#282828;hs=4;vs=0.5;repeat=1;repeatInterval=3} @origin
+        - effect:sound{s=item.armor.equip_leather;v=6;p=0} @self 
+        
+toro_wither_terror_tail_damage:
+    Skills:
+        - damage{a=40} @PlayersNearOrigin{r=8;conditions=[ - haspotioneffect{t=DAMAGE_RESISTANCE;l=100-256} false ]}
+        - skill{s=toro_wither_terror_tail_knockback} @PlayersNearOrigin{r=8;conditions=[ - haspotioneffect{t=DAMAGE_RESISTANCE;l=100-256} false ]} 
+        - particles{p=block_crack;m=black_concrete;a=30;hs=3;vs=0.5} @origin
+
+#==shoot
+toro_wither_terror_shoot:
+    Conditions:
+        - offgcd
+        - incombat true
+    TargetConditions:
+        - distance{d=0to8} true
+    Skills:
+        - gcd{ticks=40} @self
+        - setAI{ai=false} @self
+        - state{s=shoot;lerpin=5} @self
+        - effect:sound{s=entity.wither.ambient;v=3;p=1} @self
+        - delay 15
+        - particles{p=smoke;a=20;hs=0.5;vs=0.5;repeat=10;repeatInterval=3} @ModelPart{mid=toro_wither;part=head}
+        - delay 4
+        - effect:sound{s=entity.wither.shoot;v=3;p=0.5} @self
+        - projectile{bulletType=MOB;mob=toro_wither_skull_shoot;oT=toro_wither_shoot_tick;oE=toro_wither_shoot_end;i=1;v=20;g=0;d=200;sB=true;hnp=true;syo=8} @forward{f=6}
+        - delay 19
+        - setAI{ai=true} @self
+
+#===head off===
+toro_wither_terror_headoff:
+    Conditions:
+        - offgcd
+        - health{h=<1000} true
+        - incombat true
+        - hastag{t=headoff} false
+        - onground{} true
+    Skills:
+        - gcd{ticks=180} @self
+        - addtag{t=headoff} @self
+        - potion{t=DAMAGE_RESISTANCE;d=180;l=99;p=false} @self
+        - state{s=head_off;lerpin=10} @self
+        - setAI{ai=false} @self
+        - effect:sound{s=entity.skeleton_horse.death;v=4;p=0} @self
+        - delay 104
+        - effect:sound{s=entity.skeleton_horse.death;v=4;p=0} @self
+        - effect:sound{s=entity.dolphin.splash;v=4;p=0} @self
+        - particles{p=block_crack;m=black_concrete;a=60;hs=1;vs=1;s=1;repeat=3;repeatInterval=3} @ModelPart{mid=toro_wither_terror;part=head}
+        - particles{p=smoke;a=60;hs=1;vs=1;s=1;repeat=3;repeatInterval=3} @ModelPart{mid=toro_wither_terror;part=head}
+        - ChangePart{model=toro_wither_terror;part=head_on_hand;newmodel=toro_wither_terror;newpart=head_on_hand} @self
+        - ChangePart{model=toro_wither_terror;part=jaw2;newmodel=toro_wither_terror;newpart=jaw2} @self 
+        - ChangePart{model=toro_wither_terror;part=head;newmodel=toro_wither_still;newpart=nothing} @self
+        - ChangePart{model=toro_wither_terror;part=jaw;newmodel=toro_wither_still;newpart=nothing} @self 
+        - totem{ch=1;onStart=toro_wither_terror_headoff_projs;int=1;hR=3;md=1;repeat=10;repeatInterval=4} @ModelPart{mid=toro_wither_terror;part=head}
+        - delay 76
+        - defaultstate{m=toro_wither_terror;t=idle;s=head_off_idle} @self
+        - defaultstate{m=toro_wither_terror;t=walk;s=head_off_walk} @self
+        - setspeed{speed=3;type=walking} @self
+        - setAI{ai=true} @self
+        
+toro_wither_terror_headoff_projs:
+    Skills:
+        - projectile{bulletType=ITEM;material=black_concrete;oT=toro_wither_pool_proj_tick;oE=toro_wither_pool_proj_end;i=1;v=9;d=400;g=0.5;sB=true;sE=false;syo=-1;vO=2;fromOrigin=true} @RLNTE{a=1;r=25;s=5}
+
+#head off smashes
+toro_wither_terror_left_smash_headoff:
+    Conditions:
+        - offgcd
+        - incombat true
+    TargetConditions:
+        - distance{d=0to7} true
+    Skills:
+        - gcd{ticks=80} @self
+        - state{s=head_off_left_smash;lerpin=10} @self
+        - setAI{ai=false} @self
+        - delay 30
+        - effect:sound{s=item.armor.equip_leather;v=6;p=0} @self
+        - delay 10
+        - totem{ch=1;onStart=toro_wither_terror_smash_damage;int=1;hR=3;md=1;yOffset=2} @ModelPart{mid=toro_wither_terror;part=left_hand}
+        - delay 40
+        - setAI{ai=true} @self
+        
+
+toro_wither_terror_left_smash2_headoff:
+    Conditions:
+        - offgcd
+        - incombat true
+    TargetConditions:
+        - distance{d=5to12} true
+    Skills:
+        - gcd{ticks=80} @self
+        - state{s=head_off_left_smash2;lerpin=10} @self
+        - setAI{ai=false} @self
+        - delay 30
+        - effect:sound{s=item.armor.equip_leather;v=6;p=0} @self
+        - setAI{ai=true} @self
+        - potion{t=SPEED;l=12;d=6;p=false} @self
+        - delay 6
+        - setAI{ai=false} @self
+        - totem{ch=1;onStart=toro_wither_terror_smash_damage;int=1;hR=3;md=1} @ModelPart{mid=toro_wither_terror;part=left_hand}
+        - delay 22
+        - skill{s=toro_wither_terror_smash2_shoot} @self
+
+#====head off swing
+toro_wither_terror_left_swing_headoff:
+    Conditions:
+        - offgcd
+        - incombat true
+    TargetConditions:
+        - distance{d=0to8} true
+    Skills:
+        - gcd{ticks=60} @self
+        - state{s=head_off_left_swing;lerpin=10} @self
+        - setAI{ai=false} @self
+        - delay 22
+        - setAI{ai=true} @self
+        - potion{t=SPEED;l=20;d=4;p=false} @self
+        - delay 4
+        - setAI{ai=false} @self
+        - totem{ch=1;onStart=toro_wither_terror_swing_damage;int=1;hR=3;md=1;repeat=3;repeatInterval=1} @ModelPart{mid=toro_wither_terror;part=left_hand}
+        - totem{ch=1;onStart=toro_wither_terror_tail_damage;int=1;hR=3;md=1;yoffset=-1} @ModelPart{mid=toro_wither_terror;part=tail2}
+        - delay 14 
+        - skill{s=toro_wither_terror_swing_shoot} @self
+
+#=== shoot connected after smash
+toro_wither_terror_smash2_shoot:
+    Skills:
+        - gcd{ticks=30} @self
+        - setAI{ai=false} @self
+        - state{s=head_off_smash2_shoot;lerpin=5} @self
+        - effect:sound{s=entity.wither.ambient;v=3;p=1} @self
+        - delay 15
+        - particles{p=smoke;a=20;hs=0.5;vs=0.5;repeat=10;repeatInterval=3} @ModelPart{mid=toro_wither_terror;part=head}
+        - delay 2
+        - effect:sound{s=entity.wither.shoot;v=3;p=0.5} @self
+        - totem{ch=1;onStart=toro_wither_terror_handhead_shoot;int=1;hR=3;md=1;yOffset=2} @ModelPart{mid=toro_wither_terror;part=head_on_hand}
+        - delay 23
+        - setAI{ai=true} @self  
+
+#=== shoot connected after swing
+toro_wither_terror_swing_shoot:
+    Skills:
+        - gcd{ticks=40} @self
+        - setAI{ai=false} @self
+        - state{s=head_off_swing_shoot;lerpin=5} @self
+        - effect:sound{s=entity.wither.ambient;v=3;p=1} @self
+        - delay 15
+        - particles{p=smoke;a=20;hs=0.5;vs=0.5;repeat=10;repeatInterval=3} @ModelPart{mid=toro_wither_terror;part=head}
+        - delay 2
+        - effect:sound{s=entity.wither.shoot;v=3;p=0.5} @self
+        - totem{ch=1;onStart=toro_wither_terror_handhead_shoot;int=1;hR=3;md=1} @ModelPart{mid=toro_wither_terror;part=head_on_hand}
+        - delay 23
+        - setAI{ai=true} @self  
+
+toro_wither_terror_handhead_shoot:
+    Skills:
+        - projectile{bulletType=MOB;mob=toro_wither_skull_shoot;oT=toro_wither_shoot_tick;oE=toro_wither_shoot_end;i=1;v=20;g=0;d=200;sB=true;hnp=true;fromOrigin=true} @target 

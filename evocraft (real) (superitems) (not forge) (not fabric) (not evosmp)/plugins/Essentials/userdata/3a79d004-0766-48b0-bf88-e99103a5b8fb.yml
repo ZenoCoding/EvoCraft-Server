@@ -1,0 +1,47 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 24.6.72.48
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1672541060373
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1672541208581
+  login: 1672536690557
+money: '6.8285732948037132'
+last-account-name: bobthajoe
+lastlocation:
+  world: ca82709d-4280-42e0-b470-b161f1fb21e6
+  world-name: world
+  x: -2363.0932099252473
+  y: 79.0
+  z: 2533.7889727007837
+  yaw: 81.6001205444336
+  pitch: 7.800031661987305
+logoutlocation:
+  world: a798a21c-cac4-4496-b685-2f70b3cc85e1
+  world-name: flat
+  x: -133.30841855536738
+  y: 69.0
+  z: -512.9111955510338
+  yaw: 74.69769287109375
+  pitch: 23.589385986328125
+homes:
+  home:
+    world: ca82709d-4280-42e0-b470-b161f1fb21e6
+    world-name: world
+    x: -2353.286864352276
+    y: 79.0
+    z: 2519.9165237300494
+    yaw: -101.03682708740234
+    pitch: 18.90003776550293

@@ -1,0 +1,19 @@
+FireElementalProjectile:
+    Skills:
+    - effect:sound{s=entity.iron_golem.repair;v=0.1;p=0}
+    - projectile{oT=FireElementalProjectile-Visual;oH=FireElementalProjectile-oH;v=12;i=1;hR=1;vR=1;in=0.75;md=100;mr=40;syo=0.5;tyo=0.5}
+    - delay 10
+    - effect:sound{s=block.fire.ambient;v=1;p=0}
+
+FireElementalProjectile-Visual:
+    Skills:
+    - effect:particles{p=flame;a=5;speed=0;hS=0.1;vS=0.1} @origin
+    - effect:particles{p=reddust;color=#ff0000;amount=5;vs=0.1;hs=0.1} @origin
+    - effect:particles{p=reddust;color=#ff6600;amount=2;vs=0.2;hs=0.2} @origin
+
+FireElementalProjectile-oH:
+    Skills:
+    - effect:particles{p=lava;a=50;hS=1;vS=1}
+    - effect:sound{s=entity.generic.explode;v=0.5;p=0}
+    - damage{a=4;ia=true}
+    - ignite{tick=100}

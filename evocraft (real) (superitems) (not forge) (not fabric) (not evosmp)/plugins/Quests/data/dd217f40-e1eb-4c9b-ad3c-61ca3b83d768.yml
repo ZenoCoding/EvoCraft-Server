@@ -1,0 +1,11 @@
+currentQuests:
+- custom5
+currentStages:
+- 1
+quest-points: 0
+questData:
+  custom5:
+    has-talked-to:
+    - false
+completed-Quests: none
+lastKnownName: llpa

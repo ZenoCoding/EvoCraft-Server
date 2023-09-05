@@ -1,0 +1,34 @@
+toro_wither_shoot_knockback:
+    Skills:
+        - delay 1
+        - throw{v=10;vy=5}
+
+toro_wither_claw_knockback:
+    Skills:
+        - delay 1
+        - throw{v=10;vy=1}
+
+toro_wither_swipe_knockback:
+    Skills:
+        - delay 1
+        - throw{v=10;vy=1}
+
+toro_wither_smash_knockback:
+    Skills:
+        - delay 1
+        - throw{v=15;vy=3}
+
+toro_wither_terror_smash_knockback:
+    Skills:
+        - delay 1
+        - throw{v=10;vy=3}
+
+toro_wither_terror_swing_knockback:
+    Skills:
+        - delay 1
+        - throw{v=15;vy=2}
+
+toro_wither_terror_tail_knockback:
+    Skills:
+        - delay 1
+        - throw{v=10;vy=1}

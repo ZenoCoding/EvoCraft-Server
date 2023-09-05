@@ -1,0 +1,16 @@
+currentQuests: none
+currentStages: none
+quest-points: 235
+completed-Quests:
+- custom1
+- custom2
+- custom5
+completedRedoableQuests:
+- custom2
+completedQuestTimes:
+- 1662775382738
+amountsCompletedQuests:
+- custom2
+amountsCompleted:
+- 9
+lastKnownName: skdu

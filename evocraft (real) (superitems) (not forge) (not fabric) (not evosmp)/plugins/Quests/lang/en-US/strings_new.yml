@@ -1,0 +1,5 @@
+# Below are any new strings for your current version of Quests! Transfer them to the strings.yml of the same folder to stay up-to-date and suppress console warnings.
+
+COMMAND_CHOICE: choice
+COMMAND_CHOICE_HELP: <command> [choice] - Make a menu selection
+notConversing: You are not in a conversation!

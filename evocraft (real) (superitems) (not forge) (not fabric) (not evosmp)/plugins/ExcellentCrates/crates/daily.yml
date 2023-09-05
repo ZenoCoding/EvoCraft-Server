@@ -1,0 +1,137 @@
+Name: §bDaily Crate
+Preview_Config: blue
+Permission_Required: false
+Attached_Citizens: ''
+Opening:
+  Cooldown: 0
+  Cost:
+    MONEY: 0.0
+    EXP: 0.0
+Key:
+  Ids:
+  - daily
+  - daily_crate
+Block:
+  Locations:
+  - -134.0,98.0,77.0,0.0,0.0,world
+  Pushback:
+    Enabled: true
+  Hologram:
+    Enabled: true
+    Offset:
+      Y: 1.5
+    Text:
+    - §a§lDaily Crate
+  Effect:
+    Model: SIMPLE
+    Particle:
+      Name: VILLAGER_HAPPY
+      Data: ''
+Animation_Config: none
+Rewards:
+  List:
+    magic_toy_stick:
+      Name: §5Magic Toy Stick
+      Chance: 2.0
+      Broadcast: false
+      Win_Limits:
+        Amount: -1
+        Cooldown: 0
+      Preview: k00010004qb4007mqqbeclhn4ob6egt76t39cdlgk003ehgme2g02987aojcd5hk4tbbddkn8lj1dhqmaso800a76tbgclp6it35dlpjksrle1in4qbkclmg03rdc5jmioqvehnninrjehkm6qo01400ohbecdk62rjkdlimst3j1800000110004qb4009mqqbeclhn4ob6egt76q31e9o6spbjec1000rcepm000801800ep39edo6oobp10008jj1dlig17jr49ingt3ic4h3kmrr49h6ur3448t6cobcediio8j9ehgmoqb348t6cobcediio8jldpi6asjcd5n6ap1279j62r3jckm24srke9kmmpbkd1p6utb7d0h3kpj1dhpmab12dth6ctbjcdgn8pb448t6cobcediio8j3dtm6ush278h68obiddfn0tbie1m6a8hc49q6au3k48t24jb1ctkm682kdtsi0krkd5hmm8jtbkm24t35f1q24eh249ugi0049hnn4p8800000280hpti4pboehp628hqbdti4ojfdhi24ej6c5m76p9c49kn8obcd5hi4ejke9qmab12eln68pbidhkmspb448t6cobcediio8jjehp6iqr5ehk74rrlctk24ej6c5m76p9c49nm4pjledhm2t35cgh3kpj1dhpmab12cdnmorri48t24sj5cgh2o8jkcls788hq496m2pr9cdgmobh2fleio8jkcls788hq48h7q00bfch78pboegh3k8h2fk0e4up2cls78sj148t5mup2c9nmop1279j62r3jckm24qbkc5m6iop279j62r3jckm24tbechin4r39dpim88hqcpgmosr55gh76t3id5lmat38e9nnapr848t6cobcediio8jfc9j7asr3c5q6ap1279j62r3jckm24orfdhnn48hq49jmur3448m24t35f1q24eh285h6ir39ehsjk82dc5jmiop09lkn6sr9dhii4v9cfch64rrccgh3kt3ieliio8j9ehgmoqb348t6cobcediio8j3dtm6ush278h7ipbcdhnne8hc49q6au3k48t2482i953kgl108d64igqb49ulqb12ehingt1278h24v80lhti4pboehp628hqbdti4ojfdhi24ej6c5m76p9c49kn8obcd5hi4ej6c5m76p9c49qmsp35e9m6irj5cgh3kpj1dhpmab12edq74qbbclq6gsjfeljmg8hqcpgmosr55gh6uoj6elpm6obkcli24ej6c5m76p9c49hmur3fe8h3k8j7e9gni8hc49q6au3k48t24kr8dtnn8sp0c4g6qob7d5hi0rb9edpmir3541q6gobk41ings3cdti6asp2fleio8jkcls788hq48h7q06kfch6au3ke9gi4eirfch64rrccgh3kpj1dhpmab12d5q62r39cch3kpj1dhpmab12eln68pbidhkmspb448t6cobcediio8jjehp6iqr5ehk74rrlctk24ej6c5m76p9c49nm4pjledhm2t35cgh3kpj1dhpmab12cdnmorri48t24pric5si4b12ehingt1278h6urh0d5mn0ob3egg62rj441i6aobcecg6qobjedkncp92fkm7m8j9ehgmoqb348t6cobcediio8j3dtm6ush278h74pb448m24t35f1q24eh241i62rb1ctiis8jtbkm24t35f1q24eh249ug02rr49q6au3k48t248jt046nm8j5f1q74o9279dnm8j2dtm688hqcpgmosr55gh6it31dhkm68hqcpgmosr55gh7arj4clp6oqbecli24ej6c5m76p9c49pn8sj9ddin8q3idtqmeq1279j62r3jckm24rr2cpqn6or1ehim88hqcpgmosr55gh66rrcdtp24eh2ctp62u925gh78pboegh3k8hi60ii0or8c5n66p90cpnn483kd1ii0qbkclmi0t3f40h7qb3r49kn8obcd5hi4ej6c5m76p9c49hmur3fe8h3k8j7dtm688hc49q6au3k48t24orfdlh7asrk40h7qb3r49kn8obcd5hi4ej6c5m76p9c49hmur3fe8h3k8j7e9gni8hc49q6au3k48t24obecgg68qbjedgn0pb1e8n24vat5gh78pboegh3k8h2fk00mup2ehingt1278h24v80jhti4pboehp628hqbdti4ojfdhi24ejke9qmab12d5q62r39cch3kpj1dhpmab12eln68pbidhkmspb448t6cobcediio8jjehp6iqr5ehk74rrlctk24ej6c5m76p9c49nm4pjledhm2t35cgh3kpj1dhpmab12cdnmorri48t24p31e9llus3le9o6op925gh78pboegh3k8i5a14k682jal84aki9ah2kq8jtbkm24t35f1q24eh249ug00o01546ip358pm62prj000000800400agrfeln78080
+      Commands: []
+      Items:
+      - k00010004qb4007mqqbeclhn4ob6egt76t39cdlgk003ehgme2g02987aojcd5hk4tbbddkn8lj1dhqmaso800a76tbgclp6it35dlpjksrle1in4qbkclmg03rdc5jmioqvehnninrjehkm6qo01400ohbecdk62rjkdlimst3j1800000110004qb4009mqqbeclhn4ob6egt76q31e9o6spbjec1000rcepm000801800ep39edo6oobp10008jj1dlig17jr49ingt3ic4h3kmrr49h6ur3448t6cobcediio8j9ehgmoqb348t6cobcediio8jldpi6asjcd5n6ap1279j62r3jckm24srke9kmmpbkd1p6utb7d0h3kpj1dhpmab12dth6ctbjcdgn8pb448t6cobcediio8j3dtm6ush278h68obiddfn0tbie1m6a8hc49q6au3k48t24jb1ctkm682kdtsi0krkd5hmm8jtbkm24t35f1q24eh249ugi0049hnn4p8800000280hpti4pboehp628hqbdti4ojfdhi24ej6c5m76p9c49kn8obcd5hi4ejke9qmab12eln68pbidhkmspb448t6cobcediio8jjehp6iqr5ehk74rrlctk24ej6c5m76p9c49nm4pjledhm2t35cgh3kpj1dhpmab12cdnmorri48t24sj5cgh2o8jkcls788hq496m2pr9cdgmobh2fleio8jkcls788hq48h7q00bfch78pboegh3k8h2fk0e4up2cls78sj148t5mup2c9nmop1279j62r3jckm24qbkc5m6iop279j62r3jckm24tbechin4r39dpim88hqcpgmosr55gh76t3id5lmat38e9nnapr848t6cobcediio8jfc9j7asr3c5q6ap1279j62r3jckm24orfdhnn48hq49jmur3448m24t35f1q24eh285h6ir39ehsjk82dc5jmiop09lkn6sr9dhii4v9cfch64rrccgh3kt3ieliio8j9ehgmoqb348t6cobcediio8j3dtm6ush278h7ipbcdhnne8hc49q6au3k48t2482i953kgl108d64igqb49ulqb12ehingt1278h24v80lhti4pboehp628hqbdti4ojfdhi24ej6c5m76p9c49kn8obcd5hi4ej6c5m76p9c49qmsp35e9m6irj5cgh3kpj1dhpmab12edq74qbbclq6gsjfeljmg8hqcpgmosr55gh6uoj6elpm6obkcli24ej6c5m76p9c49hmur3fe8h3k8j7e9gni8hc49q6au3k48t24kr8dtnn8sp0c4g6qob7d5hi0rb9edpmir3541q6gobk41ings3cdti6asp2fleio8jkcls788hq48h7q06kfch6au3ke9gi4eirfch64rrccgh3kpj1dhpmab12d5q62r39cch3kpj1dhpmab12eln68pbidhkmspb448t6cobcediio8jjehp6iqr5ehk74rrlctk24ej6c5m76p9c49nm4pjledhm2t35cgh3kpj1dhpmab12cdnmorri48t24pric5si4b12ehingt1278h6urh0d5mn0ob3egg62rj441i6aobcecg6qobjedkncp92fkm7m8j9ehgmoqb348t6cobcediio8j3dtm6ush278h74pb448m24t35f1q24eh241i62rb1ctiis8jtbkm24t35f1q24eh249ug02rr49q6au3k48t248jt046nm8j5f1q74o9279dnm8j2dtm688hqcpgmosr55gh6it31dhkm68hqcpgmosr55gh7arj4clp6oqbecli24ej6c5m76p9c49pn8sj9ddin8q3idtqmeq1279j62r3jckm24rr2cpqn6or1ehim88hqcpgmosr55gh66rrcdtp24eh2ctp62u925gh78pboegh3k8hi60ii0or8c5n66p90cpnn483kd1ii0qbkclmi0t3f40h7qb3r49kn8obcd5hi4ej6c5m76p9c49hmur3fe8h3k8j7dtm688hc49q6au3k48t24orfdlh7asrk40h7qb3r49kn8obcd5hi4ej6c5m76p9c49hmur3fe8h3k8j7e9gni8hc49q6au3k48t24obecgg68qbjedgn0pb1e8n24vat5gh78pboegh3k8h2fk00mup2ehingt1278h24v80jhti4pboehp628hqbdti4ojfdhi24ejke9qmab12d5q62r39cch3kpj1dhpmab12eln68pbidhkmspb448t6cobcediio8jjehp6iqr5ehk74rrlctk24ej6c5m76p9c49nm4pjledhm2t35cgh3kpj1dhpmab12cdnmorri48t24p31e9llus3le9o6op925gh78pboegh3k8i5a14k682jal84aki9ah2kq8jtbkm24t35f1q24eh249ug00o01546ip358pm62prj000000800400agrfeln78080
+    enchanted_golden_apple:
+      Name: Enchanted Golden Apple
+      Chance: 2.0
+      Broadcast: false
+      Win_Limits:
+        Amount: -1
+        Cooldown: 0
+      Preview: 2g0004000j9cg020rb9dpim6sj1cpq3kpbecdk62rjkcli5uprfdhi6arivc5o70r350400agrfeln78080
+      Commands: []
+      Items:
+      - 2g0004000j9cg020rb9dpim6sj1cpq3kpbecdk62rjkcli5uprfdhi6arivc5o70r350400agrfeln78080
+    '5000':
+      Name: 5000c
+      Chance: 25.0
+      Broadcast: false
+      Win_Limits:
+        Amount: -1
+        Cooldown: 0
+      Preview: a0000g002d5i004bdd5n6aoric5j78ej5dlin4obccg5000rkc5jgk007chkn6s3cc5sgg0049pgmqp80fpti4pboehp628hqbdti4ojfdhi24ej6c5m76p9c49kn8obcd5hi4ej6c5m76p9c49qmsp35e9m6irj5cgh3kpj1dhpmab12edq74qbbclq6gsjfeljmg8hqcpgmosr55gh6uoj6elpm6obkcli24ej6c5m76p9c49q6au3k48t24d9g60o668jtbkm24t35f1q24eh249ug00o01546ip358pm62prj000008o90064arj3d1gmst3dcln78soa000000880016ip002dmmirj5cdp62pjk79pmgobie1n6asrj08006r3mdg00a0000400agrfeln78080
+      Commands:
+      - '[CONSOLE] eco give %player_name% 5000'
+      Items: []
+    ender_pearls:
+      Name: Vote Crate Key
+      Chance: 20.0
+      Broadcast: false
+      Win_Limits:
+        Amount: -1
+        Cooldown: 0
+      Preview: 5000080016ip002tmmirj5cdp62pjk79q74qbgetkn4pavd1nmuqoa001n8ob71800ep39edo6oobp10008jj1dlig183r49ingt3ic4h3kmrr49h6ur3448t6cobcediio8j9ehgmoqb348t6cobcediio8jldpi6asjcd5n6ap1279j62r3jckm24srke9kmmpbkd1p6utb7d0h3kpj1dhpmab12dth6ctbjcdgn8pb448t6cobcediio8j3dtm6ush278h6errccgh2o8jkcls788hq49b6ut35bthn4obkclfmmpbp411n4obkckg4mpbp49ulqb12ehingt1278h24v8018014k3lc9m6ioq2ellmmqbkapgmotb5ec400735f1hmar3ccln78oric5q6aspqcdp62t35btlmau9ed5i003jmdtq6anr3e9gn8pavddini0000400agrfeln78080
+      Commands: []
+      Items:
+      - 5000080016ip002tmmirj5cdp62pjk79q74qbgetkn4pavd1nmuqoa001n8ob71800ep39edo6oobp10008jj1dlig15jr49ingt3ic4h3kmrr49h6ur3448t6cobcediio8j9ehgmoqb348t6cobcediio8jldpi6asjcd5n6ap1279j62r3jckm24srke9kmmpbkd1p6utb7d0h3kpj1dhpmab12dth6ctbjcdgn8pb448t6cobcediio8j3dtm6ush278h6errccgh2o8jkcls788hq49b6ut35411n4obkckg4mpbp49ulqb12ehingt1278h24v8018014k3lc9m6ioq2ellmmqbkapgmotb5ec400735f1hmar3ccln78oric5q6aspqcdp62t35btlmau9ed5i0013mdtq6a0000400agrfeln78080
+    name_tag:
+      Name: Daily Crate Key
+      Chance: 30.0
+      Broadcast: false
+      Win_Limits:
+        Amount: -1
+        Cooldown: 0
+      Preview: a0000g002d5i005rdd5n6aoric5j78ejke9kn0tr9e9iluq3fdtlgk003ehgme2g00ti6isrgdhgni2000h762rb502bnm8j5f1q74o9279dnm8j2dtm688hqcpgmosr55gh6it31dhkm68hqcpgmosr55gh7arj4clp6oqbecli24ej6c5m76p9c49pn8sj9ddin8q3idtqmeq1279j62r3jckm24rr2cpqn6or1ehim88hqcpgmosr55gh66rrcdtp24eh2ctnmop125gh78pboegh3k8i4c5kmou908dp62t35415mau92fleio8jkcls788hq48h7q00a00950tb2dhkm6gjlddlmit2mc5m7apbj1001opbocdimor35dpq66sj1ehin6ej3e9gn8pavddinibj9cg00ap31d5m7i0000400agrfeln78080
+      Commands: []
+      Items:
+      - a0000g002d5i005rdd5n6aoric5j78ejke9kn0tr9e9iluq3fdtlgk003ehgme2g00ti6isrgdhgni2000h762rb502bnm8j5f1q74o9279dnm8j2dtm688hqcpgmosr55gh6it31dhkm68hqcpgmosr55gh7arj4clp6oqbecli24ej6c5m76p9c49pn8sj9ddin8q3idtqmeq1279j62r3jckm24rr2cpqn6or1ehim88hqcpgmosr55gh66rrcdtp24eh2ctnmop125gh78pboegh3k8i4c5kmou908dp62t35415mau92fleio8jkcls788hq48h7q00a00950tb2dhkm6gjlddlmit2mc5m7apbj1001opbocdimor35dpq66sj1ehin6ej3e9gn8pavddinibj9cg00ap31d5m7i0000400agrfeln78080
+    diamond:
+      Name: Diamonds
+      Chance: 50.0
+      Broadcast: false
+      Win_Limits:
+        Amount: -1
+        Cooldown: 0
+      Preview: 2g0004000j9cg012rb9dpim6sj1cpq3kp39c5mmurj40400agrfeln78180
+      Commands: []
+      Items:
+      - 2g0004000j9cg012rb9dpim6sj1cpq3kp39c5mmurj40400agrfeln78180
+    iron:
+      Name: Iron
+      Chance: 60.0
+      Broadcast: false
+      Win_Limits:
+        Amount: -1
+        Cooldown: 0
+      Preview: 1800020009km800kdlkmspb3e9gmct1qd5p6urivd5n6errk0400agrfeln78800
+      Commands: []
+      Items:
+      - 1800020009km800kdlkmspb3e9gmct1qd5p6urivd5n6errk0400agrfeln78800
+    steak:
+      Name: Steak
+      Chance: 80.0
+      Broadcast: false
+      Win_Limits:
+        Amount: -1
+        Cooldown: 0
+      Preview: a0000g002d5i005bdd5n6aoric5j78ej3dtnmmpb4bth6apb60400agrfeln78400
+      Commands: []
+      Items:
+      - a0000g002d5i005bdd5n6aoric5j78ej3dtnmmpb4bth6apb60400agrfeln78400
+    golden_apple:
+      Name: Golden Apple
+      Chance: 90.0
+      Broadcast: false
+      Win_Limits:
+        Amount: -1
+        Cooldown: 0
+      Preview: 2g0004000j9cg01crb9dpim6sj1cpq3kprfdhi6arivc5o70r350400agrfeln78080
+      Commands: []
+      Items:
+      - 2g0004000j9cg01crb9dpim6sj1cpq3kprfdhi6arivc5o70r350400agrfeln78080
+Item:
+  Material: ENDER_CHEST
+  Amount: 1
+  Durability: 0
+  Item_Flags: []
+  Unbreakable: false

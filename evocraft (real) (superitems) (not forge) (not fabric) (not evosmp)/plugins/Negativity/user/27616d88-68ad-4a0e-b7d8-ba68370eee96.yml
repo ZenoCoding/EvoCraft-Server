@@ -1,0 +1,23 @@
+playername: wafflefish24
+lang: en_US
+minerate-full-mined: 4448
+minerate:
+  diamond: 17
+  gold: 0
+  iron: 123
+  coal: 69
+  ancient debris: 0
+better-click: 31
+cheats:
+  timer: 6
+  inventorymove: 1
+  fly: 1
+  fastladder: 1
+  autoclick: 8
+  airplace: 2
+  forcefield: 1
+  fastplace: 1
+  step: 0
+  spider: 2
+  speed: 2
+creation-time: 1657908743944

@@ -1,0 +1,9 @@
+Name: §6Daily Crate Key
+Virtual: false
+Item:
+  Material: TRIPWIRE_HOOK
+  Amount: 1
+  Durability: 0
+  Name: '&6Daily Crate Key'
+  Item_Flags: []
+  Unbreakable: false

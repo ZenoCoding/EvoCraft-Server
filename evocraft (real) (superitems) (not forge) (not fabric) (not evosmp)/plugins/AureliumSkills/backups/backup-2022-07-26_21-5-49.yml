@@ -1,0 +1,830 @@
+backup_version: 1
+player_data:
+  f00c2649-7ca2-4954-902b-3f5108f208b7:
+    farming:
+      level: 8
+      xp: 3405.0
+    foraging:
+      level: 5
+      xp: 1024.0
+    mining:
+      level: 4
+      xp: 94.0
+    fishing:
+      level: 1
+      xp: 0.0
+    excavation:
+      level: 4
+      xp: 67.0
+    archery:
+      level: 1
+      xp: 0.0
+    defense:
+      level: 4
+      xp: 442.0
+    fighting:
+      level: 3
+      xp: 346.0
+    endurance:
+      level: 1
+      xp: 0.0
+    agility:
+      level: 7
+      xp: 2598.0
+    alchemy:
+      level: 1
+      xp: 0.0
+    enchanting:
+      level: 4
+      xp: 47.0
+    sorcery:
+      level: 1
+      xp: 0.0
+    healing:
+      level: 1
+      xp: 0.0
+    forging:
+      level: 1
+      xp: 0.0
+  183757a4-2224-46e2-b634-2b436d00205f:
+    farming:
+      level: 16
+      xp: 21404.0
+    foraging:
+      level: 6
+      xp: 1675.0
+    mining:
+      level: 11
+      xp: 6210.0
+    fishing:
+      level: 7
+      xp: 466.0
+    excavation:
+      level: 6
+      xp: 1226.0
+    archery:
+      level: 3
+      xp: 155.0
+    defense:
+      level: 11
+      xp: 3652.0
+    fighting:
+      level: 10
+      xp: 7436.0
+    endurance:
+      level: 1
+      xp: 0.0
+    agility:
+      level: 11
+      xp: 8324.0
+    alchemy:
+      level: 1
+      xp: 0.0
+    enchanting:
+      level: 10
+      xp: 6734.0
+    sorcery:
+      level: 5
+      xp: 772.0
+    healing:
+      level: 1
+      xp: 0.0
+    forging:
+      level: 1
+      xp: 0.0
+  7844aadf-91e3-4cef-9eb6-42749837bd66:
+    farming:
+      level: 20
+      xp: 34270.0
+    foraging:
+      level: 3
+      xp: 46.0
+    mining:
+      level: 4
+      xp: 38.0
+    fishing:
+      level: 1
+      xp: 0.0
+    excavation:
+      level: 3
+      xp: 296.0
+    archery:
+      level: 1
+      xp: 7.0
+    defense:
+      level: 7
+      xp: 171.0
+    fighting:
+      level: 14
+      xp: 9398.0
+    endurance:
+      level: 1
+      xp: 0.0
+    agility:
+      level: 7
+      xp: 2410.0
+    alchemy:
+      level: 1
+      xp: 0.0
+    enchanting:
+      level: 1
+      xp: 30.0
+    sorcery:
+      level: 1
+      xp: 70.0
+    healing:
+      level: 1
+      xp: 0.0
+    forging:
+      level: 1
+      xp: 0.0
+  ba8533ac-4430-452a-a79f-b3e50aae95bb:
+    farming:
+      level: 1
+      xp: 0.0
+    foraging:
+      level: 3
+      xp: 143.0
+    mining:
+      level: 6
+      xp: 183.0
+    fishing:
+      level: 1
+      xp: 0.0
+    excavation:
+      level: 1
+      xp: 57.0
+    archery:
+      level: 1
+      xp: 0.0
+    defense:
+      level: 4
+      xp: 92.0
+    fighting:
+      level: 4
+      xp: 145.0
+    endurance:
+      level: 1
+      xp: 0.0
+    agility:
+      level: 6
+      xp: 791.0
+    alchemy:
+      level: 1
+      xp: 0.0
+    enchanting:
+      level: 1
+      xp: 0.0
+    sorcery:
+      level: 1
+      xp: 5.0
+    healing:
+      level: 1
+      xp: 0.0
+    forging:
+      level: 1
+      xp: 0.0
+  53c34935-f2af-4d9f-a0b3-f147d6e4cc11:
+    farming:
+      level: 1
+      xp: 0.0
+    foraging:
+      level: 1
+      xp: 0.0
+    mining:
+      level: 1
+      xp: 0.0
+    fishing:
+      level: 1
+      xp: 0.0
+    excavation:
+      level: 4
+      xp: 217.0
+    archery:
+      level: 1
+      xp: 0.0
+    defense:
+      level: 1
+      xp: 49.0
+    fighting:
+      level: 1
+      xp: 7.0
+    endurance:
+      level: 1
+      xp: 0.0
+    agility:
+      level: 2
+      xp: 140.0
+    alchemy:
+      level: 1
+      xp: 0.0
+    enchanting:
+      level: 1
+      xp: 0.0
+    sorcery:
+      level: 1
+      xp: 0.0
+    healing:
+      level: 1
+      xp: 0.0
+    forging:
+      level: 1
+      xp: 0.0
+  27616d88-68ad-4a0e-b7d8-ba68370eee96:
+    farming:
+      level: 1
+      xp: 0.0
+    foraging:
+      level: 1
+      xp: 48.0
+    mining:
+      level: 1
+      xp: 56.0
+    fishing:
+      level: 1
+      xp: 0.0
+    excavation:
+      level: 1
+      xp: 25.0
+    archery:
+      level: 1
+      xp: 0.0
+    defense:
+      level: 1
+      xp: 0.0
+    fighting:
+      level: 1
+      xp: 0.0
+    endurance:
+      level: 1
+      xp: 0.0
+    agility:
+      level: 1
+      xp: 98.0
+    alchemy:
+      level: 1
+      xp: 0.0
+    enchanting:
+      level: 1
+      xp: 0.0
+    sorcery:
+      level: 1
+      xp: 0.0
+    healing:
+      level: 1
+      xp: 0.0
+    forging:
+      level: 1
+      xp: 0.0
+  e0766b14-6369-455f-95c9-3c0d9cfb6eeb:
+    farming:
+      level: 2
+      xp: 30.0
+    foraging:
+      level: 2
+      xp: 22.0
+    mining:
+      level: 1
+      xp: 3.0
+    fishing:
+      level: 1
+      xp: 0.0
+    excavation:
+      level: 1
+      xp: 5.0
+    archery:
+      level: 1
+      xp: 0.0
+    defense:
+      level: 1
+      xp: 73.0
+    fighting:
+      level: 1
+      xp: 20.0
+    endurance:
+      level: 1
+      xp: 0.0
+    agility:
+      level: 2
+      xp: 120.0
+    alchemy:
+      level: 1
+      xp: 0.0
+    enchanting:
+      level: 1
+      xp: 0.0
+    sorcery:
+      level: 1
+      xp: 0.0
+    healing:
+      level: 1
+      xp: 0.0
+    forging:
+      level: 1
+      xp: 0.0
+  3c226150-30e6-476b-8fa6-532067083448:
+    farming:
+      level: 11
+      xp: 3211.0
+    foraging:
+      level: 7
+      xp: 1507.0
+    mining:
+      level: 19
+      xp: 3102.0
+    fishing:
+      level: 1
+      xp: 0.0
+    excavation:
+      level: 9
+      xp: 3844.0
+    archery:
+      level: 2
+      xp: 36.0
+    defense:
+      level: 10
+      xp: 6743.0
+    fighting:
+      level: 11
+      xp: 664.0
+    endurance:
+      level: 1
+      xp: 0.0
+    agility:
+      level: 12
+      xp: 2044.0
+    alchemy:
+      level: 13
+      xp: 3537.0
+    enchanting:
+      level: 10
+      xp: 1512.0
+    sorcery:
+      level: 3
+      xp: 351.0
+    healing:
+      level: 1
+      xp: 0.0
+    forging:
+      level: 1
+      xp: 0.0
+  1a6045b4-76a9-4c37-9d5b-54185464dd3a:
+    farming:
+      level: 1
+      xp: 0.0
+    foraging:
+      level: 4
+      xp: 72.0
+    mining:
+      level: 5
+      xp: 649.0
+    fishing:
+      level: 1
+      xp: 0.0
+    excavation:
+      level: 2
+      xp: 196.0
+    archery:
+      level: 1
+      xp: 24.0
+    defense:
+      level: 3
+      xp: 377.0
+    fighting:
+      level: 2
+      xp: 20.0
+    endurance:
+      level: 1
+      xp: 0.0
+    agility:
+      level: 6
+      xp: 2228.0
+    alchemy:
+      level: 1
+      xp: 0.0
+    enchanting:
+      level: 1
+      xp: 0.0
+    sorcery:
+      level: 1
+      xp: 0.0
+    healing:
+      level: 1
+      xp: 0.0
+    forging:
+      level: 1
+      xp: 0.0
+  72b3a3d1-51f2-42e5-ab40-50e021a54ab4:
+    farming:
+      level: 1
+      xp: 0.0
+    foraging:
+      level: 1
+      xp: 32.0
+    mining:
+      level: 4
+      xp: 985.0
+    fishing:
+      level: 1
+      xp: 0.0
+    excavation:
+      level: 2
+      xp: 66.0
+    archery:
+      level: 1
+      xp: 48.0
+    defense:
+      level: 5
+      xp: 369.0
+    fighting:
+      level: 4
+      xp: 70.0
+    endurance:
+      level: 1
+      xp: 0.0
+    agility:
+      level: 7
+      xp: 95.0
+    alchemy:
+      level: 3
+      xp: 40.0
+    enchanting:
+      level: 1
+      xp: 0.0
+    sorcery:
+      level: 4
+      xp: 461.0
+    healing:
+      level: 1
+      xp: 0.0
+    forging:
+      level: 1
+      xp: 0.0
+  c7313780-0347-4c05-936c-4573da82b472:
+    farming:
+      level: 11
+      xp: 9706.0
+    foraging:
+      level: 9
+      xp: 1120.0
+    mining:
+      level: 10
+      xp: 458.0
+    fishing:
+      level: 4
+      xp: 420.0
+    excavation:
+      level: 6
+      xp: 1040.0
+    archery:
+      level: 1
+      xp: 97.0
+    defense:
+      level: 9
+      xp: 3870.0
+    fighting:
+      level: 13
+      xp: 13566.0
+    endurance:
+      level: 1
+      xp: 0.0
+    agility:
+      level: 10
+      xp: 3353.0
+    alchemy:
+      level: 4
+      xp: 365.0
+    enchanting:
+      level: 7
+      xp: 428.0
+    sorcery:
+      level: 3
+      xp: 255.0
+    healing:
+      level: 1
+      xp: 0.0
+    forging:
+      level: 1
+      xp: 0.0
+  d4728e39-089e-408a-91c5-66d003afcb99:
+    farming:
+      level: 1
+      xp: 0.0
+    foraging:
+      level: 4
+      xp: 102.0
+    mining:
+      level: 5
+      xp: 253.0
+    fishing:
+      level: 1
+      xp: 0.0
+    excavation:
+      level: 3
+      xp: 351.0
+    archery:
+      level: 1
+      xp: 24.0
+    defense:
+      level: 4
+      xp: 602.0
+    fighting:
+      level: 3
+      xp: 379.0
+    endurance:
+      level: 1
+      xp: 0.0
+    agility:
+      level: 6
+      xp: 822.0
+    alchemy:
+      level: 1
+      xp: 0.0
+    enchanting:
+      level: 1
+      xp: 0.0
+    sorcery:
+      level: 1
+      xp: 0.0
+    healing:
+      level: 1
+      xp: 0.0
+    forging:
+      level: 1
+      xp: 0.0
+  ebb9de0b-1503-4367-bec5-96c86aa55342:
+    farming:
+      level: 1
+      xp: 0.0
+    foraging:
+      level: 1
+      xp: 0.0
+    mining:
+      level: 1
+      xp: 0.0
+    fishing:
+      level: 1
+      xp: 0.0
+    excavation:
+      level: 1
+      xp: 0.0
+    archery:
+      level: 1
+      xp: 0.0
+    defense:
+      level: 1
+      xp: 0.0
+    fighting:
+      level: 1
+      xp: 0.0
+    endurance:
+      level: 1
+      xp: 0.0
+    agility:
+      level: 1
+      xp: 36.0
+    alchemy:
+      level: 1
+      xp: 0.0
+    enchanting:
+      level: 1
+      xp: 0.0
+    sorcery:
+      level: 1
+      xp: 0.0
+    healing:
+      level: 1
+      xp: 0.0
+    forging:
+      level: 1
+      xp: 0.0
+  8459eeb9-71fa-406f-88e8-3e4a887ff900:
+    farming:
+      level: 1
+      xp: 64.0
+    foraging:
+      level: 3
+      xp: 98.0
+    mining:
+      level: 3
+      xp: 47.0
+    fishing:
+      level: 1
+      xp: 0.0
+    excavation:
+      level: 2
+      xp: 74.0
+    archery:
+      level: 1
+      xp: 0.0
+    defense:
+      level: 2
+      xp: 91.0
+    fighting:
+      level: 1
+      xp: 94.0
+    endurance:
+      level: 1
+      xp: 0.0
+    agility:
+      level: 4
+      xp: 516.0
+    alchemy:
+      level: 1
+      xp: 0.0
+    enchanting:
+      level: 1
+      xp: 0.0
+    sorcery:
+      level: 1
+      xp: 0.0
+    healing:
+      level: 1
+      xp: 0.0
+    forging:
+      level: 1
+      xp: 0.0
+  5b7a1960-578e-40f9-8690-505da4df0c56:
+    farming:
+      level: 10
+      xp: 0.0
+    foraging:
+      level: 10
+      xp: 0.0
+    mining:
+      level: 10
+      xp: 14.0
+    fishing:
+      level: 10
+      xp: 0.0
+    excavation:
+      level: 10
+      xp: 56.0
+    archery:
+      level: 10
+      xp: 16.0
+    defense:
+      level: 10
+      xp: 4036.0
+    fighting:
+      level: 18
+      xp: 20165.0
+    endurance:
+      level: 1
+      xp: 32.0
+    agility:
+      level: 10
+      xp: 7108.0
+    alchemy:
+      level: 10
+      xp: 0.0
+    enchanting:
+      level: 10
+      xp: 0.0
+    sorcery:
+      level: 10
+      xp: 249.0
+    healing:
+      level: 1
+      xp: 0.0
+    forging:
+      level: 1
+      xp: 0.0
+  f405caef-5b37-481c-9033-650cde1bb7a5:
+    farming:
+      level: 15
+      xp: 697.0
+    foraging:
+      level: 11
+      xp: 6246.0
+    mining:
+      level: 13
+      xp: 3830.0
+    fishing:
+      level: 9
+      xp: 2046.0
+    excavation:
+      level: 15
+      xp: 1600.0
+    archery:
+      level: 19
+      xp: 8120.0
+    defense:
+      level: 11
+      xp: 9610.0
+    fighting:
+      level: 28
+      xp: 62039.0
+    endurance:
+      level: 2
+      xp: 107.0
+    agility:
+      level: 14
+      xp: 1331.0
+    alchemy:
+      level: 10
+      xp: 7556.0
+    enchanting:
+      level: 11
+      xp: 8887.0
+    sorcery:
+      level: 8
+      xp: 2746.0
+    healing:
+      level: 1
+      xp: 0.0
+    forging:
+      level: 3
+      xp: 30.0
+  13516ca1-d8bf-4cfa-b2fd-a621dee73b62:
+    farming:
+      level: 1
+      xp: 0.0
+    foraging:
+      level: 1
+      xp: 0.0
+    mining:
+      level: 1
+      xp: 0.0
+    fishing:
+      level: 1
+      xp: 0.0
+    excavation:
+      level: 1
+      xp: 0.0
+    archery:
+      level: 1
+      xp: 0.0
+    defense:
+      level: 1
+      xp: 0.0
+    fighting:
+      level: 1
+      xp: 0.0
+    endurance:
+      level: 1
+      xp: 0.0
+    agility:
+      level: 1
+      xp: 0.0
+    alchemy:
+      level: 1
+      xp: 0.0
+    enchanting:
+      level: 1
+      xp: 0.0
+    sorcery:
+      level: 1
+      xp: 0.0
+    healing:
+      level: 1
+      xp: 0.0
+    forging:
+      level: 1
+      xp: 0.0
+  823a3d7b-5ef0-4f64-abb2-097bd8a4aee6:
+    farming:
+      level: 1
+      xp: 0.0
+    foraging:
+      level: 1
+      xp: 42.0
+    mining:
+      level: 1
+      xp: 49.0
+    fishing:
+      level: 1
+      xp: 0.0
+    excavation:
+      level: 3
+      xp: 190.0
+    archery:
+      level: 1
+      xp: 7.0
+    defense:
+      level: 1
+      xp: 76.0
+    fighting:
+      level: 1
+      xp: 48.0
+    endurance:
+      level: 1
+      xp: 0.0
+    agility:
+      level: 3
+      xp: 75.0
+    alchemy:
+      level: 1
+      xp: 0.0
+    enchanting:
+      level: 1
+      xp: 0.0
+    sorcery:
+      level: 1
+      xp: 0.0
+    healing:
+      level: 1
+      xp: 0.0
+    forging:
+      level: 1
+      xp: 0.0

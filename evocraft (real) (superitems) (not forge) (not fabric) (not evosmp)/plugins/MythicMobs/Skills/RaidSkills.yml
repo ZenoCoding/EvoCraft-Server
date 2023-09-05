@@ -1,0 +1,144 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#  
+
+SoulDrain:
+  Cooldown: 5
+  Conditions:
+  - targetwithin 25
+  Skills:
+  - effect:enderbeam{d=120;y=2} @target
+  - effect:sound{s=mob.endermen.portal;volume=1.0;pitch=0.5}
+  - speak{offset=0.6f;radius=30;maxlinelength=22;lineprefix="&5[&dBOSS&5] &dDemiser";message=" &dCome here...";chatprefix=&5[&dBOSS&5] &dDemiser&f<&co>;duration=200} @self 0.3
+  - speak{offset=0.6f;radius=30;maxlinelength=22;lineprefix="&5[&dBOSS&5] &dDemiser";message=" &dCloser...";chatprefix=&5[&dBOSS&5] &dDemiser&f<&co>;duration=200} @self 0.3
+  - speak{offset=0.6f;radius=30;maxlinelength=22;lineprefix="&5[&dBOSS&5] &dDemiser";message=" &dLet me destroy you.";chatprefix=&5[&dBOSS&5] &dDemiser&f<&co>;duration=200} @self
+  - delay 40
+  - pull{velocity=8} @target
+  - velocity{m=add;x=0;y=1;z=0}
+  - delay 10
+  - velocity{m=add;x=0;y=0.5;z=0}
+  - pull{velocity=8} @target
+  - delay 10
+  - velocity{m=add;x=0;y=0.5;z=0}
+  - pull{velocity=8} @target
+  - delay 10
+  - velocity{m=add;x=0;y=0.5;z=0}
+  - pull{velocity=8} @target
+  - delay 10
+  - velocity{m=add;x=0;y=0.5;z=0}
+  - pull{velocity=8} @target
+  - delay 10
+  - velocity{m=add;x=0;y=0.5;z=0}
+  - pull{velocity=8} @target
+  - delay 10
+  - velocity{m=add;x=0;y=1;z=0}
+  - pull{velocity=8} @target
+  - delay 10
+  - velocity{m=add;x=0;y=-0.5;z=0}
+  - pull{velocity=8} @target
+  - damagepercent{percent=1;ia=true} @PIR{r=6}
+  - throw{velocity=10;velocityY=5} @PlayersInRadius{r=5}
+  - effect:explosion @Self
+  - speak{offset=0.6f;radius=30;maxlinelength=22;lineprefix="&5[&dBOSS&5] &dDemiser";message=" &dNow die!";chatprefix=&5[&dBOSS&5] &dDemiser&f<&co>;duration=200} @self
+  
+ThunderShield:
+  Cooldown: 10
+  Skills:
+  - orbital{bulletType=MOB;mob=Charge;onTick=ThunderShield-Tick;onHit=ThunderShield-Hit;onEnd=ThunderShoot;charges=1;points=30;interval=1;duration=100;sfo=1;oy=1.5}
+  - delay 4
+  - orbital{bulletType=MOB;mob=Charge;onTick=ThunderShield-Tick;onHit=ThunderShield-Hit;onEnd=ThunderShoot;charges=1;points=30;interval=1;duration=105;sfo=1;oy=1.5;sB=false;sE=false}
+  - delay 5
+  - orbital{bulletType=MOB;mob=Charge;onTick=ThunderShield-Tick;onHit=ThunderShield-Hit;onEnd=ThunderShoot;charges=1;points=30;interval=1;duration=110;sfo=1;oy=1.5;sB=false;sE=false}
+  - delay 4
+  - orbital{bulletType=MOB;mob=Charge;onTick=ThunderShield-Tick;onHit=ThunderShield-Hit;onEnd=ThunderShoot;charges=1;points=30;interval=1;duration=115;sfo=1;oy=1.5;sB=false;sE=false}
+  - delay 5
+  - orbital{bulletType=MOB;mob=Charge;onTick=ThunderShield-Tick;onHit=ThunderShield-Hit;onEnd=ThunderShoot;charges=1;points=30;interval=1;duration=120;sfo=1;oy=1.5;sB=false;sE=false}
+  - delay 4
+  - orbital{bulletType=MOB;mob=Charge;onTick=ThunderShield-Tick;onHit=ThunderShield-Hit;onEnd=ThunderShoot;charges=1;points=30;interval=1;duration=125;sfo=1;oy=1.5;sB=false;sE=false}
+  - delay 5
+  - orbital{bulletType=MOB;mob=Charge;onTick=ThunderShield-Tick;onHit=ThunderShield-Hit;onEnd=ThunderShoot;charges=1;points=30;interval=1;duration=130;sfo=1;oy=1.5;sB=false;sE=false}
+
+ThunderShield-Tick:
+  Skills:
+  - delay 10
+  
+ThunderShield-Hit:
+  Skills:
+  - speak{offset=0.6f;radius=30;maxlinelength=22;lineprefix="&5[&dBOSS&5] &dDemiser";message=" &dAugh!";chatprefix=&5[&dBOSS&5] &dDemiser&f<&co>;duration=200} @self 0.4
+  - speak{offset=0.6f;radius=30;maxlinelength=22;lineprefix="&5[&dBOSS&5] &dDemiser";message=" &dYou fool!";chatprefix=&5[&dBOSS&5] &dDemiser&f<&co>;duration=200} @self 0.3
+  - damagepercent{percent=0.4;ia=true}
+  - effect:particles{particle=electric_spark;amount=20;speed=1;hS=0.5;vS=0.5;audience=World}
+  - effect:lightning
+  - delay 5
+  - effect:particles{particle=electric_spark;amount=20;speed=1;hS=1;vS=1;audience=World}
+  
+ThunderShoot:
+  Skills:
+  - projectile{bulletType=MOB;mob=Charge;onHit=ThunderShoot-Hit;interval=1;duration=300;oy=1.2;v=10;hfs=2;hs=true;ac=0.1} @NearestPlayer{r=30}
+  
+ThunderShoot-Hit:
+  Skills:
+  - speak{offset=0.6f;radius=30;maxlinelength=22;lineprefix="&5[&dBOSS&5] &dDemiser";message=" &dWitness my raw power!";chatprefix=&5[&dBOSS&5] &dDemiser&f<&co>;duration=200} @self 0.4
+  - speak{offset=0.6f;radius=30;maxlinelength=22;lineprefix="&5[&dBOSS&5] &dDemiser";message=" &dI am death, destroyer of worlds!";chatprefix=&5[&dBOSS&5] &dDemiser&f<&co>;duration=200} @self
+  - damagepercent{percent=1.2;ia=true} 0.4
+  - effect:particles{particle=electric_spark;amount=20;speed=1;hS=0.5;vS=0.5;audience=World}
+  - effect:lightning
+  - delay 5
+  - effect:particles{particle=electric_spark;amount=20;speed=1;hS=1;vS=1;audience=World}
+  
+SummonRaidMinions:
+  Skills:
+  - speak{offset=0.6f;radius=30;maxlinelength=22;lineprefix="&5[&dBOSS&5] &dDemiser";message=" &dCome fight for your kingdom.";chatprefix=&5[&dBOSS&5] &dDemiser&f<&co>;duration=200} @self 0.4
+  - speak{offset=0.6f;radius=30;maxlinelength=22;lineprefix="&5[&dBOSS&5] &dDemiser";message=" &dCome my minions!";chatprefix=&5[&dBOSS&5] &dDemiser&f<&co>;duration=200} @self 0.6
+  - summon{type=PILLAGER;amount=4;radius=15} @Self
+  - summon{type=VINDICATOR;amount=3;radius=15} @Self
+  - summon{type=Berserker;amount=2;radius=15} @Self
+  - summon{type=EVOKER;amount=1;radius=10} @Self
+  - summon{type=Desecrator;amount=1;radius=15} @Self
+  
+
+ElectricBlitz:
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=140}
+  - teleport @target
+  - effect:spin{duration=140;velocity=40} @self
+  - sound{s=item.trident.throw;v=10;p=1.2;repeat=12;repeatInterval=10} @PIR{r=100}
+  - projectile{onTick=ElectricBlitzParticles;onHit=ElectricBlitzHit;v=40;i=1;hR=1;vR=1;hn=2;vn=2;d=10;repeat=65;repeatInterval=2;hnp=true} @Forward{f=4;y=1.0;sideOffset=0.0}
+  - delay 135
+  - projectile{onTick=ElectricBlitzParticles;onHit=ElectricBlitzHit;v=40;i=1;hR=2;vR=1;d=10} @Ring{radius=10;points=64;yoffset=0.5}
+
+ElectricBlitzParticles:
+  Skills:
+  - effect:particles{p=reddust;color=#00ffea;amount=40;Size=1;hs=0.5;vs=0.2} @origin
+  - effect:particles{p=enchanted_hit;amount=40;Size=1;hs=0.5;vs=0.2} @origin
+  - effect:particles{p=electric_spark;amount=40;Size=1;hs=0.5;vs=0.2} @origin
+
+ElectricBlitzHit:
+  Skills:
+  - effect:lightning @EntitiesNearOrigin{r=5}
+  - damage{amount=25;ignoreArmor=true} @EntitiesNearOrigin{r=5}
+
+DemiserConsume:
+  Skills:
+  - speak{offset=0.6f;radius=30;maxlinelength=22;lineprefix="&5[&dBOSS&5] &dDemiser";message=" &dIf you die, I simply heal. Your soul will not be in vain.";chatprefix=&5[&dBOSS&5] &dDemiser&f<&co>;duration=200} @self
+  - heal{a=3000} @self
+  
+Beserk:
+  Skills:
+  - skill{s=FirePixiePosession} @self
+  
+DemiserDeath:
+  Skills:
+  - speak{offset=0.6f;radius=30;maxlinelength=22;lineprefix="&5[&dBOSS&5] &dDemiser";message=" &dThis is not the end.";chatprefix=&5[&dBOSS&5] &dDemiser&f<&co>;duration=200} @self 0.4
+  - speak{offset=0.6f;radius=30;maxlinelength=22;lineprefix="&5[&dBOSS&5] &dDemiser";message=" &dI will see you again. Soon.";chatprefix=&5[&dBOSS&5] &dDemiser&f<&co>;duration=200} @self 0.5
+  - speak{offset=0.6f;radius=30;maxlinelength=22;lineprefix="&5[&dBOSS&5] &dDemiser";message=" &dYou are a fool for ending it like this.";chatprefix=&5[&dBOSS&5] &dDemiser&f<&co>;duration=200} @self 0.3
+  - summon{type=FireDeathMob;amount=1;radius=1}
+  - command{c="skill xp add <target.name> fighting 20000"} @ThreatTablePlayers
+  - command{c="si loottable <target.name> demiser <target.threat>"} @ThreatTablePlayers
+  
+DesecratorDeath:
+  Skills:
+  - command{c="skill xp add <target.name> fighting 5000"} @ThreatTablePlayers
+  - command{c="si droploottable <caster.uuid> desecrator <target.threat>"} @ThreatTablePlayers

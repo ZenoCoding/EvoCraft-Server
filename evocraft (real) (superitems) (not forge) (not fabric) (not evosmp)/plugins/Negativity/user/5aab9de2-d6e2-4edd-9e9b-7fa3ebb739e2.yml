@@ -1,0 +1,26 @@
+playername: parafactor
+lang: en_US
+minerate-full-mined: 24773
+minerate:
+  diamond: 2
+  gold: 6
+  iron: 93
+  coal: 86
+  ancient debris: 0
+better-click: 25
+cheats:
+  forcefield: 2
+  blink: 1
+  noslowdown: 1
+  speed: 1
+  timer: 6
+  inventorymove: 4
+  fly: 5
+  nuker: 4
+  airplace: 102
+  airjump: 1
+  fastplace: 1
+  step: 3
+  nofall: 1
+  spider: 2
+creation-time: 1659305616336

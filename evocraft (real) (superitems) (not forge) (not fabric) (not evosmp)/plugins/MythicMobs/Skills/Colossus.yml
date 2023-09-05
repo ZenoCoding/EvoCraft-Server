@@ -1,0 +1,360 @@
+ColossusSpawn:
+  Skills:
+  - model{m=colossus;n=tag_nametag} 
+  - state{s=intro}
+  - gcd{t=120}
+  - setmodeltag{m=colossus;bone=tag_nametag;tag=<caster.name> &c<&heart> &f<caster.hp>&8/&f<caster.mhp>}
+  - setspeed{speed=0;type=walking} @self
+  - delay 30
+  - sound{s=entity.zombie.attack_wooden_door;v=2;p=0}
+  - particles{particle=block;m=stone;amount=100;hS=2;vS=3} @SelfLocation{y=1}
+  - delay 20
+  - sound{s=entity.zombie.break_wooden_door;v=2;p=0}
+  - sound{s=generic.rocks;v=2;p=1}
+  - particles{particle=block;m=stone;amount=200;hS=2;vS=3} @SelfLocation{y=1}
+  - delay 10
+  - sound{s=entity.zombie.attack_wooden_door;v=2;p=0}
+  - particles{particle=block;m=stone;amount=100;hS=2;vS=3} @SelfLocation{y=1}
+
+  - delay 10
+  - sound{s=entity.zombie.attack_wooden_door;v=2;p=0}
+  - particles{particle=block;m=stone;amount=100;hS=2;vS=3} @SelfLocation{y=1}
+  
+  - delay 20
+  - sound{s=generic.rocks;v=2;p=1}
+  - sound{s=entity.zombie.attack_wooden_door;v=2;p=0}
+  - particles{particle=block;m=stone;amount=100;hS=2;vS=4} @SelfLocation{y=2}
+  
+  - delay 20
+  - sound{s=entity.zombie.attack_wooden_door;v=2;p=0}
+  - sound{s=entity.zombie.break_wooden_door;v=2;p=0}
+  - particles{particle=block;m=stone;amount=100;hS=2;vS=4} @SelfLocation{y=2}
+  
+  - delay 10
+  - sound{s=entity.zombie.attack_wooden_door;v=2;p=0}
+  - sound{s=generic.rocks;v=2;p=1}
+  - particles{particle=block;m=stone;amount=100;hS=2;vS=4} @SelfLocation{y=2}
+  - setspeed{speed=1.5;type=walking} @self
+  
+############################################
+#                  Util                    #
+############################################
+  
+############################################
+#                  Walk                    #
+############################################
+ColossusWalkLand:
+  Skills:
+  - sound{s=entity.zombie.attack_wooden_door;v=2;p=0} @ModelPart{m=Colossus;part=<skill.part>}
+  - particles{particle=block;m=stone;amount=50;hS=1;vS=1} @ModelPart{m=Colossus;part=<skill.part>}
+  - totem{ch=1;onStart=ColossusWalkDamage;int=1;hR=3;md=1} @ModelPart{m=Colossus;part=<skill.part>}
+  
+ColossusWalkDamage:
+  Skills:
+  - damage{a=10} @PlayersNearOrigin{r=3}
+  - throw{v=2;vy=2} @PlayersNearOrigin{r=3}
+  - shieldbreak{duration=200} @PlayersNearOrigin{r=3}
+
+############################################
+#                  Punch                   #
+############################################
+
+
+ColossusPunch:
+  TargetConditions:
+  - distance{d=0to7} true
+  Conditions:
+  - offgcd
+  Skills:
+  - randomskill{
+    skills=
+    ColossusLeftPunch,
+    ColossusRightPunch} @target
+  
+ColossusLeftPunch:
+  TargetConditions:
+  - distance{d=0to7} true
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{t=100} @self
+  - look{headOnly=false} 
+  - sound{s=entity.warden.roar;p=0.8}
+  - setspeed{speed=0;type=walking} @self
+  - state{s=leftpunch} @self
+  - state{s=walk;r=true;}
+  - delay 80
+  - setspeed{speed=1.5;type=walking} @self
+
+ColossusRightPunch:
+  TargetConditions:
+  - distance{d=0to7} true
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{t=100} @self
+  - look{headOnly=false} 
+  - sound{s=entity.warden.roar;p=0.8}
+  - setspeed{speed=0;type=walking} @self
+  - state{s=rightpunch} @self
+  - state{s=walk;r=true;}
+  - delay 80
+  - setspeed{speed=1.5;type=walking} @self
+ 
+ColossusPunchHit:
+  Skills:
+  - explosion{yield=6} @ModelPart{m=Colossus;p=<skill.part>}
+  - shieldbreak{duration=200} @PIR{r=5}
+  - sound{s=generic.rocks;v=2;p=1}
+  - sound{s=entity.zombie.attack_wooden_door;v=2;p=0}
+  - particles{particle=block;m=stone;amount=50;hS=1;vS=1} @ModelPart{m=Colossus;p=<skill.part>}
+ 
+ ########################################################
+ #                  Amethyst Uppercut                   #
+ ########################################################
+  
+ColossusAmethystUppercut:
+  TargetConditions:
+  - distance{d=0to10} true
+  Conditions:
+  - offgcd
+  Skills:
+  - randomskill{
+    skills=
+    ColossusLeftAmethystUppercut,
+    ColossusRightAmethystUppercut} @target
+  
+ColossusLeftAmethystUppercut:
+  TargetConditions:
+  - distance{d=0to7} true
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{t=100} @self
+  - look{headOnly=false} 
+  - sound{s=generic.energy.hum;p=1}
+  - setspeed{speed=0;type=walking} @self
+  - state{s=leftuppercut} @self
+  - state{s=walk;r=true;}
+  - delay 45
+  - setspeed{speed=1.5;type=walking} @self
+
+ColossusRightAmethystUppercut:
+  TargetConditions:
+  - distance{d=0to7} true
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{t=100} @self
+  - look{headOnly=false} 
+  - sound{s=generic.energy.hum;p=1}
+  - setspeed{speed=0;type=walking} @self
+  - state{s=rightuppercut} @self
+  - state{s=walk;r=true;} @self
+  - delay 70
+  - setspeed{speed=1.5;type=walking} @self
+
+ColossusAmethystTick:
+  Skills:
+  - effect:particles{p=reddust;color=#c300d9;amount=30;hS=0.5;vS=0.5} @ModelPart{m=Colossus;p=<skill.part>}
+  - sound{s=generic.energy.hum;v=2}
+  - skill{s=ColossusAmethystUppercutDamage} @ModelPart{m=Colossus;part=<skill.part>}
+  
+ColossusAmethystUppercutDamage:
+  Skills:
+  - damage{a=20} @PlayersNearOrigin{r=3}
+  - throw{v=4;vy=12} @PlayersNearOrigin{r=3}
+  - shieldbreak{duration=200} @PlayersNearOrigin{r=3}
+
+ ########################################################
+ #                    Crystal Barrage                   #
+ ########################################################
+
+ColossusCrystalBarrage:
+  Conditions:
+  - offgcd
+  TargetConditions:
+  - distance{d=7to80}
+  Skills:
+  - state{s=crystalbarrage} @self
+  - state{s=walk;r=true;} @self
+  - gcd{t=240} @self
+  - look{headOnly=false} 
+  - setspeed{speed=0;type=walking} @self
+  - orbital{bulletType=BLOCK;material=AMETHYST_CLUSTER;onTick=ColossusCrystalBarrageVFX;onEnd=ColossusCrystalBarrageShoot;charges=1;points=20;interval=15;duration=100;r=7;sfo=6;oy=9;sB=false;sE=false} @self
+  - delay 4
+  - orbital{bulletType=BLOCK;material=AMETHYST_CLUSTER;onTick=ColossusCrystalBarrageVFX;onEnd=ColossusCrystalBarrageShoot;charges=1;points=20;interval=1;duration=110;r=7;sfo=6;oy=9;sB=false;sE=false} @self
+  - delay 5
+  - orbital{bulletType=BLOCK;material=AMETHYST_CLUSTER;onTick=ColossusCrystalBarrageVFX;onEnd=ColossusCrystalBarrageShoot;charges=1;points=20;interval=1;duration=120;r=7;sfo=6;oy=9;sB=false;sE=false} @self
+  - delay 4
+  - orbital{bulletType=BLOCK;material=AMETHYST_CLUSTER;onTick=ColossusCrystalBarrageVFX;onEnd=ColossusCrystalBarrageShoot;charges=1;points=20;interval=1;duration=130;r=7;sfo=6;oy=9;sB=false;sE=false} @self
+  - delay 5
+  - orbital{bulletType=BLOCK;material=AMETHYST_CLUSTER;onTick=ColossusCrystalBarrageVFX;onEnd=ColossusCrystalBarrageShoot;charges=1;points=20;interval=1;duration=140;r=7;sfo=6;oy=9;sB=false;sE=false} @self
+  - delay 4
+  - orbital{bulletType=BLOCK;material=AMETHYST_CLUSTER;onTick=ColossusCrystalBarrageVFX;onEnd=ColossusCrystalBarrageShoot;charges=1;points=20;interval=1;duration=150;r=7;sfo=6;oy=9;sB=false;sE=false} @self
+  - delay 5
+  - orbital{bulletType=BLOCK;material=AMETHYST_CLUSTER;onTick=ColossusCrystalBarrageVFX;onEnd=ColossusCrystalBarrageShoot;charges=1;points=20;interval=1;duration=160;r=7;sfo=6;oy=9;sB=false;sE=false} @self
+  - delay 90
+  - look{headOnly=false}
+  - delay 110
+  - setspeed{speed=1.5;type=walking} @self
+  
+ColossusCrystalBarrageVFX:
+  Skills:
+  - effect:particles{p=reddust;color=#c300d9;amount=30;hS=0.5;vS=0.5} @Origin
+  - sound{s=generic.energy.hum;v=0.2;p=2}
+
+ColossusCrystalBarrageShoot:
+  Skills:
+  - projectile{bulletType=mob;mob=ColossusAmethystProjectile;oT=ColossusCrystalBarrageVFX;onHit=ColossusCrystalBarrageDamage;interval=1;duration=300;syo=8;v=40;tyo=2;ac=0.98;} @PIR{r=80}
+  - delay 13
+  - projectile{bulletType=mob;mob=ColossusAmethystProjectile;oT=ColossusCrystalBarrageVFX;onHit=ColossusCrystalBarrageDamage;interval=1;duration=300;syo=8;v=40;tyo=2;ac=0.8;} @PIR{r=80}
+  - delay 13
+  - projectile{bulletType=mob;mob=ColossusAmethystProjectile;oT=ColossusCrystalBarrageVFX;onHit=ColossusCrystalBarrageDamage;interval=1;duration=300;syo=8;v=40;tyo=2;ac=0.8;} @PIR{r=80}
+  
+ColossusCrystalBarrageDamage:
+  Skills:
+  - damage{a=20}
+  - shieldbreak{duration=200} 
+  - sound{s=block.glass.break;v=0.6;p=0.6}
+  - particles{particle=block;m=AMETHYST_CLUSTER;amount=10;hS=1;vS=1} @Origin{y=1}
+
+########################################################
+#                       Rock Roll                      #
+########################################################
+# Create a homing projectile that hugs the surface, then teleport the entity to it
+ColossusRockRoll:
+  Conditions:
+  - offgcd
+  TargetConditions:
+  - distance{d=20to70}
+  Skills:
+  - state{s=rockrollstart} @self
+  - state{s=walk;r=true;} @self
+  - gcd{t=50} @self
+  - look{headOnly=false} @target
+  - setspeed{speed=0;type=walking} @self
+  - delay 30
+  - projectile{ot=ColossusRockRollTick;oh=ColossusRockRollHit;oE=ColossusRockRollHit;v=30;i=1;hR=1;vR=1;in=0.75;hS=true;sE=true;sB=false;md=120} @target
+  - state{s=rockrollloop} @self
+  - delay 150 
+  - state{s=rockrollloop;r=true} @self
+  
+ColossusRockRollTick:
+  Skills:
+  - teleport @origin
+  - look{headOnly=false} @target
+  - particles{particle=block;m=stone;amount=50;hS=2;vS=2} @origin{}
+  - gcd{t=20} @self
+  
+ColossusRockRollHit:
+  Skills:
+  - shieldbreak{duration=200}
+  - damage{a=50} @PlayersNearOrigin{r=5}
+  - throw{v=3;vy=2} @PlayersNearOrigin{r=5}
+  - state{s=rockrollloop;r=true} @self
+  - state{s=rockrollend} @self
+  - setspeed{speed=1.5;type=walking} @self
+  
+########################################################
+#                         Smash                        #
+########################################################  
+ColossusSmash:
+  Conditions:
+  - offgcd
+  TargetConditions:
+  - distance{d=0to12}
+  Skills:
+  - state{s=smash} @self
+  - state{s=walk;r=true;} @self
+  - gcd{t=} @self
+  - look{headOnly=false} @target
+  - setspeed{speed=0;type=walking} @self
+  - delay 90
+  - setspeed{speed=1.5;type=walking} @self
+
+ColossusSmashHit:
+  Skills:
+  - skill{s=ColossusSmashHitDamage} @ModelPart{m=Colossus;p=clawleft}
+  - skill{s=ColossusSmashHitDamage} @ModelPart{m=Colossus;p=clawright}
+  - particles{particle=block;m=stone;amount=300;hS=12;vS=1} @Forward{f=3}
+
+ColossusSmashHitDamage:
+  Skills:
+  - explosion{y=4}
+  - shieldbreak{duration=200} @PlayersNearOrigin{r=10}
+  - damage{a=50} @PlayersNearOrigin{r=4}
+  - throw{v=12;vy=5} @PlayersNearOrigin{r=4}
+  - damage{a=30} @PlayersNearOrigin{r=10}
+  - throw{v=10;vy=4} @PlayersNearOrigin{r=10}
+  
+########################################################
+#                  Amethyst Strike                     #
+########################################################  
+ColossusCrystalStrike:
+  Conditions:
+  - offgcd
+  TargetConditions:
+  - distance{d=10to80}
+  Skills:
+  - state{s=crystalstrike} @self
+  - state{s=walk;r=true;} @self
+  - gcd{t=140} @self
+  - look{headOnly=false} @target
+  - setspeed{speed=0;type=walking} @self
+  - delay 20
+  #- summon{type=ColossusLargeAmethystProjectile;amount=1;} @self
+  #- delay 4
+  #- explosion{yield=2} @MIR{r=100;types=ColossusLargeAmethystProjectile}
+  #- mountmodel{mid=Colossus;force=true;driver=false} @MIR{r=100;types=ColossusLargeAmethystProjectile}
+  - delay 60
+  - projectile{bulletType=mob;mob=ColossusLargeAmethystProjectile;oT=ColossusCrystalBarrageVFX;onHit=ColossusCrystalStrikeDamage;oE=ColossusCrystalStrikeDamage;interval=1;duration=300;syo=8;v=20;tyo=2;} @NearestPlayer{r=80}
+  - delay 20
+  - setspeed{speed=1.5;type=walking} @self
+  
+ColossusCrystalStrikeDamage:
+  Skills:
+  - explosion{yield=4}
+  - damage{a=30} @PIR{r=10}
+  - shieldbreak{duration=200} @PIR{r=10}
+
+########################################################
+#                    Crystal Spike                     #
+########################################################  
+ColossusCrystalSpikeSkill:
+  Conditions:
+  - offgcd
+  TargetConditions:
+  - distance{d=5to40}
+  Skills:
+  - state{s=smashspike} @self
+  - state{s=walk;r=true;} @self
+  - gcd{t=140} @self
+  - look{headOnly=false} @target
+  - setspeed{speed=0;type=walking} @self
+  - delay 120
+  - setspeed{speed=1.5;type=walking} @self
+
+ColossusCrystalSpikeStart:
+  Skills:
+  - projectile{oT=ColossusCrystalSpikeSummonerTick;interval=3;duration=300;v=30;hs=true;hp=false;sE=false;sB=false} @PlayersInRadius{r=40}
+
+ColossusCrystalSpikeSummonerTick:
+  Skills:
+  - summon{mob=ColossusCrystalSpike} @origin
+
+#for the actual spikes to execute
+ColossusCrystalSpikeRaiseSkill:
+  Skills:
+  - state{s=raise} @self
+  - shieldbreak{duration=200} @EIR{r=3}
+  - damage{a=70} @EIR{r=3}
+  - throw{v=6;vy=10} @EIR{r=3}
+
+ColossusCrystalSpikeEnd:
+  Conditions:
+  - mythicmobtype{t=ColossusCrystalSpike} true
+  Skills:
+  - state{s=retract} @self
+  - delay 20
+  - remove @self

@@ -1,0 +1,29 @@
+[Mon, 19. Sep 2022 20:02:15 EDT | ID 536355611009351710] Bleec: type: zombie
+[Mon, 19. Sep 2022 20:02:26 EDT | ID 536355611009351710] Bleec: Type: zombie
+  Display: Example Mob <caster.hp> <red><&heart></red>
+[Mon, 19. Sep 2022 20:02:35 EDT | ID 536355611009351710] Bleec: Type: zombie
+  Armor: 25
+  BossBar:
+    Enabled: true
+    Title: Tanker
+    Range: 20
+    Color: RED
+    Style: NOTCHED_6
+    CreateFog: true
+    DarkenSky: true
+    PlayMusic: true
+[Mon, 19. Sep 2022 20:02:46 EDT | ID 536355611009351710] Bleec: Type: zombie
+  AIGoalSelectors:
+    - clear
+    - meleeattack
+    - randomstroll
+    - randomlookaround
+  AITargetSelectors:
+    - clear
+    - attacker
+[Mon, 19. Sep 2022 20:02:52 EDT | ID 536355611009351710] Bleec: Type: zombie
+  Display: Tanker
+  KillMessages:
+    - <caster.name> yeeted <target.name>!!
+    - You're too weak <target.name>!!
+[Mon, 19. Sep 2022 20:02:55 EDT | ID 536355611009351710] Bleec: bro what

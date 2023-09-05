@@ -1,0 +1,16 @@
+rewards:
+  90b5f632-f5f4-4ced-81fe-36275cb8b115:
+    redeemed: 174
+    pending: 4
+    active: true
+    countedPrevious: true
+    timeLeft: 5920
+  ab6b09bb-7c44-46df-ae60-e75333c302c4:
+    redeemed: 5
+    pending: 2
+    active: true
+    countedPrevious: true
+    timeLeft: 116380
+afkTime: 2161
+lastKnownName: TychoIsDumb
+playtime: 14374272

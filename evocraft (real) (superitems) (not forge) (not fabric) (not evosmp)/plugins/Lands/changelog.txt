@@ -1,0 +1,1 @@
+- Fixed: [#2210] Opening natural flags admin menu for wilderness

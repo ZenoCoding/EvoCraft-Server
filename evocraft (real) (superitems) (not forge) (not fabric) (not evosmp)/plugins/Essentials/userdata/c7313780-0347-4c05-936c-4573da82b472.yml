@@ -1,0 +1,47 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 76.132.237.130
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1673739942313
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1673739963268
+  login: 1673739860884
+money: '3303.9360000000000213'
+last-account-name: Pl4te
+lastlocation:
+  world: ca82709d-4280-42e0-b470-b161f1fb21e6
+  world-name: world
+  x: 1380.1434225506534
+  y: 122.0
+  z: 28.843993031429047
+  yaw: 45.21038055419922
+  pitch: 53.6937255859375
+homes:
+  home:
+    world: ca82709d-4280-42e0-b470-b161f1fb21e6
+    world-name: world
+    x: 1196.1247410093179
+    y: 64.0
+    z: -112.02315907684195
+    yaw: 177.2655792236328
+    pitch: 0.607637882232666
+logoutlocation:
+  world: ca82709d-4280-42e0-b470-b161f1fb21e6
+  world-name: world
+  x: 1198.270294225953
+  y: 64.0
+  z: -113.40604258096869
+  yaw: 34.7745246887207
+  pitch: 13.82376766204834

@@ -1,0 +1,166 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#  MICHAEL PLEASE REFER TO THE WIKI FIRST BEFORE CREATING A MOB
+# ALSO DONT USE TAB IT DOESNT WORK, USE DOUBLE SPACE INSTEAD
+
+Desecrator: # a powerfull version of a ravager. 
+  Type: RAVAGER
+  Display: '&8Desecrator &8| &c<&heart> &f<caster.hp>&8/&f<caster.mhp>'
+  Health: 200
+  Damage: 10
+  Equipment:
+  Drops:
+  LevelModifiers:
+  - health 5
+  - damage 0.5
+  Skills:
+  - skill{s=DesecratorDeath} @self ~onDeath
+  - setname{name=<caster.name>;delay=2} @self ~onDamaged  
+  - setname{name=<caster.name>;delay=2} @self ~onTimer:10 ?incombat{}
+  - skill{s=Charge} @target ~onTimer:70 0.3
+  - skill{s=Shockwave} ~onTimer:100 0.5 @target
+  Modules:
+#If enabled, the mob will track damage from different sources and assign more weight to targets that deal more damage (to prevent kite).
+    ThreatTable: true
+#If enabled, the mob will be able to be attacked by multiple players through damage immunity.
+    ImmunityTable: true
+  Options:
+    MovementSpeed: 0.2
+    PassthroughDamage: true
+    Despawn: False
+
+Berserker: # a powerfull version of a vindicator
+  Type: VINDICATOR
+  Display: '&cBeserker &8| &c<&heart> &f<caster.hp>&8/&f<caster.mhp>'
+  Health: 10
+  Damage: 30
+  Faction: Dark
+  LevelModifiers:
+  - health 5
+  - damage 0.5
+  Skills:
+  # Passive Skills
+  - effect:sound{s=entity.blaze.hurt;volume=1.0;pitch=0.8} 0.7
+  - effect:sound{s=entity.wither_skeleton.hurt;volume=1.0;pitch=0.8} 0.3
+  - effect:sound{s=entity.wither.hurt;volume=1.0;pitch=0.8} 0.3
+  # Active Skills
+  #- skill{s=DesecratorDeath} @self ~onDeath
+  - setname{name=<caster.name>;delay=2} @self ~onDamaged  
+  - setname{name=<caster.name>;delay=2} @self ~onTimer:10 ?incombat{}
+  - skill{s=Beserk} @self ~onTimer:70 0.3
+  #- skill{s=Shockwave} ~onTimer:100 0.5 @target
+  Modules:
+#If enabled, the mob will track damage from different sources and assign more weight to targets that deal more damage (to prevent kite).
+    ThreatTable: true
+#If enabled, the mob will be able to be attacked by multiple players through damage immunity.
+    ImmunityTable: true
+  Options:
+    MovementSpeed: 0.5
+    PassthroughDamage: true
+    Despawn: False
+    
+Demiser: # A far more powerful evoker
+  Type: EVOKER
+  Display: '&5Demiser &8| &c<&heart> &f<caster.hp>&8/&f<caster.mhp>'
+  Health: 1500
+  Damage: 15
+  Faction: Dark
+  KillMessages:
+  - '<target.name> met their &cdemise.'
+  - '<target.name><&sq>s soul was vaporized'
+  - '<target.name> perished at the hands of the &5Demiser'
+  Skills:
+  # Passive
+  - effect:sound{s=entity.endermen.portal;volume=1.0;pitch=0.5} ~onDamaged 0.5
+  - effect:sound{s=entity.ravager.hurt;volume=1.0;pitch=1.2} ~onDamaged 0.7
+  - setname{name=<caster.name>;delay=2} @self ~onDamaged  
+  - setname{name=<caster.name>;delay=2} @self ~onTimer:10 ?incombat{}
+  - skill{s=DemiserDeath} @self ~onDeath
+  - skill{s=DemiserConsume} @self ~onPlayerDeath
+  
+  # Active
+  - skill{s=SoulDrain} ~onTimer:100 @target 0.3 <75%
+  - skill{s=Blink} ~onAttack @target 0.05
+  - skill{s=SummonRaidMinions} ~onDamaged @self =99%
+  - skill{s=AirVortex} ~onDamaged @target =95%
+  - skill{s=ElectricBlitz} ~onDamaged @target =93%
+  - skill{s=AirVortex} ~onDamaged @target =90%
+  - skill{s=ElectricBlitz} ~onDamaged @target =87%
+  - skill{s=AirVortex} ~onDamaged @target =85%
+  - skill{s=ElectricBlitz} ~onDamaged @target =81%
+  - skill{s=FireBall} ~onDamaged @target =79%
+  - skill{s=ElectricBlitz} ~onDamaged @target =77%
+  - skill{s=AirVortex} ~onDamaged @target =75%
+  - summon{type=FirePixie;amount=2;radius=2} ~onDamaged @target =75%
+  - skill{s=FireElementalProjectile} ~onDamaged @target =73%
+  - skill{s=FireElementalProjectile} ~onDamaged @target =71%
+  - skill{s=FireElementalProjectile} ~onDamaged @target =69%
+  - skill{s=FireBall} ~onDamaged @target =67%
+  - skill{s=ElectricBlitz} ~onDamaged @target =65%
+  - skill{s=FireBall} ~onDamaged @target =63%
+  - skill{s=AirVortex} ~onDamaged @target =60%
+  - skill{s=FireBall} ~onDamaged @target =57%
+  - summon{type=FirePixie;amount=3;radius=2} ~onDamaged @target =50%
+  - skill{s=FireBall} ~onDamaged @target =50%
+  - skill{s=SummonRaidMinions} ~onDamaged @self =60%
+  - skill{s=ElectricBlitz} ~onDamaged @target =55%
+  - skill{s=ThunderShield} ~onDamaged @self =50%
+  - skill{s=ElectricBlitz} ~onDamaged @target =30%
+  - summon{type=FireRainMob;amount=2;radius=15} ~onDamaged @target =39%
+  - skill{s=AirVortex} ~onDamaged @target =30%
+  - skill{s=FireBall} ~onDamaged @target =27%
+  - summon{type=FireRainMob;amount=2;radius=15} ~onDamaged @target =26%
+  - skill{s=ThunderShield} ~onDamaged @self =25%
+  - summon{type=FirePixie;amount=5;radius=3} ~onDamaged @target =26%
+  - skill{s=SummonRaidMinions} ~onDamaged @self =25%
+  - skill{s=ThunderShield} ~onDamaged @self =10%
+  - skill{s=ThunderShield} ~onDamaged @self =5%
+#  AIGoalSelectors:
+#  - clear # Clears the mob's base AI
+#  - randomstroll # Randomly walks
+#  - float # Randomly floats
+  AITargetSelectors:
+  - clear # Clears the mob's base AI
+  - players # Firstly targets players
+  - attacker # Targets whatever attacks it
+  - specificfaction good # Targets mobs from the faction "good"
+  BossBar:
+    Enabled: true
+    Title: '&5<&lb>&dBOSS&5<&rb> &dDemiser'
+    Range: 40
+    Color: DARK_PURPLE
+    Style: SEGMENTED_3
+    DarkenSky: true
+  Modules:
+#If enabled, the mob will track damage from different sources and assign more weight to targets that deal more damage (to prevent kite).
+    ThreatTable: true
+#If enabled, the mob will be able to be attacked by multiple players through damage immunity.
+    ImmunityTable: true
+  Options:
+    MovementSpeed: 0.4
+    PreventOtherDrops: true
+    KnockbackResistance: 0.7
+    AlwaysShowName: true
+    MaxCombatDistance: 30
+    Despawn: False
+    
+Charge:
+  Type: CREEPER
+  Display: 'THIS SHOULDNT SHOW'
+  Health: 50
+  Damage: 5
+  Faction: Dark
+  Skills:
+  - effect:spin{duration=200;velocity=40} @self ~onTimer:200
+#  AIGoalSelectors:
+#  - clear # Clears the mob's base AI
+#  - randomstroll # Randomly walks
+#  - float # Randomly floats
+  AITargetSelectors:
+  - clear # Clears the mob's base AI
+  Options:
+    MovementSpeed: 0.4
+    PreventOtherDrops: true
+    KnockbackResistance: 1
+    ApplyInvisibility: true
+    SuperCharged: true

@@ -1,0 +1,17 @@
+location: flat:-123.963:71.000:-507.776
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&b&n&lQUICK TIP: &bWarps'
+    height: 0.3
+  - content: Warps are an easy way to get around to common locations.
+    height: 0.3
+  - content: Use &b/warp &espawn &fand &b/warp &eworld &fto instantly teleport to
+      those locations!
+    height: 0.3
+  actions: {}

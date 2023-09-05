@@ -1,0 +1,24 @@
+currentQuests:
+- custom3
+currentStages:
+- 0
+quest-points: 210
+questData:
+  custom3:
+    item-delivery-amounts:
+    - 0
+    - 0
+    has-talked-to:
+    - true
+completed-Quests:
+- custom1
+- custom2
+completedRedoableQuests:
+- custom2
+completedQuestTimes:
+- 1662517634489
+amountsCompletedQuests:
+- custom2
+amountsCompleted:
+- 7
+lastKnownName: TychoIsDumb

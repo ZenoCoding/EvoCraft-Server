@@ -1,0 +1,16 @@
+afkTime: 0
+lastKnownName: vesissa
+playtime: 654
+rewards:
+  90b5f632-f5f4-4ced-81fe-36275cb8b115:
+    redeemed: 0
+    pending: 0
+    active: true
+    countedPrevious: true
+    timeLeft: 71360
+  ab6b09bb-7c44-46df-ae60-e75333c302c4:
+    redeemed: 0
+    pending: 0
+    active: true
+    countedPrevious: false
+    timeLeft: 120000

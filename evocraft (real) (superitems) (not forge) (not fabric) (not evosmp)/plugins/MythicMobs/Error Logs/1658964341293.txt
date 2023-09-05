@@ -1,0 +1,23 @@
+java.lang.NullPointerException: Cannot invoke "io.lumine.mythic.api.adapters.AbstractEntity.getUniqueId()" because "entity" is null
+	at MythicMobs-5.1.0.jar//io.lumine.mythic.core.skills.placeholders.PlaceholderExecutor.lambda$load$55(PlaceholderExecutor.java:301)
+	at MythicMobs-5.1.0.jar//io.lumine.mythic.core.skills.placeholders.types.EntityPlaceholder.apply(EntityPlaceholder.java:19)
+	at MythicMobs-5.1.0.jar//io.lumine.mythic.core.skills.placeholders.PlaceholderParser.parse(PlaceholderParser.java:105)
+	at MythicMobs-5.1.0.jar//io.lumine.mythic.core.skills.placeholders.parsers.PlaceholderStringImpl.get(PlaceholderStringImpl.java:37)
+	at MythicMobs-5.1.0.jar//io.lumine.mythic.core.skills.placeholders.parsers.PlaceholderStringImpl.get(PlaceholderStringImpl.java:29)
+	at MythicMobs-5.1.0.jar//io.lumine.mythic.core.skills.mechanics.CommandMechanic.cast(CommandMechanic.java:101)
+	at MythicMobs-5.1.0.jar//io.lumine.mythic.core.skills.SkillMechanic.executeNoTargetSkill(SkillMechanic.java:545)
+	at MythicMobs-5.1.0.jar//io.lumine.mythic.core.skills.SkillMechanic.lambda$executeSkills$6(SkillMechanic.java:490)
+	at MythicMobs-5.1.0.jar//io.lumine.mythic.bukkit.utils.Delegates$RunnableToSupplier.get(Delegates.java:121)
+	at MythicMobs-5.1.0.jar//io.lumine.mythic.bukkit.utils.promise.LuminePromise$SupplyRunnable.run(LuminePromise.java:654)
+	at MythicMobs-5.1.0.jar//io.lumine.mythic.bukkit.utils.tasks.LumineExecutors$SchedulerWrappedRunnable.run(LumineExecutors.java:70)
+	at org.bukkit.craftbukkit.v1_19_R1.scheduler.CraftTask.run(CraftTask.java:101)
+	at org.bukkit.craftbukkit.v1_19_R1.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:483)
+	at net.minecraft.server.MinecraftServer.b(MinecraftServer.java:1490)
+	at net.minecraft.server.dedicated.DedicatedServer.b(DedicatedServer.java:446)
+	at net.minecraft.server.MinecraftServer.a(MinecraftServer.java:1414)
+	at net.minecraft.server.MinecraftServer.v(MinecraftServer.java:1187)
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:302)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+MythicMobs version: 5.1.0-f32e809c
+Bukkit version: git-Paper-65 (MC: 1.19)

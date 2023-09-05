@@ -1,0 +1,349 @@
+StageMelee:
+  Conditions:
+  - offgcd
+  Skills:
+  - randomskill{
+    skills=
+    VolkumosMelee1,
+    VolkumosMeleeSpin,
+    Smash
+    }
+
+StageRanged:
+  Conditions:
+  - offgcd
+  Skills:
+  - randomskill{
+    skills=
+    ChargedFB,
+    SkullSpin,
+    Eruption,
+    PlutonianStrike
+    }
+
+StageSmash:
+  Conditions:
+  - offgcd
+  Skills:
+  - randomskill{
+    skills=
+    SuperSmash,
+    Smash
+    }
+    
+StageFinal:
+  Conditions:
+  - offgcd
+  Skills:
+  - randomskill{
+    skills=
+    PlutonianStrike,
+    ChargedFB,
+    SuperSmash,
+    Charge
+    }
+
+
+
+
+ChargedFB:
+  Cooldown: 10
+  Skills:
+  - jump{v=1}
+  - effect:geyser{type=LAVA;height=10;speed=10} @self
+  - delay 40
+  - shootfireball{y=3;v=1;i=false;ft=100;ps=true;type=LARGE} @RingAroundOrigin{radius=5;points=15;xRotation=0;yRotation=0;zRotation=0;xOffset=0;yOffset=0;zOffset=0}
+  - delay 20
+  - shootfireball{y=3;v=1;i=false;ft=100;ps=true;type=LARGE} @RingAroundOrigin{radius=5;points=15;xRotation=0;yRotation=0;zRotation=0;xOffset=0;yOffset=0;zOffset=0}
+
+SkullSpin:
+  Cooldown: 20
+  Skills:
+  - state{s=jump} @self
+  - delay 20
+  - velocity{m=set;x=0;y=0.6;z=0} @self
+  - delay 10
+  - state{s=spin} @self
+  - shootskull{y=1;ps=true} 
+  - velocity{m=set;x=0;y=0.5;z=0} @self
+  - delay 10
+  - shootskull{y=1;ps=true} @Forward{f=5;y=0.0;sideOffset=0.0}
+  - velocity{m=set;x=0;y=0.3;z=0} @self
+  - delay 10
+  - shootskull{y=1;ps=true}
+  - velocity{m=set;x=0;y=0.3;z=0} @self
+  - delay 10
+  - shootskull{y=1;ps=true} @Forward{f=5;y=0.0;sideOffset=0.0}
+  - velocity{m=set;x=0;y=0.3;z=0} @self
+  - delay 10
+  - shootskull{y=1;ps=true} @Forward{f=5;y=0.0;sideOffset=0.0}
+  - velocity{m=set;x=0;y=0.3;z=0} @self
+  - delay 10
+  - shootskull{y=1;ps=true}
+  - velocity{m=set;x=0;y=0.3;z=0} @self
+  - delay 10
+  - shootskull{y=1;ps=true} @Forward{f=5;y=0.0;sideOffset=0.0}
+  - velocity{m=set;x=0;y=0.3;z=0} @self
+  - delay 10
+  - shootskull{y=1;ps=true}
+  - velocity{m=set;x=0;y=0.3;z=0} @self
+  
+Wither:
+  Skills:
+  - potion{type=Wither;duration=140;level=3}
+  
+ShootSkull:
+  Skills:
+  - delay 40
+  - shootskull{y=1;ps=true} 
+  - delay 40
+  - shootskull{y=1;ps=true} 
+  - delay 40
+  - shootskull{y=1;ps=true} 
+  - delay 40
+  - shootskull{y=1;ps=true} 
+  - delay 40
+  - shootskull{y=1;ps=true} 
+  
+VolkumosMeleeSpin:
+  Cooldown: 15
+  Skills:
+  - state{s=jump} @self
+  - delay 20
+  - velocity{m=set;x=0;y=0.3;z=0} @self
+  - delay 10
+  - state{s=spin} @self
+  - setspeed{speed=3;type=walking} @self
+  - damage{a=20} @PIR{r=7}
+  - delay 10
+  - damage{a=20} @PIR{r=7}
+  - delay 10
+  - damage{a=20} @PIR{r=7}
+  - delay 10
+  - damage{a=20} @PIR{r=7}
+  - delay 10
+  - damage{a=20} @PIR{r=7}
+  - delay 10
+  - damage{a=20} @PIR{r=7}
+  - delay 10
+  - setspeed{speed=1;type=walking} @self
+  - state{s=jump;r=true} @self
+
+VolkumosMelee1:
+  TargetConditions:
+    - distance{d=0to5} true
+  Skills:
+    - state{s=attack} @self
+    - particles{p=reddust;a=150;color=#282828;size=3;hs=1;vs=1} @origin
+    - delay 30
+    - damage{a=60} @PlayersNearOrigin{r=8;conditions=[ - haspotioneffect{t=DAMAGE_RESISTANCE;l=100-256} false ]}
+    - skill{s=toro_wither_shoot_knockback} @PlayersNearOrigin{r=8;conditions=[ - haspotioneffect{t=DAMAGE_RESISTANCE;l=100-256} false ]}
+    
+Smash:
+  Cooldown: 3
+  TargetConditions:
+    - distance{d=0to6}
+  Skills:
+    - state{s=raise} @self
+    - delay 20
+    - state{s=smash} @self
+    - delay 10
+    - state{s=raise;r=true} @self
+    - effect:sound{s=entity.zombie.break_wooden_door;v=3;p=0.4}
+    - damage{a=50} @PIR{r=6}
+    - throw{velocity=20;velocityY=5} @PlayersInRadius{r=8}
+
+SuperSmash:
+  Cooldown: 6
+  Skills:
+    - setspeed{speed=0.1;type=walking} @self
+    - state{s=jump} @self
+    - delay 22
+    - skill{s=ProjectileLeap}
+    - delay 15
+    - state{s=raise} @self
+    - delay 20
+    - state{s=jump;r=true} @self
+    
+PlutonianStrike:
+  Skills:
+    - setai{ai=false} @self
+    - state{s=raise} @self
+    - effect:particleorbital{r=2;oy=1.5;points=20;t=50;i=1;vy=20;particle=reddust;color=#c7dcff} @self
+    - delay 20
+    - delay 10
+    - lightning{d=7.5} @PlayersInRadius{r=50}
+    - delay 3
+    - lightning{d=7.5} @PlayersInRadius{r=50}
+    - delay 3
+    - lightning{d=7.5} @PlayersInRadius{r=50}
+    - delay 3
+    - lightning{d=7.5} @PlayersInRadius{r=50}
+    - delay 3
+    - lightning{d=7.5} @PlayersInRadius{r=50}
+    - delay 3
+    - lightning{d=7.5} @PlayersInRadius{r=50}
+    - delay 3
+    - state{s=raise;r=true} @self
+    - setai{ai=true} @self
+    
+#TEST
+ProjectileLeap:
+  Skills:
+  - projectile{onTick=ProjectileLeapTick;onEnd=ProjectileLeapHit;hp=true;sB=true;v=20;i=1;hR=3;vR=50;mr=50;sfo=0;tyo=5} @TL{yo=10}
+
+ProjectileLeapTick:
+  Skills:
+  - teleport{spreadh=0;spreadv=0} @origin
+  - look{headOnly=false;immediately=true} @Target
+
+ProjectileLeapHit:
+  Skills:
+  - jump{v=-100}
+  - state{s=smash} @self
+  - delay 10
+  - state{s=raise;r=true} @self
+  - effect:explosion @self
+  - effect:sound{s=entity.zombie.break_wooden_door;v=3;p=0.3}
+  - damage{a=100} @PIR{r=6}
+  - damage{a=20} @PIR{r=15}
+  - throw{velocity=25;velocityY=25} @PlayersInRadius{r=8}
+  - effect:bloodyScreen{d=25} @PIR{r=15}
+  - blockwave{duration=100;material=magma_block;radius=7;radiusY=5;velocity=5;shape=sphere;hs=false} @selflocation
+  - setspeed{speed=1;type=walking} @self
+  
+Tridreigon:
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=200000;level=15} @self
+  - summon{t=Tridreigon} @self
+  - setAI{ai=false} @self
+  
+TriDeath:
+  Skills:
+  - clearpotion{} @parent
+  - setAI{ai=True} @parent
+  
+#Tridreigon
+
+  
+Overheal:
+  Skills:
+  - missile{onTick=TickHeal;onHit=HitHeal;interval=2;inertia=8;v=10;a=0;md=300;mr=100} @Parent
+  - gcd{t=30} @Parent
+  - setAI{ai=false} @Parent
+  - effect:particleorbital{r=2;points=10;t=20;i=1;oy=2;vy=30;vx=30;particle=redstone;color=#03fc45} @Parent
+  - effect:particleorbital{r=3;points=20;t=20;i=1;oy=2;vz=20;vx=20;vy=5;particle=redstone;color=#03fc45} @Parent
+  - effect:particleorbital{r=4;points=30;t=20;i=1;oy=2;vz=15;vy=15;vx=5;particle=redstone;color=#03fc45} @Parent
+  
+TickHeal:
+  Skills:
+  - effect:particles{particle=villager_happy;amount=2;hs=0.1;vs=0.1;}
+  
+HitHeal:
+  Skills:
+  - heal{a=10} @Parent
+  - effect:particles{particle=heart;amount=5;hs=1;vs=1}
+  - effect:sound{s=entity.experience_orb.pickup;v=3;p=1.2}
+  - tint{m=volkumos;pid=body;c=03fc45} @Parent
+  - tint{m=volkumos_mage;pid=body;c=03fc45} @Parent
+  - tint{m=volkumos_smash;pid=body;c=03fc45} @Parent
+  
+FuryMode:
+  Skills:
+  - potion{type=SPEED;duration=100;level=2;force=true;hasParticles=false} @self
+  - Aura{auraName=Fury_Mode;onTick=VolkumosMelee1;interval=30;duration=50} @self
+  - potion{type=INCREASE_DAMAGE;duration=100;level=3;force=true;hasParticles=false} @self
+  
+Eruption:
+  Skills:
+  - setAI{ai=false}
+  - sound{s=entity.creeper.primed;volume=2.0;pitch=0} @self
+  - delay 5
+  - sound{s=entity.creeper.primed;volume=2.0;pitch=0} @self
+  - delay 5
+  - sound{s=entity.creeper.primed;volume=2.0;pitch=0} @self
+  - delay 10
+  - sound{s=entity.ghast.death;pitch=0} @self
+  - delay 5
+  - sound{s=entity.ghast.death;pitch=0} @self
+  - delay 20
+  - effect:geyser{type=LAVA;height=8;speed=20} @RingAroundOrigin{radius=8;points=12;xRotation=0;yRotation=0;zRotation=0;xOffset=0;yOffset=0;zOffset=0}
+  - delay 20
+  - throw{velocity=15;velocityY=15} @PlayersInRadius{r=15}
+  - sound{s=entity.evoker_fangs.attack;volume=2.0;pitch=0} @self
+  - delay 10
+  - damagepercent{percent=0.3,current=false;ignoreArmor=true;preventknockback=false;preventimmunity=true} @PlayersInRadius{r=15}
+  - effect:geyser{type=LAVA;height=7;speed=20} @RingAroundOrigin{radius=10;points=15;xRotation=0;yRotation=0;zRotation=0;xOffset=0;yOffset=0;zOffset=0}
+  - delay 20
+  - effect:geyser{type=LAVA;height=6;speed=20} @RingAroundOrigin{radius=12;points=16;xRotation=0;yRotation=0;zRotation=0;xOffset=0;yOffset=0;zOffset=0}
+  - delay 20
+  - effect:geyser{type=LAVA;height=5;speed=20} @RingAroundOrigin{radius=14;points=19;xRotation=0;yRotation=0;zRotation=0;xOffset=0;yOffset=0;zOffset=0}
+  - delay 50
+  - ShootShulkerBullet{interval=2;oT=SSB_oT;oH=SSB_oH} @PlayersInRadius{r=15}
+  - ShootShulkerBullet{interval=2;oT=SSB_oT;oH=SSB_oH} @PlayersInRadius{r=15}
+  - setAI{ai=true}
+   
+  
+SSB_oT:
+  Skills:
+  - particles{particle=reddust;color=#ffff00;size=1;a=3;hs=1;vs=1;s=0;y=0} @origin
+SSB_oH:
+  Skills:
+  - damagepercent{percent=.3;current=false;ignoreArmor=true;preventknockback=false;preventimmunity=true}
+  
+Charge:
+  TargetConditions:
+  - distance{d=5to100}
+  skills:
+  - state{s=charge} @self
+  - sound{s=entity.ravager.roar} @self
+  - delay 20
+  - skill{s=ProjectileLunge} @self
+  
+#on the ground
+ProjectileLunge:
+  Skills:
+  - projectile{onTick=ProjectileLungeTick;onHit=ProjectileLungeHit;onEnd=ProjectileLungeHit;hp=true;hs=true;v=20;i=1;hR=3;vR=3;mr=50;} @TL
+
+ProjectileLungeTick:
+  Skills:
+  - teleport{spreadh=0;spreadv=0} @origin
+  - look{headOnly=false;immediately=true} @Target
+
+ProjectileLungeHit:
+  Skills:
+  - effect:explosion @self
+  - effect:sound{s=entity.zombie.break_wooden_door;v=3;p=0.5}
+  - damage{a=100} @PIR{r=6}
+  - throw{velocity=25;velocityY=1} @PlayersInRadius{r=6}
+  - effect:bloodyScreen{d=25} @PIR{r=15}
+  - blockwave{duration=100;material=BLACKSTONE;radius=7;radiusY=5;velocity=2;shape=sphere;hs=false} @selflocation
+  - setspeed{speed=1;type=walking} @self
+  
+VolkumosConvertMage:
+  Skills:
+  - effect:particleorbital{r=2;points=10;t=50;i=1;oy=2;vy=30;vx=30;particle=redstone;color=#a103fc} @self
+  - effect:particleorbital{r=3;points=20;t=50;i=1;oy=2;vz=20;vx=20;vy=5;particle=redstone;color=#a103fc} @self
+  - effect:particleorbital{r=4;points=30;t=50;i=1;oy=2;vz=15;vy=15;vx=5;particle=redstone;color=#a103fc} @self
+  - effect:sound{s=block.end_portal.spawn;p=2;v=10}
+  - model{mid=volkumos;n=nametag;r=true} @self
+  - model{mid=volkumos_mage;n=nametag} @self
+  
+VolkumosConvertSmash:
+  Skills:
+  - effect:particleorbital{r=2;points=10;t=50;i=1;oy=2;vy=30;vx=30;particle=redstone;color=#ffa200} @self
+  - effect:particleorbital{r=3;points=20;t=50;i=1;oy=2;vz=20;vx=20;vy=5;particle=redstone;color=#ffa200} @self
+  - effect:particleorbital{r=4;points=30;t=50;i=1;oy=2;vz=15;vy=15;vx=5;particle=redstone;color=#ffa200} @self
+  - effect:sound{s=block.end_portal.spawn;p=2;v=10}
+  - model{mid=volkumos_mage;n=nametag;r=true} @self
+  - model{mid=volkumos_smash;n=nametag} @self
+  
+VolkumosConvertFury:
+  Skills:
+  - effect:particleorbital{r=2;points=10;t=50;i=1;oy=2;vy=30;vx=30;particle=redstone;color=#ff0000} @self
+  - effect:particleorbital{r=3;points=20;t=50;i=1;oy=2;vz=20;vx=20;vy=5;particle=redstone;color=#ff0000} @self
+  - effect:particleorbital{r=4;points=30;t=50;i=1;oy=2;vz=15;vy=15;vx=5;particle=redstone;color=#ff0000} @self
+  - effect:sound{s=block.end_portal.spawn;p=2;v=10}
+  - model{mid=volkumos_smash;n=nametag;r=true} @self
+  - model{mid=volkumos_fury;n=nametag} @self
+  

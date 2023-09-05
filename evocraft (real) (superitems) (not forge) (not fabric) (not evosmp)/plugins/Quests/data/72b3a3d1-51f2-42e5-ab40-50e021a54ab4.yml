@@ -1,0 +1,21 @@
+currentQuests:
+- custom1
+currentStages:
+- 6
+quest-points: 0
+questData:
+  custom1:
+    item-delivery-amounts:
+    - 64
+    - 64
+    - 64
+    - 64
+    - 64
+    - 64
+    - 64
+    - 64
+    - 64
+    - 64
+completed-Quests:
+- custom5
+lastKnownName: BaneOfNoobs6

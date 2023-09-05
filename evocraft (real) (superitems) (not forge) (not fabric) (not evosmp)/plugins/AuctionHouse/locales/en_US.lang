@@ -1,0 +1,187 @@
+pricing:
+  minstartingprice: '&cThe minimum starting bid price must be &a$%price%'
+  moneyremove: '&c&l- $%price% &7(%player_balance%)'
+  maxbaseprice: '&cThe maximum base price is &a$%price%'
+  minbidincrementprice: '&cThe minimum bid increment must be &a$%price%'
+  bidmusthigherthanprevious: '&cYour bid must be higher than &4%current_bid%'
+  minitemprice: '&cThe minimum price for this item must be &a$%price%'
+  moneyadd: '&a&l+ $%price% &7(%player_balance%)'
+  maxstartingprice: '&cThe maximum starting bid price is &a$%price%'
+  maxbidincrementprice: '&cThe maximum bid increment is &a$%price%'
+  basepricetoolow: '&cThe buy now price must be higher than the starting bid.'
+  minbaseprice: '&cThe minimum base price must be &a$%price%'
+
+auction_filter:
+  categories:
+    spawners: Spawners
+    tools: Tools
+    self: Self
+    armor: Armor
+    food: Food
+    all: All
+    enchants: Enchants
+    search: Search
+    weapons: Weapons
+    blocks: Blocks
+    misc: Misc
+  sale_types:
+    biddable: Biddable
+    non_biddable: Not Biddable
+    both: All
+  sort_order:
+    price: Price
+    recent: Recent
+
+general:
+  blocked: '&cSorry, you are not allowed to sell &e%item%'
+  wait_to_list: '&cPlease wait &4%time%&cs before listing another item'
+  mcmmo_ability_active: '&cCannot list item when mcMMO ability is active!'
+  air: '&cSorry, but you cannot sell air o.O'
+  finishenteringprice: '&cPlease finish entering the new price first.'
+  notenoughmoney: '&cYou do not have enough money!'
+  cantbuyown: '&cYou cannot buy your own item!'
+  bought_item: '&aYou bought &fx%amount% %item%&a for &a$%price%'
+  addeditemtofilterwhitelist: '&aAdded &2%item_name%&a to the &2%filter_category%&a''s whitelist'
+  entersearchphrase: '&aEnter a search phrase into chat'
+  notanumber: '&cThe entry &4%value% &cis not a valid number!'
+  toggled listing:
+    'off': '&cYou turned off listing messages'
+    'on': '&aYou turned on listing messages'
+  invalidtimestring: '&cInvalid time, use the following format, ex: 1d (valid suffixes: s,m,h,d,y)'
+  prefix: '&8[&eAuctionHouse&8]'
+  please_enter_at_least_one_number: '&cPlease enter at least 1 valid number!'
+  min item price air: '&cSorry, but you cannot add a price to air'
+  relisteditems: '&aYou relisted all expired items!'
+  deleted transactions: '&cDeleted a total of &4%deleted_transactions% &ctransactions'
+  blockedname: '&cThat item contains a blocked name phrase'
+  qtybuydisabled: '&4%item_owner%&c is only accepting purchases of the entire stack.'
+  noroom: '&cPlease clear room in your inventory to purchase that item.'
+  requires creative: '&cThat action requires you to be in creative mode'
+  min price already added: '&cThere is already a minimum price set, please delete the existing one first.'
+  transaction delete begin: '&cBeginning transaction deletion, this may take some time.'
+  cannot list repaired item: '&cCannot list a repaired item!'
+  playernotfound: '&cCould not find the player &4%player%'
+  marked chest: '&aYou marked that chest as an Auction chest'
+  unmarked chest: '&cYou unmarked that chest as an Auction chest'
+  added min price: '&aSuccessfully set minimum price for %item% &ato &2$%price%'
+  cannot list damaged item: '&cCannot list a damaged item!'
+  endedallauctions: '&cYou force ended all active auctions'
+  locked: '&cThe Auction House is currently locked!'
+  noroomclaim: '&cYou do not have enough space in your inventory'
+  disabled in world: '&cAuction House is disabled in this world.'
+  something_went_wrong_while_listing: '&cSomething went wrong while listing item.'
+  filter air: '&cSorry, but you cannot add air to a filter whitelist'
+  blockeditem: '&cYou are not allowed to auction that item. (%item%)'
+  filteritemaddedalready: '&cThat item already exists within that category''s filter whitelist.'
+  visit auction chest: '&cVisit an Auction chest to use Auction House.'
+  cantbidonown: '&cYou cannot bid on your own item!'
+  buynowdisabledonitem: '&cBuy now is disabled on this item.'
+  cannotsellbundleditem: '&cYou cannot sell a bundled item as a bundle.'
+  blockedlore: '&cThat item contains a blocked lore phrase'
+  sellinglimit: '&cYou cannot sell more items, please remove/sell current active items'
+
+commands:
+  syntax:
+    active: active
+    ban: ban [player] [time] [reason]
+    settings: settings
+    unban: unban <player>
+    search: search <keywords>
+    togglelistinfo: togglelistinfo
+    convert: convert
+    filter: filter [additem] [category]
+    sell: sell <basePrice> [bidStart] [bidIncr]
+    transactions: transactions
+    reload: reload
+    auctionhouse: /ah
+    expired: expired
+    min price: minprices [add] [price]
+    upload: upload
+    markchest: markchest
+  description:
+    auctionhouse: Main command for the plugin, it opens the auction window.
+    upload: Used to upload flat file data to the database
+    markchest: Toggles whether a chest is an auction chest
+    expired: View all your expired/cancelled listings
+    active: View all your auction listings
+    togglelistinfo: Toggle whether auction house should message you when you list an item
+    search: Search for specific item(s) in the auction house
+    ban: Ban a player from the auction house for a set amount of time.
+    reload: Reload plugin files
+    filter: Edit the filter whitelist items
+    settings: Open the in-game config editor
+    sell: Used to put an item up for auction
+    min price: Adds a minimum sell price to an item
+    convert: Used to make an attempted conversion from < 2.0.0+
+    unban: Unban a player from the auction house
+    transactions: Used to open the transactions menu
+  invalid_syntax: '&7The valid syntax is: &6%syntax%&7.'
+  sell:
+    args:
+      suggestion three: 10 -b
+      suggestion one: '100'
+      suggestion two: 50 -b
+  no_permission: '&dYou do not have permission to do that.'
+
+auction:
+  broadcast:
+    nobid: '&e%player% listed &fx%amount% &6%item% &efor &a%base_price%'
+    bid: '&e%player% increased the bid to &a$%amount% &eon &6%item%'
+    withbid: '&e%player% listed &fx%amount% &6%item% &e&lBuy Now&f: &a%base_price% &e&lStarting&f: &a%start_price% &e&lIncrement&f: &a%increment_price%'
+    sold: '&e&fx%amount% &6%item% &esold to %player% for &a%price%'
+    ending: '&eAuction for &6%item% &eis ending in &6%seconds%&es'
+  nobids: '&cNo Bids'
+  listed:
+    nobid: '&eListed &fx%amount% &6%item% &efor &a%base_price%'
+    withbid: '&eListed &fx%amount% &6%item% &e&lBuy Now&f: &a%base_price% &e&lStarting&f: &a%start_price% &e&lIncrement&f: &a%increment_price%'
+  itemnotavailable: '&cThat item is no longer available :('
+  biditemwithdisabledbuynow: '&CN/A'
+  itemsold: '&eYou sold &6%item% &eto &6%buyer_name% &efor &a%price%'
+  tax:
+    paidlistingfee: '&aPaid &2$%price%&a listing fee'
+    cannotpaylistingfee: '&cYou do not have enough money to pay the listing fee &f(&4$%price%&f)'
+  outbid: '&6%player% &ehas out bid you for &6%item%'
+  placedbid: '&6%player% &eincreased the bid to &a$%amount% &eon &6%item%'
+  bidwon: '&eYou won the bid for&fx%amount% &6%item% &efor &a%price%'
+
+prompts:
+  enter valid listing time: '&cPlease enter a valid listing time.'
+  enter new starting bid: '&aPlease enter the new starting bid in chat:'
+  enter listing time: '&aPlease enter listing time (ex. 1 day):'
+  enter valid bid amount: '&cBid either too low or too high'
+  enter new bid increment: '&aPlease enter the new bid increment in chat:'
+  enter deletion range: '&aPlease enter deletion range (ex. 1 day):'
+  enter new buy now price: '&aPlease enter the new buy now price in chat:'
+  enter bid amount: '&7Current Bid &e%current_bid% &7Type ''&ccancel&7'' to cancel placing bid'
+  enter valid deletion range: '&cPlease enter a valid deletion range'
+
+bans:
+  nobanreason: '&cPlease enter a ban reason'
+  remainingtime: '&cYou are banned from the auction house for &4%ban_amount%'
+  bannedplayer: '&aBanned &2%player% &afrom the auction house for &2%ban_amount%'
+  ban expired: '&aBan Expired'
+  playernotbanned: '&4%player% &cis not banned from the auction house'
+  unbanned: '&aYou are now unbanned from the auction house'
+  playeralreadybanned: '&4%player% &cis already banned from the auction house'
+  playerunbanned: '&cUnbanned &4%player% &cfrom the auction house'
+
+admin action:
+  return: Returned
+  copy: Copied
+  claim: Claimed
+  delete: Deleted
+
+discord:
+  is_bid_true: 'true'
+  player_lost: Player Lost o.O
+  sale_bid_win: Won Bid
+  no_buyer: No Buyer
+  not_sold: Not Sold
+  sale_immediate_buy: Bought Immediately
+  not_bought: Was not bought
+  is_bid_false: 'false'
+
+transaction:
+  sale_type:
+    bid_won: Won Auction
+    immediate_buy: Bought Immediately

@@ -1,0 +1,21 @@
+playername: thesummerduck
+lang: en_US
+minerate-full-mined: 24433
+minerate:
+  diamond: 0
+  gold: 0
+  iron: 35
+  coal: 226
+  ancient debris: 0
+better-click: 24
+cheats:
+  timer: 1
+  inventorymove: 1
+  fly: 4
+  airplace: 2
+  airjump: 1
+  forcefield: 2
+  noslowdown: 1
+  spider: 1
+  speed: 1
+creation-time: 1658634405799

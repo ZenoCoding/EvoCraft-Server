@@ -1,0 +1,11 @@
+Blink:
+  Skills: 
+  - effect:particles{particle=portal;amount=100;hs=0.5;vs=0.5;y=1} @self
+  - effect:particles{particle=reddust;color=#F60FD7;a=100;hs=0.5;vs=0.5;y=1} @self
+  - delay 1
+  - teleport @Forward{f=6.5;y=1} ~onUse
+  - effect:sound{s=entity.enderman.teleport;v=1;p=1} @PlayersInRadius{r=60}
+  - delay 1
+  - effect:particles{particle=portal;amount=100;hs=0.5;vs=0.5;y=1} @self
+  - effect:particles{particle=reddust;color=#F60FD7;a=100;hs=0.5;vs=0.5;y=1} @self
+

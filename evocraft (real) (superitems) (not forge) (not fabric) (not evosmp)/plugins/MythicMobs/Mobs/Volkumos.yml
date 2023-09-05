@@ -1,0 +1,137 @@
+Volkumos:
+  Type: PIGLIN_BRUTE
+  Display: '&c<&lb>BOSS<&rb> Volkumos'
+  Health: 2500
+  Damage: 0
+  Faction: Volken
+  AIGoalSelectors:
+  - clear # Clears the mob's base AI
+  - movetowardstarget
+  - randomstroll # Randomly walks
+  AITargetSelectors:
+  - clear # Clears the mob's base AI
+  - specificfaction Dark
+  - players # Firstly targets players
+  - attacker # Targets whatever attacks it
+  - specificfaction Blazeborn # Targets mobs from the faction "good"
+  KillMessages:
+  - '<target.name> had their soul incinerated'
+  - '<target.name><&sq> overheated'
+  - '<target.name> was crisped to death'
+  - '<target.name> erupted into ashes'
+  - '<target.name> could not handle the heat'
+  Skills:
+  - model{mid=volkumos;n=nametag} @self ~onSpawn
+  - model{mid=volkumos;n=nametag} @self ~onTimer:20 =75%-100%
+  - model{mid=volkumos_mage;n=nametag;r=true} @self ~onTimer:20 =75%-100%
+  - model{mid=volkumos_smash;n=nametag;r=true} @self ~onTimer:20 =75%-100%
+  - model{mid=volkumos_fury;n=nametag;r=true} @self ~onTimer:20 =75%-100%
+  
+  - skill{s=VolkumosConvertMage} @self ~onDamaged =75% @self
+  - model{mid=volkumos_mage;n=nametag} @self ~onTimer:20 =50%-74%
+  - model{mid=volkumos;n=nametag;r=true} @self ~onTimer:20 =50%-74%
+  - model{mid=volkumos_smash;n=nametag;r=true} @self ~onTimer:20 =50%-74%
+  - model{mid=volkumos_fury;n=nametag;r=true} @self ~onTimer:20 =50%-74%
+  
+  - skill{s=VolkumosConvertSmash} @self ~onDamaged =50% @self
+  - model{mid=volkumos_smash;n=nametag} @self ~onTimer:20 =25%-49%
+  - model{mid=volkumos;n=nametag;r=true} @self ~onTimer:20 =25%-49%
+  - model{mid=volkumos_mage;n=nametag;r=true} @self ~onTimer:20 =25%-49%
+  - model{mid=volkumos_fury;n=nametag;r=true} @self ~onTimer:20 =25%-49%
+  
+  - skill{s=VolkumosConvertFury} @self ~onDamaged =25% @self
+  - model{mid=volkumos_fury;n=nametag} @self ~onTimer:20 =<24%
+  - model{mid=volkumos;n=nametag;r=true} @self ~onTimer:20 =<24%
+  - model{mid=volkumos_mage;n=nametag;r=true} @self ~onTimer:20 =<24%
+  - model{mid=volkumos_smash;n=nametag;r=true} @self ~onTimer:20 =<24%
+  
+  - setitemmodel{mid=volkumos;bone=item_l;item=VolkenAxe} @self ~onSpawn
+  - setitemmodel{mid=volkumos;bone=item_l;item=VolkenAxe} @self ~onTimer =75%-100%
+  - setname{name=<caster.name>;delay=2} @self ~onDamaged  
+  - setname{name=<caster.name>;delay=2} @self ~onSpawn
+  - setname{name=<caster.name>;delay=2} @self ~onTimer:10 ?incombat{}
+  - speak{offset=0.6f;radius=30;maxlinelength=22;lineprefix="&c";message="May the wrath of my Fiery Wave crash upon you!";chatprefix=<caster.name>&f<&co>;duration=200} @self ~onSpawn
+  - skybox{s=0} @PIR{r=100} ~onSpawn
+  - speak{m="&cYour fire is dwindling, <trigger.name>. There is no escape from my Raging Fury."} @PlayersInRadius{r=40} ~onPlayerKill >0 1
+  - skill{s=StageMelee} @self ~onTimer:50 .5 =75%-100%
+  - skill{s=Tridreigon} @self ~onDamaged =66%
+  - skill{s=StageRanged} @self ~onTimer:50 .5 =50%-75%
+  - skill{s=Tridreigon} @self ~onDamaged =33%
+  - skill{s=StageSmash} @self ~onTimer:15 .5 =25%-50%
+  - skill{s=StageFinal} @self ~onTimer:50 .5 <25%
+  - skill{s=FuryMode} @self ~onTimer:20 <25%
+  DamageModifiers:
+  - FIRE_TICK 0
+  - FIRE 0
+  - PROJECTILE 0.5
+  - HOT_FLOOR 0
+  - FALL 0
+  BossBar:
+    Enabled: true
+    Title: '&c<&lb>BOSS<&rb> &4Volkumos'
+    Range: 40
+    Color: RED
+    Style: SEGMENTED_12
+    DarkenSky: true
+  Modules:
+#If enabled, the mob will track damage from different sources and assign more weight to targets that deal more damage (to prevent kite).
+    ThreatTable: true
+#If enabled, the mob will be able to be attacked by multiple players through damage immunity.
+    ImmunityTable: true
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.4
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    Glowing: true
+    KnockbackResistance: 0.4
+    RepeatAllSkills: false
+    DigOutOfGround: true
+    Silent: false
+    Despawn: false
+    
+    
+Tridreigon:
+  Type: WITHER_SKELETON
+  Display: '&c<&lb>MINI-BOSS<&rb> Tridreigon'
+  Health: 200
+  Damage: 20
+  AITargetSelectors:
+  - clear # Clears the mob's base AI
+  - players # Firstly targets players
+  - specificfaction good # Targets mobs from the faction "good"
+  KillMessages:
+  - '<target.name> fainted'
+  - '<target.name><&sq> got knocked out'
+  - '<target.name> died to a super effective Brutal Swing'
+  - '<target.name> was Crunched'
+  - '<target.name> was a psychic type'
+  - '<target.name> fell unconcious from a Dragon Claw'
+  Skills:
+  - setname{name=<caster.name>;delay=2} @self ~onDamaged  
+  - setname{name=<caster.name>;delay=2} @self ~onTimer:10 ?incombat{}
+  - skill{s=Overheal} ~onTimer:20
+  - skill{s=TriDeath} ~onDeath
+  DamageModifiers:
+  - FIRE_TICK 0
+  - FIRE 0
+  - PROJECTILE 0.5
+  - HOT_FLOOR 0
+  - FALL 0
+  Modules:
+#If enabled, the mob will track damage from different sources and assign more weight to targets that deal more damage (to prevent kite).
+    ThreatTable: true
+#If enabled, the mob will be able to be attacked by multiple players through damage immunity.
+    ImmunityTable: true
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.3
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    Glowing: false
+    KnockbackResistance: 1.5
+    RepeatAllSkills: true
+    DigOutOfGround: true
+    Silent: false
+    Despawn: false
+    PassthroughDamage: true

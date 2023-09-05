@@ -1,0 +1,66 @@
+uuid: b6f47b9a-dc79-44ff-9789-4b62a2db6ac9
+skills:
+  farming:
+    level: 4
+    xp: 562.0000000000009
+  foraging:
+    level: 3
+    xp: 480.0399999999999
+  mining:
+    level: 13
+    xp: 21244.889999999734
+  fishing:
+    level: 1
+    xp: 0.0
+  excavation:
+    level: 4
+    xp: 561.6999999999952
+  archery:
+    level: 1
+    xp: 20.0
+  defense:
+    level: 1
+    xp: 0.0
+  fighting:
+    level: 3
+    xp: 265.0999999999999
+  endurance:
+    level: 1
+    xp: 0.0
+  agility:
+    level: 5
+    xp: 1833.7000000000014
+  alchemy:
+    level: 1
+    xp: 0.0
+  enchanting:
+    level: 1
+    xp: 0.0
+  sorcery:
+    level: 1
+    xp: 70.0
+  healing:
+    level: 1
+    xp: 0.0
+  forging:
+    level: 1
+    xp: 0.0
+mana: 112.0
+locale: en
+stat_modifiers:
+  '0':
+    name: AureliumSkills.Modifiers.Armor.Leggings.Health
+    stat: health
+    value: 10.0
+  '1':
+    name: AureliumSkills.Modifiers.Armor.Boots.Health
+    stat: health
+    value: 5.0
+  '2':
+    name: AureliumSkills.Modifiers.Armor.Helmet.Health
+    stat: health
+    value: 5.0
+  '3':
+    name: AureliumSkills.Modifiers.Armor.Chestplate.Health
+    stat: health
+    value: 12.0

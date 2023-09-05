@@ -1,0 +1,3 @@
+2022-07-16 14:04:58.239: (31ms) 68% FORCEFIELD > Big distance with: horse. Exact distance: 3.439999999999952, without thorns. Ping: 31. Player version: V1_19. TPS: [20.000002714667033, 19.9999960841341, 19.99999809460018]
+2022-07-16 14:14:58.134: (35ms) 82% FORCEFIELD > Big distance with: creeper. Exact distance: 4.139999999999962, without thorns. Ping: 35. Player version: V1_19. TPS: [19.99996107674242, 20.000001509133448, 19.99999890471117]
+2022-07-16 14:23:53.56: (31ms) 62% AUTOCLICK > Clicks in one second: 25; Last second: 9; Better click in one second: 9 Ping: 31. Player version: V1_19. TPS: [20.000000622333353, 19.99999896506672, 19.999999998822222]

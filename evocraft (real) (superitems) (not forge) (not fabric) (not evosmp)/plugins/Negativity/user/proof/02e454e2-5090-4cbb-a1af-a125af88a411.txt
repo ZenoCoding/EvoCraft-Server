@@ -1,0 +1,4 @@
+2022-07-15 17:00:08.683: (33ms) 70% FORCEFIELD > Big distance with: zombie. Exact distance: 3.519999999999971, without thorns. Ping: 33. Player version: V1_19. TPS: [20.274212585085454, 18.952995870729737, 18.875914872198653]
+2022-07-15 23:50:57.421: (29ms) 87% BLINK > PositionLook packet: 43 Position Packet: 24 (=67) Ping: 29 Warn for Timer: 0. Player version: V1_19. TPS: [19.999980104686458, 19.999995065334552, 19.99999798635576]
+2022-07-15 23:50:57.421: (29ms) 85% TIMER > Flying: 0, position: 24, look: 0, positionLook: 43, sum: 29.0, median: 20. Player version: V1_19. TPS: [19.999980104686458, 19.999995065334552, 19.99999798635576]
+2022-07-16 00:09:07.447: (30ms) 83% FORCEFIELD > Big distance with: creeper. Exact distance: 4.159999999999949, without thorns. Ping: 30. Player version: V1_19. TPS: [19.999081981139867, 19.999809957539156, 19.999937099108937]

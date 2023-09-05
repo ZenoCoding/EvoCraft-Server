@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 47.210.178.254
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1672462819232
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1672523428185
+  login: 1672523427872
+money: '79.7175'
+last-account-name: CHEATERS_GET_BAN
+logoutlocation:
+  world: ca82709d-4280-42e0-b470-b161f1fb21e6
+  world-name: world
+  x: -41.30000001192093
+  y: 85.0
+  z: 140.69999998807907
+  yaw: -22.19919776916504
+  pitch: 25.350112915039062
+lastlocation:
+  world: ca82709d-4280-42e0-b470-b161f1fb21e6
+  world-name: world
+  x: -126.43787395019304
+  y: 63.0
+  z: 152.6914681412201
+  yaw: -92.70002746582031
+  pitch: 41.549957275390625

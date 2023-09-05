@@ -1,0 +1,101 @@
+templates:
+  spawn:
+    allowed-flags:
+    - invincible
+    denied-flags:
+    - pvp
+    - other-explosion
+    - mob-spawning
+    - interact
+    - creeper-explosion
+    - enderpearl
+  shop:
+    allowed-flags:
+    - invincible
+    denied-flags:
+    - pvp
+    - creeper-explosion
+    - other-explosion
+    - mob-spawning
+    - enderpearl
+    - interact
+  warpedvillage:
+    allowed-flags:
+    - interact
+    denied-flags: []
+  witherarena:
+    allowed-flags:
+    - enderpearl
+    - damage-combat
+    - receive-chat
+    - exp-drops
+    - entry
+    - aureliummobs-mob-spawning
+    - use
+    - drop-money
+    - damage-animals
+    - spawner-mob-drop-money
+    - send-chat
+    - mob-damage
+    - fall-damage
+    - ride
+    - item-drop
+    - exit-via-teleport
+    - item-pickup
+    - potion-splash
+    - mob-combat
+    - player-combat
+    - natural-hunger-drain
+    - player-drop-money
+    - natural-health-regen
+    - firework-damage
+    - interact
+    - mythic-mob-combat
+    - aureliumskills-xp-gain
+    - aureliumskills-custom-loot
+    - unknown-combat
+    - chorus-fruit-teleport
+    - other-explosion
+    denied-flags:
+    - invincible
+  hell:
+    allowed-flags:
+    - ghast-fireball
+    - natural-hunger-drain
+    - mythic-mob-combat
+    - lava-fire
+    - mob-damage
+    - receive-chat
+    - pvp
+    - mob-spawning
+    - send-chat
+    - damage-animals
+    - exit
+    - wither-damage
+    - aureliumskills-xp-gain
+    - player-combat
+    - exit-via-teleport
+    - ride
+    - unknown-combat
+    - damage-combat
+    - firework-damage
+    - fire-spread
+    - enderpearl
+    - interact
+    - other-explosion
+    - entry
+    - potion-splash
+    - use-anvil
+    - exp-drops
+    - mob-combat
+    - use
+    - fall-damage
+    - item-drop
+    - chorus-fruit-teleport
+    - aureliummobs-mob-spawning
+    denied-flags:
+    - tnt
+    - block-break
+    - creeper-explosion
+    - lava-flow
+    - graves-teleport

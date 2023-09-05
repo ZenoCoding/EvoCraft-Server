@@ -1,0 +1,149 @@
+MyAnimation1:
+  change-interval: 100
+  texts:
+  - '&d-&3--------------'
+  - '&3-&d-&3-------------'
+  - '&3--&d-&3------------'
+  - '&3---&d-&3-----------'
+  - '&3----&d-&3----------'
+  - '&3-----&d-&3---------'
+  - '&3------&d-&3--------'
+  - '&3-------&d-&3-------'
+  - '&3--------&d-&3------'
+  - '&3---------&d-&3-----'
+  - '&3----------&d-&3----'
+  - '&3-----------&d-&3---'
+  - '&3------------&d-&3--'
+  - '&3-------------&d-&3-'
+  - '&3--------------&d-'
+  - '&3-------------&d-&3-'
+  - '&3------------&d-&3--'
+  - '&3-----------&d-&3---'
+  - '&3----------&d-&3----'
+  - '&3---------&d-&3-----'
+  - '&3--------&d-&3------'
+  - '&3-------&d-&3-------'
+  - '&3------&d-&3--------'
+  - '&3-----&d-&3---------'
+  - '&3----&d-&3----------'
+  - '&3---&d-&3-----------'
+  - '&3--&d-&3------------'
+  - '&3-&d-&3-------------'
+  - '&d-&3--------------'
+logo:
+  change-interval: 50
+  texts:
+  - "&#00f2e3E&#00f0ffv&#00f2e3o&#00f4c6C&#00f6aar&#00f98da&#00fb71f&#00fd54t"
+  - "&#00f4c6E&#00f2e3v&#00f0ffo&#00f2e3C&#00f4c6r&#00f6aaa&#00f98df&#00fb71t"
+  - "&#00f6aaE&#00f4c6v&#00f2e3o&#00f0ffC&#00f2e3r&#00f4c6a&#00f6aaf&#00f98dt"
+  - "&#00f98dE&#00f6aav&#00f4c6o&#00f2e3C&#00f0ffr&#00f2e3a&#00f4c6f&#00f6aat"
+  - "&#00fb71E&#00f98dv&#00f6aao&#00f4c6C&#00f2e3r&#00f0ffa&#00f2e3f&#00f4c6t"
+  - "&#00fd54E&#00fb71v&#00f98do&#00f6aaC&#00f4c6r&#00f2e3a&#00f0fff&#00f2e3t"
+  - "&#00ff38E&#00fd54v&#00fb71o&#00f98dC&#00f6aar&#00f4c6a&#00f2e3f&#00f0fft"
+  - "&#00fd54E&#00ff38v&#00fd54o&#00fb71C&#00f98dr&#00f6aaa&#00f4c6f&#00f2e3t"
+  - "&#00fb71E&#00fd54v&#00ff38o&#00fd54C&#00fb71r&#00f98da&#00f6aaf&#00f4c6t"
+  - "&#00f98dE&#00fb71v&#00fd54o&#00ff38C&#00fd54r&#00fb71a&#00f98df&#00f6aat"
+  - "&#00f6aaE&#00f98dv&#00fb71o&#00fd54C&#00ff38r&#00fd54a&#00fb71f&#00f98dt"
+  - "&#00f4c6E&#00f6aav&#00f98do&#00fb71C&#00fd54r&#00ff38a&#00fd54f&#00fb71t"
+  - "&#00f2e3E&#00f4c6v&#00f6aao&#00f98dC&#00fb71r&#00fd54a&#00ff38f&#00fd54t"
+  - "&#00f0ffE&#00f2e3v&#00f4c6o&#00f6aaC&#00f98dr&#00fb71a&#00fd54f&#00ff38t"
+  
+season2:
+  change-interval: 50
+  texts:
+  - "&#ff6800S&#ff5400e&#ff6800a&#ff7b00s&#ff8f00o&#ffa300n &#ffb7001"
+  - "&#ff7b00S&#ff6800e&#ff5400a&#ff6800s&#ff7b00o&#ff8f00n &#ffa3001"
+  - "&#ff8f00S&#ff7b00e&#ff6800a&#ff5400s&#ff6800o&#ff7b00n &#ff8f001"
+  - "&#ffa300S&#ff8f00e&#ff7b00a&#ff6800s&#ff5400o&#ff6800n &#ff7b001"
+  - "&#ffb700S&#ffa300e&#ff8f00a&#ff7b00s&#ff6800o&#ff5400n &#ff68001"
+  - "&#ffca00S&#ffb700e&#ffa300a&#ff8f00s&#ff7b00o&#ff6800n &#ff54001"
+  - "&#ffde00S&#ffca00e&#ffb700a&#ffa300s&#ff8f00o&#ff7b00n &#ff68001"
+  - "&#ffca00S&#ffde00e&#ffca00a&#ffb700s&#ffa300o&#ff8f00n &#ff7b001"
+  - "&#ffb700S&#ffca00e&#ffde00a&#ffca00s&#ffb700o&#ffa300n &#ff8f001"
+  - "&#ffa300S&#ffb700e&#ffca00a&#ffde00s&#ffca00o&#ffb700n &#ffa3001"
+  - "&#ff8f00S&#ffa300e&#ffb700a&#ffca00s&#ffde00o&#ffca00n &#ffb7001"
+  - "&#ff7b00S&#ff8f00e&#ffa300a&#ffb700s&#ffca00o&#ffde00n &#ffca001"
+  - "&#ff6800S&#ff7b00e&#ff8f00a&#ffa300s&#ffb700o&#ffca00n &#ffde001"
+  - "&#ff5400S&#ff6800e&#ff7b00a&#ff8f00s&#ffa300o&#ffb700n &#ffca001"
+
+
+
+web:
+  change-interval: 200
+  texts:
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+  - '&6w&eww.domain.com'
+  - '&ew&6w&ew.domain.com'
+  - '&eww&6w&e.domain.com'
+  - '&ewww&6.&edomain.com'
+  - '&ewww.&6d&eomain.com'
+  - '&ewww.d&6o&emain.com'
+  - '&ewww.do&6m&eain.com'
+  - '&ewww.dom&6a&ein.com'
+  - '&ewww.doma&6i&en.com'
+  - '&ewww.domai&6n&e.com'
+  - '&ewww.domain&6.&ecom'
+  - '&ewww.domain.&6c&eom'
+  - '&ewww.domain.c&6o&em'
+  - '&ewww.domain.co&6m'
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+  - '&ewww.domain.com'
+vote:
+  change-interval: 1000
+  texts:
+  - '&avote.domain.com'
+  - '&a&nvote.domain.com'
+  - '&5vote.domain.com'
+  - '&5&nvote.domain.com'
+Welcome:
+  change-interval: 200
+  texts:
+  - '&cW'
+  - '&cW'
+  - '&cWe'
+  - '&cWel'
+  - '&cWelc'
+  - '&cWelco'
+  - '&cWelcom'
+  - '&cWelcome'
+  - '&cWelcome'
+  - '&cWelcome'
+  - '&cWelcome'
+  - '&cWelcom'
+  - '&cWelco'
+  - '&cWelc'
+  - '&cWel'
+  - '&cWe'
+  - '&cW'
+time:
+  change-interval: 900
+  texts:
+  - '&7Time &b%time%'
+  - '&7> Time &b%time% &7<'
+  - '&7>> Time &b%time% &7<<'
+  - '&7>>> Time &b%time% &7<<<'
+  - '&7Date &b%date%'
+  - '&7> Date &b%date% &7<'
+  - '&7>> Date &b%date% &7<<'
+  - '&7>>> Date &b%date% &7<<<'
+ping-tps:
+  change-interval: 5000
+  texts:
+  - '&aPing: &2&n%ping%&r &ams'
+  - '&bServer TPS: &8%tps%'
+barcolors:
+  change-interval: 1000
+  texts:
+    - RED
+    - BLUE
+    - GREEN
+    - YELLOW

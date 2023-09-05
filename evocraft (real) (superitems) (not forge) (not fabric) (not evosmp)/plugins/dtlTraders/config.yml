@@ -1,0 +1,79 @@
+#
+# Appearance and position of page selectors
+version: 6.0.0
+General:
+  disable-npc-left-click: true
+  disable-npc-right-click: false
+  disable-shops-no-items: false
+  Support:
+    OptEco:
+      enabled: false
+    GemsEconomy:
+      enabled: false
+      currency: Valis
+    BeastToken:
+      enabled: false
+    Vault:
+      enabled: true
+    Placeholderapi: true
+page-selectors:
+  back:
+    slots:
+    - 2
+    position: bottom
+    item:
+      ==: org.bukkit.inventory.ItemStack
+      v: 3105
+      type: EMERALD_BLOCK
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"text":"&aBack"}],"text":""}'
+    name: '&aBack'
+  next:
+    slots:
+    - 6
+    position: bottom
+    item:
+      ==: org.bukkit.inventory.ItemStack
+      v: 3105
+      type: EMERALD_BLOCK
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"text":"&aNext"}],"text":""}'
+    name: '&aNext'
+  exit:
+    slots:
+    - 4
+    position: bottom
+    item:
+      ==: org.bukkit.inventory.ItemStack
+      v: 3105
+      type: REDSTONE_BLOCK
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"text":"&cExit"}],"text":""}'
+    name: '&cExit'
+shop-selectors:
+  slot: 8
+  position: bottom
+  buy:
+    item:
+      ==: org.bukkit.inventory.ItemStack
+      v: 3105
+      type: GOLDEN_APPLE
+    name: '&aBuy'
+  sell:
+    item:
+      ==: org.bukkit.inventory.ItemStack
+      v: 3105
+      type: STONE
+    name: '&6Sell'
+  trade:
+    item:
+      ==: org.bukkit.inventory.ItemStack
+      v: 3105
+      type: REDSTONE_BLOCK
+    name: '&bTrade'

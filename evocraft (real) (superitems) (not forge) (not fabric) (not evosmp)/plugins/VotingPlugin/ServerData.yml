@@ -1,0 +1,37 @@
+LastUpdated: 1674766373489
+IntColumns:
+- VotePartyVotes
+- MilestoneCount
+- MonthTotal
+- AllTimeTotal
+- DailyTotal
+- WeeklyTotal
+- Points
+- DayVoteStreak
+- BestDayVoteStreak
+- WeekVoteStreak
+- BestWeekVoteStreak
+- MonthVoteStreak
+- HighestDailyTotal
+- HighestMonthlyTotal
+- HighestWeeklyTotal
+- LastMonthTotal
+- BestMonthVoteStreak
+VotingPlugin:
+  Version: 'git-Paper-65 (MC: 1.19)'
+  ServiceSites:
+  - Best Minecraft Servers
+  - Servers-Minecraft
+  - MinecraftServers.org
+  - Best-Minecraft-Servers.Co
+  - MCSL
+  - Minecraft.Buzz
+  VoteParty:
+    Total: 8
+    Voted:
+    - df5522ee-70a5-4015-8d4d-75f7f04e6b45
+PluginVersions:
+  VotingPlugin: 6.9.3
+Month: JANUARY
+PrevWeek: 4
+PrevDay: 26

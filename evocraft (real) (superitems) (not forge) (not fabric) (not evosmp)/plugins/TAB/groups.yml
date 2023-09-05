@@ -1,0 +1,41 @@
+Owner:
+  tabprefix: "&0&l[&a&lOwner&0&l] &a"
+  tagprefix: "&2&lOwner &a"
+Admin:
+  tabprefix: "&c[ADMIN] &c"
+  tagprefix: "&cAdmin &c"
+Mod:
+  tabprefix: "&2[MOD] &2"
+  tagprefix: "&2Mod &2"
+omega:
+  tabprefix: "&6[OMEGA] &f"
+  tagprefix: "&6OMEGA &f"
+alpha:
+  tabprefix: "&5[ALPHA] &f"
+  tagprefix: "&5ALPHA &f"
+beta:
+  tabprefix: "&9[BETA] &f"
+  tagprefix: "&9BETA &f"
+default:
+  tabprefix: "&7[&bPlayer&7] &b"
+  tagprefix: "&bPlayer &b"
+example_group:
+  header:
+    - "This is an example of per-group header/footer"
+  footer:
+    - "applied to a group"
+
+ # default settings for all groups, all groups will take properties from this section unless player's primary group overrides a specific setting
+_DEFAULT_:
+  tabprefix: "%vault-prefix%"
+  tagprefix: "%vault-prefix%"
+  customtabname: "%essentials_nickname%"
+  customtagname: "%essentials_nickname%" # don't forget to enable unlimited nametag mode to make this one work
+  tabsuffix: "%vault-suffix%%afk%"
+  tagsuffix: "%vault-suffix%%afk%"
+
+per-world:
+  world1:
+    Owner:
+      tabprefix: "&0&l[&a&lOwner&0&l] &a"
+      tagprefix: "&2&lOwner &a"

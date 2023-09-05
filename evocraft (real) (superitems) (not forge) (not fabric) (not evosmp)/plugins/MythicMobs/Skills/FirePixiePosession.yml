@@ -1,0 +1,34 @@
+FirePixiePosession:
+    Skills:
+    - effect:sound{s=entity.illusioner.prepare_mirror;v=1;p=0}
+    - effect:sound{s=entity.illusioner.prepare_mirror;v=1;p=0}
+    - effect:sound{s=entity.illusioner.prepare_mirror;v=1;p=0}
+    - effect:sound{s=entity.illusioner.prepare_mirror;v=1;p=0}
+    #orbital=PixieTrail
+    - orbital{onTick=FirePixieOrbital;onHit=FirePixieOrbitalHit;points=20;interval=1;duration=500;charges=1;r=2;oy=1} @target
+    - potion{t=SLOW;d=60;l=3} @PIR{r=5}
+    - potion{t=CONFUSION;d=60;l=9} @PIR{r=5}
+    - potion{t=FIRE_RESISTANCE;d=700;l=1} @target
+    - potion{t=LEVITATION;d=10;l=1} @target
+    - potion{t=INCREASE_DAMAGE;d=700;l=2} @PIR{r=5}
+    - damage{a=30;pkb=true} @PIR{r=5}
+    - potion{t=SPEED;d=300;l=1} @target
+    - delay 1
+    - remove @self
+    - suicide
+
+
+FirePixieOrbital:
+    Skills:
+    - effect:particles{p=reddust;color=#fdaf38;amount=1;vs=0.1;hs=0.1}
+    - effect:particles{p=reddust;color=#ff0000;amount=1;vs=0.1;hs=0.1}
+    - effect:particles{p=reddust;color=#ff6600;amount=1;vs=0.1;hs=0.1}
+    - effect:particles{p=flame;amount=1;vs=0.1;hs=0.1}
+    - effect:particles{p=mobSpell;color=#ff6600;amount=1;vs=0.1;hs=0.1}
+
+FirePixieOrbitalHit:
+    Skills:
+    - effect:particles{p=largeexplosion;amount=1;vs=0.1;hs=0.1}
+    - effect:sound{s=block.fire.extinguish;v=1;p=-3}
+    - damage{a=20;pkb=true}
+    - ignite{d=200}

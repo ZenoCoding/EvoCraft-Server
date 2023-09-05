@@ -1,0 +1,49 @@
+uuid: 3c226150-30e6-476b-8fa6-532067083448
+skills:
+  farming:
+    level: 5
+    xp: 1141.9999999999977
+  foraging:
+    level: 3
+    xp: 198.83999999999992
+  mining:
+    level: 7
+    xp: 3283.300000000002
+  fishing:
+    level: 1
+    xp: 0.0
+  excavation:
+    level: 1
+    xp: 7.0
+  archery:
+    level: 1
+    xp: 0.0
+  defense:
+    level: 1
+    xp: 0.0
+  fighting:
+    level: 2
+    xp: 127.0
+  endurance:
+    level: 1
+    xp: 0.0
+  agility:
+    level: 4
+    xp: 468.00000000000006
+  alchemy:
+    level: 1
+    xp: 0.0
+  enchanting:
+    level: 1
+    xp: 0.0
+  sorcery:
+    level: 1
+    xp: 0.0
+  healing:
+    level: 1
+    xp: 0.0
+  forging:
+    level: 1
+    xp: 0.0
+mana: 109.0
+locale: en

@@ -1,0 +1,22 @@
+AirVortex:
+  Skills:
+  - orbital{onTick=SweepOrbTick2;onHit=SweepOrbHit2;points=32;interval=1;duration=160;rotx=0;rotz=0;roty=180;ox=0;oy=0.5;oz=-5;r=5;HitNonPlayers=true}
+  - orbital{onTick=SweepOrbTick2;onHit=SweepOrbHit2;points=32;interval=1;duration=160;rotx=0;rotz=0;roty=1;ox=0;oy=0.5;oz=5;r=5;HitNonPlayers=true}
+  - orbital{onTick=SweepOrbTick2;onHit=SweepOrbHit2;points=32;interval=1;duration=160;rotx=0;rotz=0;roty=335.5;ox=5;oy=0.5;oz=0;r=5;HitNonPlayers=true}
+  - orbital{onTick=SweepOrbTick2;onHit=SweepOrbHit2;points=32;interval=1;duration=160;rotx=0;rotz=0;roty=156.5;ox=-5;oy=0.5;oz=0;r=5;HitNonPlayers=true}
+  - orbital{onTick=SweepOrbTick2;onHit=SweepOrbHit2;points=32;interval=1;duration=160;rotx=0;rotz=0;roty=0.5;ox=-3.5;oy=0.5;oz=3.5;r=5;HitNonPlayers=true}
+  - orbital{onTick=SweepOrbTick2;onHit=SweepOrbHit2;points=32;interval=1;duration=160;rotx=0;rotz=0;roty=179.5;ox=3.5;oy=0.5;oz=-3.5;r=5;HitNonPlayers=true}
+  - orbital{onTick=SweepOrbTick2;onHit=SweepOrbHit2;points=32;interval=1;duration=160;rotx=0;rotz=0;roty=218.5;ox=-3.5;oy=0.5;oz=-3.5;r=5;HitNonPlayers=true}
+  - orbital{onTick=SweepOrbTick2;onHit=SweepOrbHit2;points=32;interval=1;duration=160;rotx=0;rotz=0;roty=58.5;ox=3.5;oy=0.5;oz=3.5;r=5;HitNonPlayers=true}
+  - sound{s=item.elytra.flying;p=1.24}
+
+SweepOrbTick2:
+  Skills:
+  - effect:particles{p=sweep_attack;amount=1;speed=0;hS=0;vS=0;size=1} @origin
+  - effect:particles{particle=reddust;color=#2EFAF1;a=1;hs=0;vs=0} @origin
+  - effect:particles{particle=reddust;color=#1AA7A1;a=1;hs=0;vs=0} @origin
+
+SweepOrbHit2:
+  Skills:
+  - damage{a=20}
+  - throw{velocity=5;velocityY=3}

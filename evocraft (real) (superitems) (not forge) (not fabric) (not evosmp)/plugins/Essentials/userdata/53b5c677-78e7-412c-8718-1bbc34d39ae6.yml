@@ -1,0 +1,47 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 174.160.18.227
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1671671911303
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1671671992062
+  login: 1671671882553
+money: '755.6210199945082387'
+last-account-name: BabyRushu
+lastlocation:
+  world: a798a21c-cac4-4496-b685-2f70b3cc85e1
+  world-name: flat
+  x: -367.69999998807907
+  y: 17.5
+  z: -591.3000000119209
+  yaw: -115.50001525878906
+  pitch: 43.050018310546875
+homes:
+  home:
+    world: ca82709d-4280-42e0-b470-b161f1fb21e6
+    world-name: world
+    x: -1475.211162489134
+    y: 65.0
+    z: -288.9965427781427
+    yaw: -123.6363525390625
+    pitch: 39.45000457763672
+logoutlocation:
+  world: a798a21c-cac4-4496-b685-2f70b3cc85e1
+  world-name: flat
+  x: -365.30000001192093
+  y: 17.5
+  z: -591.4428820643383
+  yaw: 126.43433380126953
+  pitch: 17.436445236206055

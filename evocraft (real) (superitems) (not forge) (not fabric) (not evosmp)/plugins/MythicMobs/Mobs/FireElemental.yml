@@ -1,0 +1,72 @@
+FireElemental:
+  Type: BABY_ZOMBIE
+  Display: '&4Fire Elemental'
+  Health: 50
+  Damage: 0
+  Armor: 0
+  Disguise:
+    Type: blaze
+  Options:
+    ApplyInvisibility: true
+    AlwaysShowName: false
+    Despawn: false
+    MaxCombatDistance: 5
+    NoDamageTicks: 1
+    PreventItemPickup: true
+    PreventLeashing: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    MovementSpeed: 0.13
+    PreventOtherDrops: true
+    Silent: true
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+    - 0 clear
+    - 1 fleeplayers
+  AITargetSelectors:
+    - 0 clear
+    - 1 players
+    - 2 attacker
+  DamageModifiers:
+    - PROJECTILE 0.33
+    - ENTITY_ATTACK 1.5
+    - FIRE -4
+    - FIRE_TICK -4
+    - HOT_FLOOR -1
+    - DROWNING 100
+  Skills:
+    - skill{s=FireElementalProjectile} @target ~onTimer:100
+    - effect:particlering{particle=flame;radius=1;points=32;amount=1;hS=0.1;vS=0} @self ~onTimer:1
+    - ignite{tick=50} ~onDamaged
+    - effect:sound{s=entity.phantom.ambient;v=1;p=-3} ~onDamaged
+    - effect:sound{s=entity.husk.death;v=1;p=0} ~onDeath
+    - effect:sound{s=block.beacon.power_select;v=1;p=0} ~onDeath
+    - skill{s=FireDeath} @self ~onDeath
+
+FireDeathMob:
+    Type: BABY_ZOMBIE
+    Display: 'FireDeathMob'
+    Health: 10
+    Damage: 0
+    Armor: 0
+    Options:
+        PreventJockeyMounts: true
+        PreventSunburn: true
+        Collidable: false
+        ApplyInvisibility: true
+        MovementSpeed: 0.001
+        Silent: true
+        PreventOtherDrops: true
+        Invincible: true
+        PreventRandomEquipment: true
+    Modules:
+    ThreatTable: true
+    AIGoalSelectors:
+        - 0 clear
+    AITargetSelectors:
+        - 0 clear
+    DamageModifiers:
+        - DROWNING 100
+    Skills:
+        - skill{s=FireDeathSkill} @self ~onSpawn

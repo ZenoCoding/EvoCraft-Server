@@ -1,0 +1,48 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 69.222.188.155
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1673676108663
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1673718600117
+  login: 1673718484513
+money: '364.8007613400111121'
+last-account-name: skdu
+lastlocation:
+  world: ca82709d-4280-42e0-b470-b161f1fb21e6
+  world-name: world
+  x: -2335.587156832984
+  y: 62.5625
+  z: 781.5018951711969
+  yaw: -0.6421598792076111
+  pitch: 38.65633773803711
+logoutlocation:
+  world: ca82709d-4280-42e0-b470-b161f1fb21e6
+  world-name: world
+  x: -95.59993188843121
+  y: 63.0
+  z: 55.561631286302074
+  yaw: 148.38333129882812
+  pitch: 43.47346496582031
+homes:
+  home:
+    world: ca82709d-4280-42e0-b470-b161f1fb21e6
+    world-name: world
+    x: -2330.300000011921
+    y: 62.0
+    z: 774.2375000119209
+    yaw: 63.6937255859375
+    pitch: 39.65574645996094
+confirm-pay: false

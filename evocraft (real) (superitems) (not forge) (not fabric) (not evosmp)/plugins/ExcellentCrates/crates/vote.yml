@@ -1,0 +1,158 @@
+Name: §bVote Crate
+Preview_Config: default
+Permission_Required: false
+Attached_Citizens: ''
+Opening:
+  Cooldown: 0
+  Cost:
+    MONEY: 0.0
+    EXP: 0.0
+Key:
+  Ids:
+  - vote
+Block:
+  Locations:
+  - -131.0,98.0,79.0,0.0,0.0,world
+  Pushback:
+    Enabled: true
+  Hologram:
+    Enabled: true
+    Offset:
+      Y: 1.5
+    Text:
+    - §5Vote Crate
+    - §dGet Keys by using /vote
+  Effect:
+    Model: PULSAR
+    Particle:
+      Name: SPELL_WITCH
+      Data: ''
+Rewards:
+  List:
+    elytra:
+      Name: Elytra
+      Chance: 2.0
+      Broadcast: false
+      Win_Limits:
+        Amount: -1
+        Cooldown: 0
+      Preview: a0000g002d5i0043dd5n6aoric5j78ej5dhsn8sj118006t31cs1g01i4c5mm2pr5000000000400agrfeln78080
+      Commands: []
+      Items:
+      - a0000g002d5i0043dd5n6aoric5j78ej5dhsn8sj118006t31cs1g01i4c5mm2pr5000000000400agrfeln78080
+    netherite_ingot:
+      Name: Netherite Ingot
+      Chance: 5.0
+      Broadcast: false
+      Win_Limits:
+        Amount: -1
+        Cooldown: 0
+      Preview: 1800020009km800pdlkmspb3e9gmct1qdpin8q35e9kn8pavd5n6errk0400agrfeln78080
+      Commands: []
+      Items:
+      - 1800020009km800pdlkmspb3e9gmct1qdpin8q35e9kn8pavd5n6errk0400agrfeln78080
+    end_crystal:
+      Name: End Crystals
+      Chance: 10.0
+      Broadcast: false
+      Win_Limits:
+        Amount: -1
+        Cooldown: 0
+      Preview: a0000g002d5i005bdd5n6aoric5j78ej5dpi5uorif5pn8obc0400agrfeln78080
+      Commands: []
+      Items:
+      - a0000g002d5i005bdd5n6aoric5j78ej5dpi5uorif5pn8obc0400agrfeln78080
+    totem_of_undying:
+      Name: Totem of Undying
+      Chance: 25.0
+      Broadcast: false
+      Win_Limits:
+        Amount: -1
+        Cooldown: 0
+      Preview: a0000g002d5i006jdd5n6aoric5j78ejkdtq6aravdtj5utbechsmirj70400agrfeln78080
+      Commands: []
+      Items:
+      - a0000g002d5i006jdd5n6aoric5j78ejkdtq6aravdtj5utbechsmirj70400agrfeln78080
+    vote_crate_key:
+      Name: Vote Crate Key
+      Chance: 25.0
+      Broadcast: false
+      Win_Limits:
+        Amount: -1
+        Cooldown: 0
+      Preview: 5000080016ip002tmmirj5cdp62pjk79q74qbgetkn4pavd1nmuqoa001n8ob71800ep39edo6oobp10008jj1dlig15jr49ingt3ic4h3kmrr49h6ur3448t6cobcediio8j9ehgmoqb348t6cobcediio8jldpi6asjcd5n6ap1279j62r3jckm24srke9kmmpbkd1p6utb7d0h3kpj1dhpmab12dth6ctbjcdgn8pb448t6cobcediio8j3dtm6ush278h6errccgh2o8jkcls788hq49b6ut35411n4obkckg4mpbp49ulqb12ehingt1278h24v8018014k3lc9m6ioq2ellmmqbkapgmotb5ec400735f1hmar3ccln78oric5q6aspqcdp62t35btlmau9ed5i0013mdtq6a0000400agrfeln78080
+      Commands: []
+      Items:
+      - 5000080016ip002tmmirj5cdp62pjk79q74qbgetkn4pavd1nmuqoa001n8ob71800ep39edo6oobp10008jj1dlig15jr49ingt3ic4h3kmrr49h6ur3448t6cobcediio8j9ehgmoqb348t6cobcediio8jldpi6asjcd5n6ap1279j62r3jckm24srke9kmmpbkd1p6utb7d0h3kpj1dhpmab12dth6ctbjcdgn8pb448t6cobcediio8j3dtm6ush278h6errccgh2o8jkcls788hq49b6ut35411n4obkckg4mpbp49ulqb12ehingt1278h24v8018014k3lc9m6ioq2ellmmqbkapgmotb5ec400735f1hmar3ccln78oric5q6aspqcdp62t35btlmau9ed5i0013mdtq6a0000400agrfeln78080
+    5000c:
+      Name: 5000c
+      Chance: 30.0
+      Broadcast: false
+      Win_Limits:
+        Amount: -1
+        Cooldown: 0
+      Preview: 1800020009km800hdlkmspb3e9gmct1qclmmasj1dhi0k003ehgme0o01546ip358pm62prj000008o90064arj3d1gmst3dcln78soa000000880016ip002dmmirj5cdp62pjk79pmgobie1n6asrj08006r3mdg00a0000400agrfeln78080
+      Commands:
+      - '[CONSOLE] eco give %player_name% 5000'
+      Items: []
+    shulker_box:
+      Name: Shulker Box
+      Chance: 15.0
+      Broadcast: false
+      Win_Limits:
+        Amount: -1
+        Cooldown: 0
+      Preview: a0000g002d5i005bdd5n6aoric5j78ejjd1qmoqr5e9fm4rro0400agrfeln78080
+      Commands: []
+      Items:
+      - a0000g002d5i005bdd5n6aoric5j78ejjd1qmoqr5e9fm4rro0400agrfeln78080
+    fireworks:
+      Name: Fireworks
+      Chance: 35.0
+      Broadcast: false
+      Win_Limits:
+        Amount: -1
+        Cooldown: 0
+      Preview: 1800020009km800pdlkmspb3e9gmct1qcpkn4pbndtp6mnridthmmpbk0400agrfeln78400
+      Commands: []
+      Items:
+      - 1800020009km800pdlkmspb3e9gmct1qcpkn4pbndtp6mnridthmmpbk0400agrfeln78400
+    wither_skeleton_skull:
+      Name: Wither Skeleton Skull
+      Chance: 10.0
+      Broadcast: false
+      Win_Limits:
+        Amount: -1
+        Cooldown: 0
+      Preview: a0000g002d5i007rdd5n6aoric5j78ejnd5q6gpbibtpmmpbcclq6urivedlnar3c0400agrfeln78080
+      Commands: []
+      Items:
+      - a0000g002d5i007rdd5n6aoric5j78ejnd5q6gpbibtpmmpbcclq6urivedlnar3c0400agrfeln78080
+    daily_crate_key:
+      Name: Daily Crate Key
+      Chance: 35.0
+      Broadcast: false
+      Win_Limits:
+        Amount: -1
+        Cooldown: 0
+      Preview: a0000g002d5i005rdd5n6aoric5j78ejke9kn0tr9e9iluq3fdtlgk003ehgme2g00ti6isrgdhgni2000h762rb502bnm8j5f1q74o9279dnm8j2dtm688hqcpgmosr55gh6it31dhkm68hqcpgmosr55gh7arj4clp6oqbecli24ej6c5m76p9c49pn8sj9ddin8q3idtqmeq1279j62r3jckm24rr2cpqn6or1ehim88hqcpgmosr55gh66rrcdtp24eh2ctnmop125gh78pboegh3k8i4c5kmou908dp62t35415mau92fleio8jkcls788hq48h7q00a00950tb2dhkm6gjlddlmit2mc5m7apbj1001opbocdimor35dpq66sj1ehin6ej3e9gn8pavddinibj9cg00ap31d5m7i0000400agrfeln78080
+      Commands: []
+      Items:
+      - a0000g002d5i005rdd5n6aoric5j78ejke9kn0tr9e9iluq3fdtlgk003ehgme2g00ti6isrgdhgni2000h762rb502bnm8j5f1q74o9279dnm8j2dtm688hqcpgmosr55gh6it31dhkm68hqcpgmosr55gh7arj4clp6oqbecli24ej6c5m76p9c49pn8sj9ddin8q3idtqmeq1279j62r3jckm24rr2cpqn6or1ehim88hqcpgmosr55gh66rrcdtp24eh2ctnmop125gh78pboegh3k8i4c5kmou908dp62t35415mau92fleio8jkcls788hq48h7q00a00950tb2dhkm6gjlddlmit2mc5m7apbj1001opbocdimor35dpq66sj1ehin6ej3e9gn8pavddinibj9cg00ap31d5m7i0000400agrfeln78080
+    block_of_gold:
+      Name: Block of Gold
+      Chance: 60.0
+      Broadcast: false
+      Win_Limits:
+        Amount: -1
+        Cooldown: 0
+      Preview: 1800020009km800kdlkmspb3e9gmct1qctnmop2vc9m6uorb0400agrfeln78080
+      Commands: []
+      Items:
+      - 1800020009km800kdlkmspb3e9gmct1qctnmop2vc9m6uorb0400agrfeln78080
+Item:
+  Material: ENDER_CHEST
+  Amount: 1
+  Durability: 0
+  Item_Flags: []
+  Unbreakable: false

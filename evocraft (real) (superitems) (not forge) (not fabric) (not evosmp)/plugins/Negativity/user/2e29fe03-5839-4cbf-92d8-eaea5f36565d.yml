@@ -1,0 +1,21 @@
+playername: FrezinPowerYT
+lang: en_US
+minerate-full-mined: 35060
+minerate:
+  diamond: 0
+  gold: 0
+  iron: 3
+  coal: 128
+  ancient debris: 0
+better-click: 26
+cheats:
+  timer: 4
+  inventorymove: 2
+  nuker: 2
+  airplace: 2
+  forcefield: 1
+  airjump: 1
+  fastplace: 3
+  noslowdown: 1
+  speed: 8
+creation-time: 1660176839608

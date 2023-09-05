@@ -1,0 +1,22 @@
+#  ExampleDestination:
+#    world: it will be the world name
+#    pos:
+#      X:
+#      Y:
+
+warptoworld:
+  world: flat
+  pos:
+    X: -134.5
+    Y: 78.0
+    Z: -465.5
+    pitch: 0.039381735
+    yaw: 179.9977
+world:
+  world: world
+  pos:
+    X: 0.5
+    Y: 101.0
+    Z: 0.5
+    pitch: -5.9169083
+    yaw: -2.85005

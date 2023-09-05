@@ -1,0 +1,17 @@
+playername: LilNibbles
+lang: en_US
+minerate-full-mined: 2392
+minerate:
+  diamond: 0
+  gold: 0
+  iron: 32
+  coal: 25
+  ancient debris: 0
+better-click: 8
+cheats:
+  airjump: 1
+  forcefield: 1
+  noslowdown: 1
+  spider: 2
+  speed: 5
+creation-time: 1659816145342

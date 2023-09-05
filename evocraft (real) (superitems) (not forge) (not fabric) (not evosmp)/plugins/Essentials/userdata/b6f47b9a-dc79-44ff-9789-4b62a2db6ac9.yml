@@ -1,0 +1,48 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 47.210.178.254
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1672543407023
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1672543449778
+  login: 1672543394323
+money: '12644.7861427945584112'
+last-account-name: AncientBinary
+logoutlocation:
+  world: ca82709d-4280-42e0-b470-b161f1fb21e6
+  world-name: world
+  x: -999.1233147979391
+  y: 68.0
+  z: -2197.887422877676
+  yaw: 26.23516845703125
+  pitch: 13.045071601867676
+lastlocation:
+  world: a798a21c-cac4-4496-b685-2f70b3cc85e1
+  world-name: flat
+  x: -138.95902959690048
+  y: 70.0
+  z: -569.9284310299248
+  yaw: 140.54408264160156
+  pitch: 20.008861541748047
+nickname: Dirac
+homes:
+  home:
+    world: ca82709d-4280-42e0-b470-b161f1fb21e6
+    world-name: world
+    x: -1009.3732499661289
+    y: 68.0
+    z: -2213.5832141870474
+    yaw: -130.38279724121094
+    pitch: 32.137794494628906

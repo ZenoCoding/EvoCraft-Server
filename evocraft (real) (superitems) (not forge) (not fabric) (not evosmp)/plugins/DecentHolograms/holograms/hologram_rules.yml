@@ -1,0 +1,34 @@
+location: flat:-130.050:83.000:-495.950
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: <#55FFFF>&lEvoCraft</#55FF55> RULES
+    height: 0.6
+  - content: <#55FFFF>1. Stay cool, calm, and be respectful to others.
+    height: 0.4
+  - content: <#55FFFF>2. Swearing is fine, but don't direct hate towards others.
+    height: 0.4
+  - content: <#55FFFF>3. No hacking, X-Raying, or Macroing. Don't abuse unfair advantages.
+    height: 0.4
+  - content: '&a4.<#55FFFF> Report rule breakers with sufficient evidence.'
+    height: 0.4
+  - content: '&a5.<#55FFFF> Don''t spam, it''s annoying and unnecessary.'
+    height: 0.4
+  - content: '&a6.<#55FFFF> Don''t grief unnecessarily, (yes, that includes the wilderness)'
+    height: 0.4
+  - content: '&a7.<#55FFFF> Don''t start unecessary drama, try to resolve your arguments
+      respectfully.'
+    height: 0.4
+  - content: '&a8.<#55FFFF> Don''t post &cNSFW &bcontent. (Gore, Sexually Themed Content,
+      etc.)'
+    height: 0.4
+  - content: '&a9.<#55FFFF> Don''t combat log, spawn kill, or trap people''s login.'
+    height: 0.3
+  - content: '&c&lRULES INCLUDE BUT AREN''T LIMITED TO WHAT IS LISTED ABOVE'
+    height: 0.3
+  actions: {}

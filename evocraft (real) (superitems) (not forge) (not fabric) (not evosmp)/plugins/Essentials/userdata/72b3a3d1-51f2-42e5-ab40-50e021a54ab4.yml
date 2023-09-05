@@ -1,0 +1,48 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 24.6.83.134
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1673677006363
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1673677371968
+  login: 1673675225845
+money: '3.0431055013919718'
+last-account-name: BaneOfNoobs6
+lastlocation:
+  world: ca82709d-4280-42e0-b470-b161f1fb21e6
+  world-name: world
+  x: -2348.6547520236104
+  y: 76.0
+  z: 2474.3016859922095
+  yaw: -155.05747985839844
+  pitch: 10.949861526489258
+logoutlocation:
+  world: ca82709d-4280-42e0-b470-b161f1fb21e6
+  world-name: world
+  x: -96.5
+  y: 63.0
+  z: 48.5
+  yaw: 88.64997863769531
+  pitch: 0.4500000476837158
+confirm-pay: false
+homes:
+  home:
+    world: ca82709d-4280-42e0-b470-b161f1fb21e6
+    world-name: world
+    x: -2344.0533590187674
+    y: 76.0
+    z: 2476.375782458514
+    yaw: 17.89398193359375
+    pitch: 29.699926376342773

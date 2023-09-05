@@ -1,0 +1,19 @@
+playername: XX_Sh4duw_XX
+lang: en_US
+minerate-full-mined: 1040
+minerate:
+  diamond: 0
+  gold: 0
+  iron: 0
+  coal: 7
+  ancient debris: 0
+better-click: 12
+cheats:
+  speed: 1
+  inventorymove: 9
+  fly: 10
+  forcefield: 2
+  step: 0
+  noslowdown: 1
+  spider: 3
+creation-time: 1658523450716

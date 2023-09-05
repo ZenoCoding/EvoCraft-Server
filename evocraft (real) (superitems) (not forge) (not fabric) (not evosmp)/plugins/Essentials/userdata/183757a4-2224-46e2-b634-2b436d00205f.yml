@@ -1,0 +1,48 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 71.202.80.88
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: false
+baltop-exempt: false
+timestamps:
+  lastteleport: 1674187475113
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1674187498473
+  login: 1674187282883
+money: '21507.1110000000000005'
+homes:
+  home:
+    world: ca82709d-4280-42e0-b470-b161f1fb21e6
+    world-name: world
+    x: 793.5
+    y: 94.0
+    z: -395.5
+    yaw: -180.0
+    pitch: 0.0
+lastlocation:
+  world: ca82709d-4280-42e0-b470-b161f1fb21e6
+  world-name: world
+  x: 1918.1966716271374
+  y: -3.1875
+  z: -909.3599822773807
+  yaw: 79.33126831054688
+  pitch: 36.5003776550293
+logoutlocation:
+  world: ca82709d-4280-42e0-b470-b161f1fb21e6
+  world-name: world
+  x: 791.6750890448341
+  y: 94.0
+  z: -399.0618918643212
+  yaw: -68.96338653564453
+  pitch: 65.19268035888672
+last-account-name: XanyXerus
+confirm-pay: true

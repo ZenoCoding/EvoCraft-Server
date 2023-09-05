@@ -1,0 +1,22 @@
+FireBall:
+  Skills:
+  - projectile{onTick=FB-Tick;StartFOffset=0.5;StartYOffset=1;StopAtEntity=true;StopAtBlock=true;HitNonPlayers=true;v=16;i=1;hR=1.5;vR=1.5;oH=FireBallHit;oE=FireBallEnd} @target       #use @targetlocation if you want to use this skill as a playerskill in MMOCORE
+  - effect:sound{s=entity.illusioner.cast_spell;v=1;p=0.1} @PlayersInRadius{r=60}
+
+FB-Tick:
+  Skills:
+  - effect:particles{particle=reddust;color=#F5EC26;a=40;hs=0.25;vs=0.25} @origin
+  - effect:particles{particle=reddust;color=#E33227;a=20;hs=0.1;vs=0.1} @origin
+  - effect:particles{particle=reddust;color=#D57B08;a=30;hs=0.15;vs=0.15} @origin
+  - effect:particles{particle=lava;a=1;hs=0.1;vs=0.1} @origin
+
+FireBallEnd:
+  Skills:
+  - effect:particles{particle=lava;a=60;hs=0.25;vs=0.25} @origin
+
+FireBallHit:
+  Skills:
+  - effect:particles{particle=lava;a=60;hs=0.25;vs=0.25} @origin
+  - effect:sound{s=entity.generic.explode;v=0.5;p=0}
+  - damage{a=5} @target
+  - ignite{ticks=100} @target

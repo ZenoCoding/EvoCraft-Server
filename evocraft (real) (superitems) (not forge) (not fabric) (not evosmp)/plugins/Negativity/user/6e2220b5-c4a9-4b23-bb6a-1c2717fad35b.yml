@@ -1,0 +1,15 @@
+playername: aqasi
+lang: en_US
+minerate-full-mined: 12
+minerate:
+  diamond: 0
+  gold: 0
+  iron: 0
+  coal: 0
+  ancient debris: 0
+better-click: 2
+cheats:
+  speed: 2
+  fly: 11
+  step: 14
+creation-time: 1660818181361

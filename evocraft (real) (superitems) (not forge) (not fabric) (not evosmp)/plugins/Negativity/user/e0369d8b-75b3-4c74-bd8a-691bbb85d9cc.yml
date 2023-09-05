@@ -1,0 +1,14 @@
+playername: Gungalok
+lang: en_US
+minerate-full-mined: 369
+minerate:
+  diamond: 0
+  gold: 0
+  iron: 7
+  coal: 19
+  ancient debris: 0
+better-click: 5
+cheats:
+  fly: 1
+  forcefield: 2
+creation-time: 1659982601477

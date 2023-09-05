@@ -1,0 +1,144 @@
+FireRain:
+    Skills:
+    - summon{t=FireRainMob;a=1;os=true} @target 			#use this line if you want a mob to use the skill @player (also change hnp=true to hnp=false if you want the mob to be immune to the damage of the skill)
+    #- summon{t=FireRainMob;a=1;onSurface=true;radius=1;yr=radius;yu=true} @targetlocation    #use this line if you want to use this skill as a playerskill in MMOCORE
+
+
+FireRainSkill:
+    Skills:
+    - effect:particleorbital{p=smoke;a=5;points=32;an=1;hs=4;vs=0.5;s=0;y=0;ticks=250;in=1;rx=0;ry=0;r=0.1;yOffset=0}
+    - effect:particleorbital{p=smoke;a=10;points=64;an=1;hs=3.5;vs=0.7;s=0;y=0;ticks=250;in=1;rx=0;ry=0;r=0.1;yOffset=7}
+    - effect:particleorbital{p=cloud;a=1;points=16;an=1;hs=3.5;vs=0.4;s=0;y=0;ticks=250;in=1;rx=0;ry=0;r=0.1;yOffset=7}
+    - effect:particleorbital{p=largesmoke;a=20;points=64;an=1;hs=3.5;vs=0.7;s=0;y=0;ticks=250;in=1;rx=0;ry=0;r=0.1;yOffset=7.5}
+    - effect:sound{s=item.firecharge.use;v=0.4;p=-5}
+    - effect:sound{s=entity.iron_golem.step;v=2;p=0}
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - effect:sound{s=item.firecharge.use;v=0.1;p=-5}
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - effect:sound{s=item.firecharge.use;v=0.1;p=-5}
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - effect:sound{s=item.firecharge.use;v=0.1;p=-5}
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - effect:sound{s=item.firecharge.use;v=0.1;p=-5}
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - effect:sound{s=item.firecharge.use;v=0.1;p=-5}
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - effect:sound{s=item.firecharge.use;v=0.1;p=-5}
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - effect:sound{s=item.firecharge.use;v=0.1;p=-5}
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - effect:sound{s=item.firecharge.use;v=0.1;p=-5}
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - effect:sound{s=item.firecharge.use;v=0.1;p=-5}
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - effect:sound{s=item.firecharge.use;v=0.1;p=-5}
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - effect:sound{s=item.firecharge.use;v=0.1;p=-5}
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - effect:sound{s=item.firecharge.use;v=0.1;p=-5}
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - effect:sound{s=item.firecharge.use;v=0.1;p=-5}
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - effect:sound{s=item.firecharge.use;v=0.1;p=-5}
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - effect:sound{s=item.firecharge.use;v=0.1;p=-5}
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - effect:sound{s=item.firecharge.use;v=0.1;p=-5}
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - delay 5
+    - projectile{onTick=FireRainVisual;onHit=FireRainHit;type=METEOR;sE=true;hO=0.5;vO=0;d=100;tyo=7;i=1;v=3;hnp=true;syo=5;mr=7;sso=0;sfo=0;g=0.5} @RLNTE{a=2;r=7;s=1;minr=0.5}
+    - remove @self
+    - suicide
+
+
+
+FireRainVisual:
+    Skills:
+    - effect:particles{p=reddust;color=#DD571C;amount=5;speed=0;hS=0.1;vS=0.1} @origin
+    - effect:particles{p=flame;a=1;s=0;hs=0.1;vs=0.1} @origin
+    - effect:particles{p=smoke;a=5;hs=0.1;vs=0.1} @origin
+
+FireRainHit:
+    Skills:
+    - ignite{t=60}
+    - damage{a=10}

@@ -1,0 +1,13 @@
+playername: nexus_exe
+lang: en_US
+minerate-full-mined: 54
+minerate:
+  diamond: 0
+  gold: 0
+  iron: 0
+  coal: 0
+  ancient debris: 0
+better-click: 7
+cheats:
+  speed: 3
+creation-time: 1660185894717

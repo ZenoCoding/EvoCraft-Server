@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 71.202.83.44
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1673232588769
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1673232661678
+  login: 1673232463872
+money: '0'
+last-account-name: Bleec
+lastlocation:
+  world: ca82709d-4280-42e0-b470-b161f1fb21e6
+  world-name: world
+  x: -24.12650181969297
+  y: 72.01919687853703
+  z: -24.577330469966554
+  yaw: -30.04254150390625
+  pitch: 19.802358627319336
+logoutlocation:
+  world: a798a21c-cac4-4496-b685-2f70b3cc85e1
+  world-name: flat
+  x: 70.49180006224829
+  y: 91.49567858048344
+  z: -517.8169474568425
+  yaw: -104.84954833984375
+  pitch: 33.749969482421875

@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 73.63.223.68
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1672882025247
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1673804779219
+  login: 1673804513187
+money: '-1519.7104935172375339'
+logoutlocation:
+  world: e9abbe2c-2360-4fa2-b79e-f3f15fdafaf4
+  world-name: nether_flat
+  x: -195.2050410574927
+  y: 32.0
+  z: -7.211012965601573
+  yaw: -41.18719482421875
+  pitch: 90.0
+last-account-name: Zqnqx
+lastlocation:
+  world: a798a21c-cac4-4496-b685-2f70b3cc85e1
+  world-name: flat
+  x: 161.8714461192029
+  y: 31.0
+  z: -252.37467363879438
+  yaw: -26.5301513671875
+  pitch: 29.400569915771484

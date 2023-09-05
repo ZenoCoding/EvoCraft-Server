@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 76.224.23.54
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1671729857203
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1672804890779
+  login: 1672802160246
+money: '5050.9682999999999976'
+last-account-name: bobderaa
+lastlocation:
+  world: ca82709d-4280-42e0-b470-b161f1fb21e6
+  world-name: world
+  x: 83.67075404817386
+  y: 4.0
+  z: 7.863867325805252
+  yaw: 54.7403564453125
+  pitch: 50.477638244628906
+logoutlocation:
+  world: ca82709d-4280-42e0-b470-b161f1fb21e6
+  world-name: world
+  x: -2330.859457508014
+  y: 62.0
+  z: 776.9000111616543
+  yaw: 142.86126708984375
+  pitch: 19.99755859375

@@ -1,0 +1,718 @@
+# For non-English characters, this file MUST stay encoded in UTF-8
+quests:
+  default1:
+    name: Iron Miner
+    ask-message: <yellow>Mine <pink>2<yellow> blocks of <pink>Iron Ore<yellow>.
+    finish-message: <yellow>Well done. Here is your reward.
+    redo-delay: 1800
+    requirements:
+      items:
+      - name-stone_pickaxe:amount-1
+      remove-items:
+      - false
+      fail-requirement-message: <red>You must have a <pink>Stone Pickaxe<red> first.
+    stages:
+      ordered:
+        '1':
+          break-block-names:
+          - IRON_ORE
+          break-block-amounts:
+          - 2
+          break-block-durability:
+          - 0
+    rewards:
+      money: 1000
+      quest-points: 1
+  default2:
+    name: Mob Hunter
+    ask-message: <yellow>Kill an assortment of Mobs.
+    finish-message: <yellow>Excellent. Here is a <pink>Diamond Sword<yellow>.
+    stages:
+      ordered:
+        '1':
+          death-event: DeathFail
+          mobs-to-kill:
+          - Pig
+          mob-amounts:
+          - 3
+          finish-event: NiceFinish
+        '2':
+          death-event: DeathFail
+          mobs-to-kill:
+          - Zombie
+          mob-amounts:
+          - 2
+          finish-event: NiceFinish
+        '3':
+          death-event: DeathFail
+          mobs-to-kill:
+          - Skeleton
+          mob-amounts:
+          - 1
+    rewards:
+      items:
+      - name-DIAMOND_SWORD:amount-1
+      exp: 100
+      quest-points: 1
+  default3:
+    name: Catch Fish
+    ask-message: <yellow>Catch some fish!
+    finish-message: <yellow>Good job. Here is some <green>experience<yellow>.
+    stages:
+      ordered:
+        '1':
+          start-event: GiveRod
+          death-event: DeathFail
+          fish-to-catch: 5
+    rewards:
+      exp: 250
+  default4:
+    name: Timed Quest
+    ask-message: <yellow>Dig up <pink>10<yellow> blocks of <pink>Dirt<yellow> before
+      time runs out!
+    finish-message: <yellow>You did it in time! Have an <pink>Iron Shovel<yellow>
+      and some <green>experience<yellow>.
+    requirements:
+      quest-points: 1
+      fail-requirement-message: <red>Complete <pink>Iron Miner<red> or <pink>Mob Hunter<red>
+        first.
+    stages:
+      ordered:
+        '1':
+          break-block-names:
+          - DIRT
+          break-block-amounts:
+          - 10
+          break-block-durability:
+          - 0
+          start-event: TimerStart
+          finish-event: CancelTimer
+    rewards:
+      items:
+      - name-GOLD_INGOT:amount-1
+      exp: 150
+  custom1:
+    name: ElmirFetch1
+    ask-message: '§e[NPC] §5Elmir§f: Brave adventurer, can you help me? I''ve come
+      a long way, and am in desperate need of supplies.'
+    finish-message: '§e[NPC] §5Elmir§f: Thank you for your kindess in helping me.
+      Here''s something to compensate.'
+    npc-giver-uuid: fccf6840-8c64-4b8c-be68-96505c9118ff
+    stages:
+      ordered:
+        '1':
+          items-to-deliver:
+          - ==: org.bukkit.inventory.ItemStack
+            v: 3105
+            type: ENDER_PEARL
+            meta:
+              ==: ItemMeta
+              meta-type: UNSPECIFIC
+              display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Absolute
+                Ender Pearl"}],"text":""}'
+              lore:
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Contains
+                the souls of 729 Endermen."}],"text":""}'
+              - '{"text":""}'
+              - '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"RARE
+                "}],"text":""}'
+              enchants:
+                ARROW_INFINITE: 1
+              ItemFlags:
+              - HIDE_ENCHANTS
+              PublicBukkitValues:
+                superitems:superitem: ender_pearl_compact_3
+          npc-delivery-uuids:
+          - fccf6840-8c64-4b8c-be68-96505c9118ff
+          delivery-messages:
+          - Thank you. Only <amount> more to go!
+          start-message: '&e[NPC] &5Elmir&f: Can you bring me &91 Absolute Ender Pearls?'
+          complete-message: '&e[NPC] &5Elmir&f: Thank you so much! I''ll be sure to
+            reward you, but I''ve got another task for you first.'
+        '2':
+          items-to-deliver:
+          - ==: org.bukkit.inventory.ItemStack
+            v: 3105
+            type: BLAZE_POWDER
+            meta:
+              ==: ItemMeta
+              meta-type: UNSPECIFIC
+              display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Molten
+                Powder"}],"text":""}'
+              lore:
+              - '{"text":""}'
+              - '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"RARE
+                "}],"text":""}'
+              enchants:
+                FIRE_ASPECT: 2
+              ItemFlags:
+              - HIDE_ENCHANTS
+              PublicBukkitValues:
+                superitems:superitem: molten_powder
+          npc-delivery-uuids:
+          - fccf6840-8c64-4b8c-be68-96505c9118ff
+          delivery-messages:
+          - Thank you. Only <amount> more to go!
+          start-message: '&e[NPC] &5Elmir&f: Hmm.. very good. Next I need 1 &9Molten
+            Powder'
+          complete-message: '&e[NPC] &5Elmir&f: Thank you so much. This is a very
+            fine quality!'
+        '3':
+          items-to-deliver:
+          - ==: org.bukkit.inventory.ItemStack
+            v: 3105
+            type: END_CRYSTAL
+            amount: 10
+          npc-delivery-uuids:
+          - fccf6840-8c64-4b8c-be68-96505c9118ff
+          delivery-messages:
+          - '<npc>&f: Thank you! Only <amount> more to go!'
+          start-message: '&e[NPC] &5Elmir&f: Please bring me &b10x End Crystal. &fAnd
+            please hurry.'
+          complete-message: '&e[NPC] &5Elmir&f: Wow! Thanks. You wont be dissapointed.'
+        '4':
+          players-to-kill: 2
+          start-message: '&e[NPC] &5Elmir&f: &7&oShh! Next I need you to kill 2 players.
+            Then meet back with me here afterwards!'
+          complete-message: '&6[QUEST]&f: Quest completed. Meet with &e[NPC] &5Elmir&f
+            at spawn!'
+        '5':
+          npc-uuids-to-talk-to:
+          - fccf6840-8c64-4b8c-be68-96505c9118ff
+          complete-message: '&e[NPC] &5Elmir&f: Thank you for doing that. Belive me,
+            those two are better dead than alive.'
+        '6':
+          npc-uuids-to-talk-to:
+          - af7b4e2a-27cb-4147-9698-d9c3a5028fca
+          start-message: '&e[NPC] &5Elmir&f: Next, I need something obscure, you will
+            likely not be able to obtain it. Visit my brother in the &bWarped Village,
+            &fhe may be able to help you.'
+          complete-message: '&e[NPC] &6Senler&f: Hello. Do you need something? I assume
+            my brother sent you.'
+        '7':
+          items-to-deliver:
+          - ==: org.bukkit.inventory.ItemStack
+            v: 3105
+            type: WARPED_STEM
+            amount: 64
+          - ==: org.bukkit.inventory.ItemStack
+            v: 3105
+            type: WARPED_STEM
+            amount: 64
+          - ==: org.bukkit.inventory.ItemStack
+            v: 3105
+            type: WARPED_STEM
+            amount: 64
+          - ==: org.bukkit.inventory.ItemStack
+            v: 3105
+            type: WARPED_STEM
+            amount: 64
+          - ==: org.bukkit.inventory.ItemStack
+            v: 3105
+            type: WARPED_STEM
+            amount: 64
+          - ==: org.bukkit.inventory.ItemStack
+            v: 3105
+            type: WARPED_STEM
+            amount: 64
+          - ==: org.bukkit.inventory.ItemStack
+            v: 3105
+            type: WARPED_STEM
+            amount: 64
+          - ==: org.bukkit.inventory.ItemStack
+            v: 3105
+            type: WARPED_STEM
+            amount: 64
+          - ==: org.bukkit.inventory.ItemStack
+            v: 3105
+            type: WARPED_STEM
+            amount: 64
+          - ==: org.bukkit.inventory.ItemStack
+            v: 3105
+            type: WARPED_STEM
+            amount: 64
+          npc-delivery-uuids:
+          - af7b4e2a-27cb-4147-9698-d9c3a5028fca
+          - af7b4e2a-27cb-4147-9698-d9c3a5028fca
+          - af7b4e2a-27cb-4147-9698-d9c3a5028fca
+          - af7b4e2a-27cb-4147-9698-d9c3a5028fca
+          - af7b4e2a-27cb-4147-9698-d9c3a5028fca
+          - af7b4e2a-27cb-4147-9698-d9c3a5028fca
+          - af7b4e2a-27cb-4147-9698-d9c3a5028fca
+          - af7b4e2a-27cb-4147-9698-d9c3a5028fca
+          - af7b4e2a-27cb-4147-9698-d9c3a5028fca
+          - af7b4e2a-27cb-4147-9698-d9c3a5028fca
+          delivery-messages:
+          - '&e[NPC] &5Senler&f: Thank you. Only <amount> more to go! (Give 640 Total)'
+          - '&e[NPC] &5Senler&f: Thank you. Only <amount> more to go! (Give 640 Total)'
+          - '&e[NPC] &5Senler&f: Thank you. Only <amount> more to go! (Give 640 Total)'
+          - '&e[NPC] &5Senler&f: Thank you. Only <amount> more to go! (Give 640 Total)'
+          - '&e[NPC] &5Senler&f: Thank you. Only <amount> more to go! (Give 640 Total)'
+          - '&e[NPC] &5Senler&f: Thank you. Only <amount> more to go! (Give 640 Total)'
+          - '&e[NPC] &5Senler&f: Thank you. Only <amount> more to go! (Give 640 Total)'
+          - '&e[NPC] &5Senler&f: Thank you. Only <amount> more to go! (Give 640 Total)'
+          - '&e[NPC] &5Senler&f: Thank you. Only <amount> more to go! (Give 640 Total)'
+          - '&e[NPC] &5Senler&f: Thank you. Only <amount> more to go! (Give 640 Total)'
+          finish-event: ElmirSenlerReward
+          start-message: '&e[NPC] &5Senler&f: Please get me &b640x Warped Log.'
+          complete-message: '&e[NPC] &5Senler&f: Thank you so much! Here''s the item
+            you are looking for!'
+        '8':
+          items-to-deliver:
+          - ==: org.bukkit.inventory.ItemStack
+            v: 3105
+            type: PLAYER_HEAD
+            meta:
+              ==: ItemMeta
+              meta-type: SKULL
+              display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Warped
+                Cube"}],"text":""}'
+              lore:
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Is
+                it still considered wood?"}],"text":""}'
+              - '{"text":""}'
+              - '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"RARE
+                "}],"text":""}'
+              ItemFlags:
+              - HIDE_ENCHANTS
+              PublicBukkitValues:
+                superitems:superitem: warped_cube
+              skull-owner:
+                ==: PlayerProfile
+                uniqueId: 0a89f9df-d072-3ded-bc14-9254b23d7862
+                properties:
+                - name: textures
+                  value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjVjYjVkYTFjMmVlZDQzYmY2ODUxODllMDgwMjlmYzJhZWVlZGZhZTFjNmEyMTRlNzBmNzRiOGEzMjExYjBhIn19fQ==
+          npc-delivery-uuids:
+          - fccf6840-8c64-4b8c-be68-96505c9118ff
+          delivery-messages:
+          - Thank you. Only <amount> more to go!
+          start-message: '&6[QUESTS] Talk to &e[NPC] &5Elmir&f and give him &b1x Warped
+            Cube'
+          complete-message: '&e[NPC] &5Elmir&f: Thank you. Let me find your reward.
+            Here! It''s a rare shard only our people can obtain, use it wisely.'
+    rewards:
+      items:
+      - ==: org.bukkit.inventory.ItemStack
+        v: 3105
+        type: QUARTZ
+        amount: 2
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"green","text":"Crulen
+            Shard"}],"text":""}'
+          lore:
+          - '{"text":""}'
+          - '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"green","text":"UNCOMMON
+            "}],"text":""}'
+          enchants:
+            DAMAGE_ALL: 2
+          ItemFlags:
+          - HIDE_ENCHANTS
+          PublicBukkitValues:
+            superitems:superitem: crulen_shard
+      quest-points: 10
+    planner:
+      override: false
+    options:
+      allow-commands: true
+      allow-quitting: true
+      ignore-silk-touch: true
+      use-parties-plugin: true
+      share-progress-level: 1
+      same-quest-only: true
+      share-distance: 0.0
+      handle-offline-players: false
+      ignore-block-replace: true
+  custom2:
+    name: Corruption
+    ask-message: '§e[NPC] §5Salie§f: Hello. That''s a nice relic you have there. But
+      you haven''t unlocked its true potential. Would you like to do so?'
+    finish-message: '§e[NPC] §5Salie§f: You have unlocked the true potential of this
+      relic. But tread carefully, as great power comes with lots of bad guys chasing
+      after you.'
+    npc-giver-uuid: a0162e56-465b-4ed8-9dfb-913b2b22b0f5
+    requirements:
+      money: 25000
+      items:
+      - ==: org.bukkit.inventory.ItemStack
+        v: 3105
+        type: PLAYER_HEAD
+        meta:
+          ==: ItemMeta
+          meta-type: SKULL
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Totem
+            Pole"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Wisdom:
+            "},{"italic":false,"color":"blue","text":"+5"}],"text":""}'
+          - '{"extra":[{"text":" "}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"yellow","text":"Centralized
+            power."}],"text":""}'
+          - '{"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ability:
+            Centralize"},{"bold":true,"italic":false,"color":"yellow","text":" RIGHT
+            CLICK"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Place
+            down a "},{"bold":true,"italic":false,"color":"yellow","text":"Totem"},{"bold":false,"italic":false,"color":"gray","text":"
+            which temporarily"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"grants
+            "},{"italic":false,"color":"red","text":"Resistance I"},{"italic":false,"color":"gray","text":"
+            and "},{"italic":false,"color":"gold","text":"Fire Resistance I"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"to
+            all players in a"},{"italic":false,"color":"green","text":" 30 block"},{"italic":false,"color":"gray","text":"
+            radius."}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Mana
+            Cost: "},{"italic":false,"color":"dark_aqua","text":"125"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Cooldown:
+            "},{"italic":false,"color":"green","text":"30.0s"}],"text":""}'
+          - '{"text":""}'
+          - '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"RARE
+            DEPLOYABLE"}],"text":""}'
+          internal: H4sIAAAAAAAA/+NiYOBi4HMsLUrNySzNDc7OzMkp5mLg9M1PyUzLTC0Cslk8S1Jz2RjYwjOLU/JzHUQY4AAA7pfr3zwAAAA=
+          PublicBukkitValues:
+            superitems:superitem: totem_pole
+          skull-owner:
+            ==: PlayerProfile
+            uniqueId: ca56c5e9-ae71-3df6-b761-fa15de88a253
+            properties:
+            - name: textures
+              value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWU4MDkxMjhhMGU1YTQ0YzJlMzk1MzJlNmJiYzY4MjUyY2I4YzlkNWVjZDI0NmU1OTY1MDc3YzE0N2M3OTVlNyJ9fX0=
+      remove-items:
+      - true
+    stages:
+      ordered:
+        '1':
+          mobs-to-kill:
+          - Wither
+          - EnderDragon
+          - Warden
+          mob-amounts:
+          - 1
+          - 1
+          - 2
+          start-message: '&e[NPC] &5Salie&f: Souls are the most powerful thing to
+            exist. Please obtain the souls of the following mobs. Use /quests to track
+            your progress.'
+          complete-message: '&e[NPC] &5Salie&f: Very good.'
+        '2':
+          players-to-kill: 1
+          start-message: '&e[NPC] &5Salie&f: Next, bring me the soul of a player.'
+          complete-message: '&e[NPC] &5Salie&f: Very well then.'
+        '3':
+          locations-to-reach:
+          - world -252.0 93.0 511.0
+          reach-location-radii:
+          - 10
+          reach-location-names:
+          - '&cVillage of Armagon'
+          start-message: '&e[NPC] &5Salie&f: I need you to travel to the &cVillage
+            of Armagon. &fBe carefull, though, as he doesn''t take kindly to visitors.'
+        '4':
+          npc-uuids-to-talk-to:
+          - c9d16131-083e-42a0-b34c-85c1401ef1f8
+          complete-message: '&e[NPC] &c&lArmagon&f: Leave.'
+        '5':
+          npc-uuids-to-kill:
+          - c9d16131-083e-42a0-b34c-85c1401ef1f8
+          npc-kill-amounts:
+          - 1
+          start-message: '&e[NPC] &c&lArmagon&f: You''ll never kill me. I am the leader
+            of the neverending dark, I am-'
+          complete-message: '&c&lArmagon &8&o(Death, Destroyer of Worlds) &fwas slain.'
+        '6':
+          locations-to-reach:
+          - world_nether 81.0 43.0 198.0
+          reach-location-radii:
+          - 30
+          reach-location-names:
+          - Warped Village
+          start-message: '&6[QUEST] &fMeet back with &e[NPC] &5Salie &fat the &bWarped
+            Village.'
+        '7':
+          npc-uuids-to-talk-to:
+          - a0162e56-465b-4ed8-9dfb-913b2b22b0f5
+          start-message: '&6[QUEST] &fTalk to &e[NPC] &5Salie&f.'
+          complete-message: '&e[NPC] &5Salie&f: You''re back? So quickly! I guess
+            that &c&lArmagon &freally is a fake. Anyways, it doesnt matter. Here''s
+            your reward.'
+    rewards:
+      items:
+      - ==: org.bukkit.inventory.ItemStack
+        v: 3105
+        type: PLAYER_HEAD
+        meta:
+          ==: ItemMeta
+          meta-type: SKULL
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Corrupted
+            Totem Pole"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Strength:
+            "},{"italic":false,"color":"dark_red","text":"+5"}],"text":""}'
+          - '{"extra":[{"text":" "}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"With
+            great power, comes "},{"italic":false,"color":"light_purple","text":"corruption."}],"text":""}'
+          - '{"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ability:
+            Centralize"},{"bold":true,"italic":false,"color":"yellow","text":" RIGHT
+            CLICK"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Place
+            down a "},{"bold":true,"italic":false,"color":"dark_purple","text":"Totem"},{"bold":false,"italic":false,"color":"gray","text":"
+            which temporarily"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"grants
+            "},{"italic":false,"color":"red","text":"Resistance II"},{"italic":false,"color":"gray","text":"
+            and "},{"italic":false,"color":"gold","text":"Fire Resistance I"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"to
+            you, yourself in a"},{"italic":false,"color":"green","text":" 45 block"},{"italic":false,"color":"gray","text":"
+            radius."}],"text":""}'
+          - '{"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"light_purple","text":"Corrupted
+            Uses Left: "},{"italic":false,"color":"dark_purple","text":"5"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Mana
+            Cost: "},{"italic":false,"color":"dark_aqua","text":"150"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Cooldown:
+            "},{"italic":false,"color":"green","text":"30.0s"}],"text":""}'
+          - '{"text":""}'
+          - '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"RARE
+            DEPLOYABLE"}],"text":""}'
+          internal: H4sIAAAAAAAA/+NiYOBi4HMsLUrNySzNDc7OzMkp5mLg9M1PyUzLTC0Cslk8S1Jz2Rg4gkuKUvPSSzIcRBjgAAABxu9LPgAAAA==
+          PublicBukkitValues:
+            superitems:superitem: corrupted_totem_pole
+          skull-owner:
+            ==: PlayerProfile
+            uniqueId: 16f30b37-2304-310c-8450-8172baa3e815
+            properties:
+            - name: textures
+              value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTk3YzI4NmI2ZDE2MjM5YTcxZmYxNjc0OTQ0MTZhZDk0MDcxNzIwNTEwY2Y4YTgyYWIxZjQ1MWZmNGE5MDkxNiJ9fX0=
+      quest-points: 25
+    planner:
+      cooldown: 600
+      override: false
+    options:
+      allow-commands: true
+      allow-quitting: true
+      ignore-silk-touch: true
+      use-parties-plugin: true
+      share-progress-level: 1
+      same-quest-only: true
+      share-distance: 0.0
+      handle-offline-players: false
+      ignore-block-replace: true
+  custom3:
+    name: Farmer
+    ask-message: Help! I am lying under the PPC Curve, which means I am not maximizing
+      the usage of my resources. Please help me by farming §2 32 wheat §f and §6 32
+      potatoes!
+    finish-message: Thanks for helping me get back onto the PPC Curve!
+    npc-giver-uuid: 60ec5bd5-22a1-4bbd-bfbd-47a16de713f1
+    stages:
+      ordered:
+        '1':
+          items-to-deliver:
+          - ==: org.bukkit.inventory.ItemStack
+            v: 3105
+            type: WHEAT
+            amount: 32
+          - ==: org.bukkit.inventory.ItemStack
+            v: 3105
+            type: POTATO
+            amount: 32
+          npc-delivery-uuids:
+          - 60ec5bd5-22a1-4bbd-bfbd-47a16de713f1
+          - 60ec5bd5-22a1-4bbd-bfbd-47a16de713f1
+          delivery-messages:
+          - '"Thank you. Only <amount> more to go!"'
+          npc-uuids-to-talk-to:
+          - 60ec5bd5-22a1-4bbd-bfbd-47a16de713f1
+    rewards:
+      items:
+      - ==: org.bukkit.inventory.ItemStack
+        v: 3105
+        type: PUMPKIN_SEEDS
+        amount: 8
+      - ==: org.bukkit.inventory.ItemStack
+        v: 3105
+        type: MELON_SEEDS
+        amount: 8
+      money: 5
+    planner:
+      override: false
+    options:
+      allow-commands: true
+      allow-quitting: true
+      ignore-silk-touch: true
+      use-parties-plugin: true
+      share-progress-level: 1
+      same-quest-only: true
+      share-distance: 0.0
+      handle-offline-players: false
+      ignore-block-replace: true
+  custom4:
+    name: Blaziel Quest
+    ask-message: '§e[NPC] §cSahara§f: Do you dare challenge the gods of the nether?'
+    finish-message: '§e[NPC] §cSahara§f: The nether gods'' crimson blood boils.'
+    npc-giver-uuid: f8dd1086-a195-400d-9349-331cc6304b92
+    stages:
+      ordered:
+        '1':
+          mobs-to-kill:
+          - Blaze
+          mob-amounts:
+          - 10
+          start-message: '&e[NPC] &cSahara&f: Sacrafice lives to the gods of the nether.'
+          complete-message: '&6[QUEST]&f: Talk to &e[NPC] &cSahara'
+        '2':
+          break-block-durability: []
+          npc-uuids-to-talk-to:
+          - f8dd1086-a195-400d-9349-331cc6304b92
+          start-message: '&6[QUEST]&f: Talk to &e[NPC] &cSahara'
+          complete-message: '&e[NPC] &cSahara&f: Hello again, adventurer.'
+        '3':
+          items-to-deliver:
+          - ==: org.bukkit.inventory.ItemStack
+            v: 3105
+            type: GLASS_BOTTLE
+            amount: 3
+            meta:
+              ==: ItemMeta
+              meta-type: UNSPECIFIC
+              display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"Burning
+                Smoke"}],"text":""}'
+              lore:
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Blaze
+                smoke in a bottle. Highly reactive."}],"text":""}'
+              - '{"text":""}'
+              - '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"COMMON"},{"bold":true,"italic":false,"color":"white","text":"
+                "}],"text":""}'
+              custom-model-data: 2077759
+              ItemFlags:
+              - HIDE_ENCHANTS
+              - HIDE_UNBREAKABLE
+              Unbreakable: true
+              PublicBukkitValues:
+                superitems:var_type: '[B;-84B,-19B,0B,5B,126B,114B,0B,41B,109B,101B,46B,122B,101B,110B,111B,120B,46B,115B,117B,112B,101B,114B,105B,116B,101B,109B,115B,46B,105B,116B,101B,109B,46B,67B,111B,109B,112B,108B,101B,120B,73B,116B,101B,109B,36B,84B,121B,112B,101B,0B,0B,0B,0B,0B,0B,0B,0B,18B,0B,0B,120B,114B,0B,14B,106B,97B,118B,97B,46B,108B,97B,110B,103B,46B,69B,110B,117B,109B,0B,0B,0B,0B,0B,0B,0B,0B,18B,0B,0B,120B,112B,116B,0B,4B,77B,73B,83B,67B]'
+                superitems:ability: '[B;-84B,-19B,0B,5B,115B,114B,0B,19B,106B,97B,118B,97B,46B,117B,116B,105B,108B,46B,65B,114B,114B,97B,121B,76B,105B,115B,116B,120B,-127B,-46B,29B,-103B,-57B,97B,-99B,3B,0B,1B,73B,0B,4B,115B,105B,122B,101B,120B,112B,0B,0B,0B,0B,119B,4B,0B,0B,0B,0B,120B]'
+                superitems:superitem: burning_smoke
+                superitems:complexenchants: '[B;-84B,-19B,0B,5B,115B,114B,0B,17B,106B,97B,118B,97B,46B,117B,116B,105B,108B,46B,72B,97B,115B,104B,77B,97B,112B,5B,7B,-38B,-63B,-61B,22B,96B,-47B,3B,0B,2B,70B,0B,10B,108B,111B,97B,100B,70B,97B,99B,116B,111B,114B,73B,0B,9B,116B,104B,114B,101B,115B,104B,111B,108B,100B,120B,112B,63B,64B,0B,0B,0B,0B,0B,0B,119B,8B,0B,0B,0B,16B,0B,0B,0B,0B,120B]'
+                superitems:var_rarity: '[B;-84B,-19B,0B,5B,126B,114B,0B,43B,109B,101B,46B,122B,101B,110B,111B,120B,46B,115B,117B,112B,101B,114B,105B,116B,101B,109B,115B,46B,105B,116B,101B,109B,46B,67B,111B,109B,112B,108B,101B,120B,73B,116B,101B,109B,36B,82B,97B,114B,105B,116B,121B,0B,0B,0B,0B,0B,0B,0B,0B,18B,0B,0B,120B,114B,0B,14B,106B,97B,118B,97B,46B,108B,97B,110B,103B,46B,69B,110B,117B,109B,0B,0B,0B,0B,0B,0B,0B,0B,18B,0B,0B,120B,112B,116B,0B,6B,67B,79B,77B,77B,79B,78B]'
+                superitems:glow: 0i
+          npc-delivery-uuids:
+          - f8dd1086-a195-400d-9349-331cc6304b92
+          delivery-messages:
+          - '<npc>&f: Please bring me <amount> more.'
+          start-message: '&6[QUEST]&f: Kill blazes in the nether to attain Burning
+            Smoke. (In bottle form!)'
+          complete-message: '<npc>&f: Thank you adventurer.'
+    rewards:
+      items:
+      - ==: org.bukkit.inventory.ItemStack
+        v: 3105
+        type: NETHERITE_INGOT
+      money: 5000
+      quest-points: 5
+      exp: 2000
+    planner:
+      override: false
+    options:
+      allow-commands: true
+      allow-quitting: true
+      ignore-silk-touch: true
+      use-parties-plugin: true
+      share-progress-level: 1
+      same-quest-only: true
+      share-distance: 0.0
+      handle-offline-players: false
+      ignore-block-replace: true
+  custom5:
+    name: The Guardian's Keep
+    ask-message: '§e[NPC] §bPenelope§f: Hello adventurer! Welcome to §bThe Guardian''s
+      Keep. §fCan you go find a §9Arcane Jewel §ffor me?'
+    finish-message: '§e[NPC] Ancient Penelope§f: Goodbye, adventurer.'
+    npc-giver-uuid: 622a3703-d260-435b-8d99-e8400dcbd1fe
+    stages:
+      ordered:
+        '1':
+          locations-to-reach:
+          - flat -326.0 -60.0 -511.0
+          reach-location-radii:
+          - 5
+          reach-location-names:
+          - '&bThe Arcane Quarters'
+          start-message: '<npc>&f: Thank you! Maybe look in the &bArcane Quarters,
+            &fthey must have some spare!'
+        '2':
+          npc-uuids-to-talk-to:
+          - be9221d5-d23f-45db-a392-a0a326d5c79f
+          finish-event: RewardArcaneJewel
+          complete-message: '&e[NPC] &5Arcius&f: Hey! Woah- get back here! You can''t
+            take that!'
+        '3':
+          items-to-deliver:
+          - ==: org.bukkit.inventory.ItemStack
+            v: 3105
+            type: AMETHYST_SHARD
+            meta:
+              ==: ItemMeta
+              meta-type: UNSPECIFIC
+              display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Arcane
+                Jewel"}],"text":""}'
+              lore:
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Holds
+                the true power of a mage."}],"text":""}'
+              - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"QUEST
+                ITEM"}],"text":""}'
+              - '{"text":""}'
+              - '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"RARE"},{"bold":true,"italic":false,"color":"blue","text":"
+                "}],"text":""}'
+              custom-model-data: 1376617
+              ItemFlags:
+              - HIDE_ENCHANTS
+              - HIDE_ATTRIBUTES
+              - HIDE_UNBREAKABLE
+              Unbreakable: true
+              PublicBukkitValues:
+                superitems:var_type: '[B;-84B,-19B,0B,5B,126B,114B,0B,41B,109B,101B,46B,122B,101B,110B,111B,120B,46B,115B,117B,112B,101B,114B,105B,116B,101B,109B,115B,46B,105B,116B,101B,109B,46B,67B,111B,109B,112B,108B,101B,120B,73B,116B,101B,109B,36B,84B,121B,112B,101B,0B,0B,0B,0B,0B,0B,0B,0B,18B,0B,0B,120B,114B,0B,14B,106B,97B,118B,97B,46B,108B,97B,110B,103B,46B,69B,110B,117B,109B,0B,0B,0B,0B,0B,0B,0B,0B,18B,0B,0B,120B,112B,116B,0B,4B,77B,73B,83B,67B]'
+                superitems:ability: '[B;-84B,-19B,0B,5B,115B,114B,0B,19B,106B,97B,118B,97B,46B,117B,116B,105B,108B,46B,65B,114B,114B,97B,121B,76B,105B,115B,116B,120B,-127B,-46B,29B,-103B,-57B,97B,-99B,3B,0B,1B,73B,0B,4B,115B,105B,122B,101B,120B,112B,0B,0B,0B,0B,119B,4B,0B,0B,0B,0B,120B]'
+                superitems:superitem: arcane_jewel
+                superitems:complexenchants: '[B;-84B,-19B,0B,5B,115B,114B,0B,17B,106B,97B,118B,97B,46B,117B,116B,105B,108B,46B,72B,97B,115B,104B,77B,97B,112B,5B,7B,-38B,-63B,-61B,22B,96B,-47B,3B,0B,2B,70B,0B,10B,108B,111B,97B,100B,70B,97B,99B,116B,111B,114B,73B,0B,9B,116B,104B,114B,101B,115B,104B,111B,108B,100B,120B,112B,63B,64B,0B,0B,0B,0B,0B,0B,119B,8B,0B,0B,0B,16B,0B,0B,0B,0B,120B]'
+                superitems:attributes: '[B;-84B,-19B,0B,5B,115B,114B,0B,19B,106B,97B,118B,97B,46B,117B,116B,105B,108B,46B,65B,114B,114B,97B,121B,76B,105B,115B,116B,120B,-127B,-46B,29B,-103B,-57B,97B,-99B,3B,0B,1B,73B,0B,4B,115B,105B,122B,101B,120B,112B,0B,0B,0B,0B,119B,4B,0B,0B,0B,0B,120B]'
+                superitems:var_rarity: '[B;-84B,-19B,0B,5B,126B,114B,0B,43B,109B,101B,46B,122B,101B,110B,111B,120B,46B,115B,117B,112B,101B,114B,105B,116B,101B,109B,115B,46B,105B,116B,101B,109B,46B,67B,111B,109B,112B,108B,101B,120B,73B,116B,101B,109B,36B,82B,97B,114B,105B,116B,121B,0B,0B,0B,0B,0B,0B,0B,0B,18B,0B,0B,120B,114B,0B,14B,106B,97B,118B,97B,46B,108B,97B,110B,103B,46B,69B,110B,117B,109B,0B,0B,0B,0B,0B,0B,0B,0B,18B,0B,0B,120B,112B,116B,0B,4B,82B,65B,82B,69B]'
+                superitems:glow: 0i
+          npc-delivery-uuids:
+          - 622a3703-d260-435b-8d99-e8400dcbd1fe
+          delivery-messages:
+          - Thank you. Only <amount> more to go!
+          finish-event: RewardSoulStone
+          complete-message: '<npc>&f: Thank you! We must get you on your way. Take
+            my last &dSoul Stone, &fand escape!'
+        '4':
+          locations-to-reach:
+          - flat -369.0 -54.0 -594.0
+          reach-location-radii:
+          - 5
+          reach-location-names:
+          - '&8The Desolated Temple'
+          delay: 22
+          start-message: '&6[QUESTS]&f: Use the &dSoul Stone &fto escape the temple!'
+          complete-message: '&7&oNote: Please wait for the voiceover to finish before
+            continuing the quest.'
+        '5':
+          npc-uuids-to-talk-to:
+          - 13f29f20-9882-4c71-a110-24e1d1623ae8
+          finish-event: RewardSoulStone
+          start-message: '&e[NPC] Ancient Penelope&f: &7&oHelp! Over here!'
+          complete-message: '&e[NPC] Ancient Penelope&f: I''m stuck in the obsidian.
+            Go without me adventurer, take this.'
+    planner:
+      override: false
+    options:
+      allow-commands: true
+      allow-quitting: true
+      ignore-silk-touch: true
+      use-parties-plugin: true
+      share-progress-level: 1
+      same-quest-only: true
+      share-distance: 0.0
+      handle-offline-players: false
+      ignore-block-replace: true

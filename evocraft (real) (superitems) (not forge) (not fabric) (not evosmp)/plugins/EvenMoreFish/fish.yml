@@ -1,0 +1,175 @@
+fish:
+  Common:
+    # Using "" after the fish name will create you a default cod fish.
+    Herring:
+      # Use this to override the price that's calculated by (multiplier * length)
+      set-worth: 1
+    Cod: ""
+    Sea Bass: ""
+    Shrimp:
+      item:
+        material: NAUTILUS_SHELL
+      set-worth: 2
+    Anchovies: ""
+    Tuna:
+      item:
+        material: SALMON
+    Carp: ""
+    Sardine: ""
+    Sea Snail: ""
+    Salmon:
+      item:
+        # Items must be spelt the same as found in game by using advanced tooltips (f3 + h)
+        material: SALMON
+    Stick:
+      item:
+        material: STICK
+    Fishing Rod:
+      item:
+        material: FISHING_ROD
+    Coalfish:
+      item:
+        material: COAL
+    Sandfish:
+      # define the biome(s) the fish can only be found in, without this marker the fish will be found anywhere
+      biomes:
+        - DESERT
+    Oheers:
+      item:
+        head-64: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjczZjU2OTk5YWJjNmMzMjVhYzlmMWNjMThkZTgyMDNiMmYxZjY4NDQ5ZTAwOTQ1ZGQ1YzhjYmM3NDQ2MTRiIn19fQ=="
+
+  Uncommon:
+    Silver Carp: ""
+    Stonefish: ""
+    Starfish: ""
+    Eel: ""
+    Tiger Shark: ""
+    Cookiecutter Shark:
+      item:
+        material: COOKIE
+    Swordfish:
+      item:
+        material: STONE_SWORD
+    Electric Eel:
+      message: "&b*Zap!*"
+      health: -1
+    Squid:
+      item:
+        material: INK_SAC
+      # Sends a message to the player when they catch a fish
+      message: "&3You've been inked!"
+      # Gives an effect to the player, EFFECT_NAME:AMPLIFIER:DURATION(seconds)
+      # this shows you all the effect names, https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html
+      effect: "BLINDNESS:1:5"
+    Pufferfish:
+      item:
+        material: PUFFERFISH
+      message: "&aOuch. That doesn't feel so good..."
+      effect: "POISON:1:7"
+    Dory:
+      item:
+        material: SALMON
+    Nemo:
+      item:
+        material: TROPICAL_FISH
+    Coral:
+      item:
+        materials:
+          - TUBE_CORAL
+          - BRAIN_CORAL
+          - FIRE_CORAL
+          - BUBBLE_CORAL
+          - HORN_CORAL
+    Jellyfish:
+      item:
+        # You can get base-64 heads from https://minecraft-heads.com/custom-heads, copy and paste all of the base-64 value for the head you want.
+        head-64: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjNkZTQ4YTg0NjY4YTM2MTkxODdkYTE5NmU3NzdmOTMxZjc1NTQ4NDllOGYyNDM4OTdhYzgzYzhhZDYxIn19fQ=="
+  Epic:
+    Lemon Shark: ""
+    Salmon Shark:
+      item:
+        material: SALMON
+    Frog:
+      item:
+        head-64: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzE3ODE4OWVmOGZhN2E1YjcyNGZiOTFkZjlhNDQ3ODRmZDg1NjQ4ZWQzZTNhY2Y2ZDBkZWQ3YjhjYWEzMGYwNyJ9fX0="
+    Clownfish:
+      item:
+        material: TROPICAL_FISH
+      # Add a lore of (pretty much) infinite length. No colour code values will default to the vanilla purple italic.
+      lore:
+        - "&7&oWhat's the difference between pork and"
+        - "&7&oa meteorite? One's meaty the other"
+        - "&7&oone's a little meteor."
+    Dolphin:
+      item:
+        head-64: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGU5Njg4Yjk1MGQ4ODBiNTViN2FhMmNmY2Q3NmU1YTBmYTk0YWFjNmQxNmY3OGU4MzNmNzQ0M2VhMjlmZWQzIn19fQ=="
+    Elephant Fish:
+      item:
+        head-64: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGI2Mjk2OWMwMDU4MTVkMDQwOTEzNjM4MGZlYmM1YWM0NjhhYWJhOWJkYTRkYjgwOTU0ZmE1NDI2ZWUwYTMyMyJ9fX0="
+    Hermit Crab:
+      item:
+        head-64: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTg1ZTY4MzRhNGJmMjZhNjUyNmY3Y2FjNGY2ZWFhOWY3ZmE3N2RiOGMxNDM1M2E4MTU4MmI1ZjY5OSJ9fX0="
+      size:
+        # Fish can have unique sizes that will override the size set by their rarity
+        minSize: 5
+        maxSize: 10
+    Glowsquid:
+      item:
+        head-64: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmVjZDBiNWViNmIzODRkYjA3NmQ4NDQ2MDY1MjAyOTU5ZGRkZmYwMTYxZTBkNzIzYjNkZjBjYzU4NmQxNmJiZCJ9fX0="
+    Turtle:
+      item:
+        head-64: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMGE0MDUwZTdhYWNjNDUzOTIwMjY1OGZkYzMzOWRkMTgyZDdlMzIyZjlmYmNjNGQ1Zjk5YjU3MThhIn19fQ=="
+  Legendary:
+    Great White Shark:
+      item:
+        head-64: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjEyNGM1NDFkZWRhNGIyNjZmZjE0ZTYxYjBhMTMyNDRiMmQ0YjdjMThkMmI2YzhkZDIxNzZkNWQzNjVmYmQifX19"
+    Breaded Fish:
+      item:
+        material: BREAD
+    Goldfish:
+      item:
+        material: GOLD_NUGGET
+    Golden Skull:
+      item:
+        head-64: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjc4ODNlYTQ4MDlhZjc0NWM5N2NhNzdlNzA0NDg1NDk4OTA1MTk4ZDZhZTI4MTM4YWRiZDRjNWQ0YjgxYjk0NCJ9fX0="
+      lore:
+        - "&eℸ ̣ ⍑ᒷ ⊣ꖎ↸ᒷリ リᒷ ╎ᓭ ⊣↸"
+      size:
+        minSize: 30
+        maxSize: 50
+    Massive Goldfish:
+      item:
+        material: TROPICAL_FISH
+      # Should the item glow? (The enchantment glint) - defaults to false.
+      glowing: true
+      # The results from the custom event follow the same format as the rewards given in config.yml's competition reward section.
+      eat-event:
+        - "ITEM:GOLD_INGOT,1"
+        - "MESSAGE:&eYou've received a gold ingot!"
+      lore:
+        - "&eEat me for a surprise gift."
+    Moustache Pufferfish:
+      item:
+        head-64: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDI5MTA1ZTU2YTM2ZDM1NDA4ZjI5MzIxOTI4NzRlMGJiNTMyZTEyY2U2MTA4MDM1ODhjMzdlZDI4N2UwZGE4YyJ9fX0="
+    MrCrayfish:
+      item:
+        head-64: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzdjM2QxNTg5Y2U2NzMzMzFmNjkwYjY5MmRiMmEzNTVjMzNmYjYzZTc1NGIxNzY3YmVkZWU2NmI4ZjM3In19fQ=="
+    Blue Whale:
+      item:
+        head-64: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2FmNzIyMTc5ODU0NmY4ZjllNzZhNmEzZWUzYjE3NjczNGU5ZDVmMTdkYmNiMDg1OTgxOTQxNzU4Njk4NjQzNiJ9fX0="
+      size:
+        minSize: 2900
+        maxSize: 3800
+    Golden Axolotl:
+      item:
+        head-64: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2Y4MGNjMTQ5MmU0NDY2OGNjY2RiNDAxNzhjM2E2Njg5ZThkZmMwZDIzNGU5ODU1M2ZiN2RlYmMyNmZjYWVhYyJ9fX0="
+    Flower Fish:
+      item:
+        # Add custom model data for making texture packs, you can add a material/head-64 value too to change it from the default cod fish.
+        # https://www.planetminecraft.com/forums/communities/texturing/new-1-14-custom-item-models-tuto-578834/
+        custom-model-data: 1234567
+      glowing: true
+      biomes:
+        - FLOWER_FOREST
+      lore:
+        - "&e&oCovered in pollen"

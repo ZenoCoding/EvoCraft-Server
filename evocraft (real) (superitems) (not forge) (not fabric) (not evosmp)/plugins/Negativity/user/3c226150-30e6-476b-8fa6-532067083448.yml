@@ -1,0 +1,28 @@
+playername: bobderaa
+lang: en_US
+minerate-full-mined: 98916
+minerate:
+  diamond: 7
+  gold: 48
+  iron: 74
+  coal: 413
+  ancient debris: 0
+better-click: 35
+cheats:
+  fastladder: 2
+  autoclick: 6
+  regen: 1
+  forcefield: 1
+  blink: 1
+  noslowdown: 1
+  speed: 1
+  timer: 2
+  inventorymove: 6
+  fly: 1
+  nuker: 1
+  airplace: 2
+  airjump: 1
+  fastplace: 1
+  nofall: 1
+  spider: 9
+creation-time: 1658887759607

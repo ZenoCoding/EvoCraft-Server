@@ -1,0 +1,427 @@
+WildfireShieldDown:
+  Skills:
+  - state{s=shield} @self
+  - potion{type=DAMAGE_RESISTANCE;duration=100;level=15} @self
+  - delay 100
+  - gcd 100
+  - state{s=shield;r=true} @self
+
+TriggerShockwave:
+  Skills:
+  - signal{s=shockwave} @MobsInRadius{r=15;t=Wildfire} 
+
+WildfireShockwave:
+  Conditions: 
+  - offgcd
+  Skills:
+  - gcd{ticks=100} @self
+  # Move up and hover
+  - velocity{m=set;vx=0;vy=1;vz=0} @self
+  - Aura{onTick=FloatUP;interval=5;t=30} @self
+  - state{s=attack}
+  - delay 30
+  # Smash down
+  - Aura{onTick=DownVelocity;i=3;duration=20} @self
+  - delay 20
+  # Smash Effects
+  - sound{s=entity.wither.spawn;v=2} @self
+  - effect:particlering{particle=flame;radius=3;points=20;amount=10;hs=1;vs=1} @self
+  - explosion{yield=0;fire=true} @Ring{radius=2;points=2;yOffset=1} @self
+  - delay 10
+  - effect:particlering{particle=flame;radius=4;points=30;amount=10;hs=1;vs=1} @self
+  - explosion{yield=0;fire=true} @Ring{radius=4;points=5;yOffset=1} @self
+  - delay 10
+  - throw{v=3;vy=3} @PIR{r=7}
+  - damagepercent{percent=1}
+  - delay 10
+  - explosion{yield=0;fire=true} @Ring{radius=7;points=7;yOffset=1} @self
+  - delay 20
+
+
+SpinSlash:
+  Skills:
+  - state{s=attack} @self
+  - sound{s=ENTITY_SHULKER_HURT_CLOSED;v=3}
+  - delay 20
+  - damagepercent{percent=0.5} @PIR{5}
+  - throw{velocity=10;velocityY=5} @PlayersInRadius{r=5}
+  - state{s=attack;r=true} @self
+  
+  
+  
+Stun:
+  Skills:
+  - setAI{ai=false} @self
+  - sound{s=ENTITY_ENDERMAN_SCREAM;v=3} @self
+  - delay 20
+  - guardianbeam{d=60;i=5;ot=tickDmg} @PIR{r=10}
+  - delay 80
+  - pull{v=6} @PIR{r=15}
+  - effect:explosion @self
+  - delay 10
+  - freeze{ticks=100} @PIR{r=5}
+  - delay 130
+  - skill{s=SpinSlash} @self
+  
+  
+tickDmg:
+  Skills:
+  - damage{damage=2;pk=true} @PIR{r=10}
+  
+BlazielAmbient:
+  Skills:
+  - effect:particle{p=large_smoke;amount=30;hs=0.5;vs=1} @SelfLocation{y=2.0}
+  
+BlazielFieryAmbient:
+  Skills:
+  - effect:particle{p=large_smoke;amount=30;hs=0.5;vs=1} @SelfLocation{y=2.0}
+  - effect:particle{p=lava;amount=3;hs=0.5;vs=2} @SelfLocation{y=3.0}
+  - effect:particle{p=landing_lava;amount=5;hs=0.5;vs=2} @SelfLocation{y=3.0}
+  
+FireShockwave:
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=200} @self 
+  - potion{type=DAMAGE_RESISTANCE;d=150;level=100;p=false} @self
+  # - setAI{ai=false} @self
+  - velocity{m=set;x=0;y=5;z=0} @self
+  - Aura{onTick=FloatUP;i=5;duration=30} @self
+  - delay 30
+  - Aura{onTick=Float;i=5;duration=30} @self
+  - delay 20
+  - sound{s=entity.wildfire.shockwave;v=3} @self
+  - delay 10
+  - Aura{onTick=DownVelocity;i=3;duration=20} @self
+  - delay 10
+  - explosion{yield=4} @self
+  - velocity{m=set;x=0;y=0;z=0} @self
+  - projectile{oH=FireShockwaveHit;oT=Wave;i=3;hs=true;v=7;ho=0;se=false;hnp=true;hR=2} @NearestPlayer{r=30}
+  - projectile{oH=FireShockwaveHit;oT=Wave;i=3;hs=true;v=7;ho=90;se=false;hnp=true;hR=2} @NearestPlayer{r=30}
+  - projectile{oH=FireShockwaveHit;oT=Wave;i=3;hs=true;v=7;ho=180;se=false;hnp=true;hR=2} @NearestPlayer{r=30}
+  - projectile{oH=FireShockwaveHit;oT=Wave;i=3;hs=true;v=7;ho=270;se=false;hnp=true;hR=2} @NearestPlayer{r=30}
+  - delay 20
+  - projectile{oH=FireShockwaveHit;oT=Wave;i=3;hs=true;v=13;ho=45;se=false;hnp=true;hR=2} @NearestPlayer{r=30}
+  - projectile{oH=FireShockwaveHit;oT=Wave;i=3;hs=true;v=13;ho=135;se=false;hnp=true;hR=2} @NearestPlayer{r=30}
+  - projectile{oH=FireShockwaveHit;oT=Wave;i=3;hs=true;v=13;ho=215;se=false;hnp=true;hR=2} @NearestPlayer{r=30}
+  - projectile{oH=FireShockwaveHit;oT=Wave;i=3;hs=true;v=13;ho=305;se=false;hnp=true;hR=2} @NearestPlayer{r=30}
+  - delay 20
+  - projectile{oH=FireShockwaveHit;oT=Wave;i=3;hs=true;v=10;ho=22;se=false;hnp=true;hR=2} @NearestPlayer{r=30}
+  - projectile{oH=FireShockwaveHit;oT=Wave;i=3;hs=true;v=10;ho=112;se=false;hnp=true;hR=2} @NearestPlayer{r=30}
+  - projectile{oH=FireShockwaveHit;oT=Wave;i=3;hs=true;v=10;ho=202;se=false;hnp=true;hR=2} @NearestPlayer{r=30}
+  - projectile{oH=FireShockwaveHit;oT=Wave;i=3;hs=true;v=10;ho=292;se=false;hnp=true;hR=2} @NearestPlayer{r=30}
+  - delay 30
+  #- setAI{ai=true} @self
+  
+Wave:
+  Skills:
+  - effect:particle{p=flame;amount=10;hs=.5;vs=.1} @Origin{xoffset=0;yoffset=0;zoffset=0}
+  - effect:particle{p=lava;amount=10;hs=.5;vs=.1} @Origin{xoffset=0;yoffset=0;zoffset=0}
+  - effect:particle{p=landing_lava;amount=10;hs=.5;vs=.1} @Origin{xoffset=0;yoffset=0;zoffset=0}
+  - effect:blockmask{m=magma_block;r=2;d=20} @origin
+  - sound{s=entity.wildfire.shockwave_projectile;v=0.2} @origin 0.3
+
+FireShockwaveHit:
+  Skills:
+  - throw{vx=5;vy=2}
+  - damage{a=75}
+  - ignite{ticks=100}
+
+FloatUP:
+  Skills:
+  - velocity{m=set;x=0;y=0.6;z=0} @self
+
+Float:
+  Skills:
+  - velocity{m=set;x=0;y=0.1;z=0} @self
+DownVelocity:
+  Skills:
+  - velocity{m=set;x=0;y=-20;z=0} @self
+  
+BlazielFireball:
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=100} @self
+  - velocity{m=set;x=0;y=5;z=0} @self
+  - Aura{onTick=FloatUP;i=5;duration=20} @self
+  - delay 30
+  - Aura{onTick=Float;i=5;duration=20} @self
+  - state{s=attack} @self
+  - delay 30
+  - state{s=attack} @self
+  - Aura{ot=FBShoot;i=10;duration=50} @self
+  - sound{s=entity.wildfire.shoot_vocal} @self
+  - delay 30
+  - state{s=attack;r=true;lerpout=5} @self
+  
+FBShoot:
+  Skills:
+  - fireball{y=5;i=false;ps=true;sml=false} @PlayersInRadius{r=35}
+  - sound{s=entity.wildfire.shoot;v=3} @self
+  - sound{s=entity.wildfire.shoot_vocal;v=3} @self
+  
+Down:
+  Skills:
+  - velocity{m=set;x=0;y=-10;z=0} @self
+  
+  
+ShieldThrow:
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=100} @self
+  - state{s=attack} @self
+  - partvisibility{m=blaziel;p=shield;v=false;em=false} @self
+  - projectile{bulletType=MOB;mob=blazielshield;oE=ShieldHit;oH=ShieldHit;oT=ShieldTick;i=1;v=15;ho=0;se=true;sB=true;hnp=true;} @PlayersInRadius{r=30;limit=1;sort=NEAREST}
+  - projectile{bulletType=MOB;mob=blazielshield;oE=ShieldHit;oH=ShieldHit;oT=ShieldTick;i=1;v=15;ho=90;se=true;sB=true;hnp=true;} @PlayersInRadius{r=30;limit=1;sort=NEAREST}
+  - projectile{bulletType=MOB;mob=blazielshield;oE=ShieldHit;oH=ShieldHit;oT=ShieldTick;i=1;v=15;ho=180;se=true;sB=true;hnp=true;} @PlayersInRadius{r=30;limit=1;sort=NEAREST}
+  - projectile{bulletType=MOB;mob=blazielshield;oE=ShieldHit;oH=ShieldHit;oT=ShieldTick;i=1;v=15;ho=270;se=true;sB=true;hnp=true;} @PlayersInRadius{r=30;limit=1;sort=NEAREST}
+  - delay 100
+  - partvisibility{m=blaziel;p=shield;v=true;em=false} @self
+  
+ShieldHit:
+  Skills:
+  - damage{a=30} @PIR{r=5}
+  - explosion{yield=7} @origin
+  - effect:particle{p=smoke;amount=10;hs=2;vs=.1} @Origin
+  - effect:particle{p=lava;amount=10;hs=2;vs=.1} @Origin
+  - effect:bloodyScreen{d=20} @PIR{r=5}
+  - summon{type=blazielshieldreturner;amount=1;radius=0} @origin
+  
+ShieldTick:
+  Skills:
+  - effect:particle{p=smoke;amount=10;hs=.5;vs=.1} @Origin
+  - effect:particle{p=lava;amount=10;hs=.5;vs=.1} @Origin
+  
+ReturnShield:
+  Skills:
+  - delay 3
+  - projectile{bulletType=MOB;mob=blazielshield;i=1;v=15;ho=0;se=true;sb=false;hnp=true;} @Parent
+  
+BlazielMeleeSpin:
+  Conditions:
+  - playerwithin{d=6} true
+  Skills:
+  - state{s=attack} @self
+  - delay 20
+  - damagepercent{percent=0.5} @PIR{5}
+  - throw{velocity=20;velocityY=5} @PlayersInRadius{r=6}
+  - delay 20
+  - state{s=attack;r=true} @self
+
+WildfireFireball:
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=150} @self
+  - velocity{m=set;x=0;y=2;z=0} @self
+  - Aura{onTick=WFFloatUP;i=5;duration=20} @self
+  - delay 30
+  - Aura{onTick=Float;i=5;duration=20} @self
+  - state{s=attack} @self
+  - delay 30
+  - state{s=attack} @self
+  - Aura{ot=WildfireFBShoot;i=5;duration=40} @self
+  - delay 40
+  - velocity{m=set;x=0;y=-5;z=0} @self
+  - state{s=attack;r=true;lerpout=5} @self
+  
+  
+FBShoot:
+  Skills:
+  - fireball{y=5;i=false;ps=true;sml=false} @PlayersInRadius{r=35}
+  - sound{s=entity.wildfire.shoot;v=0.5} @self
+  
+WFFloatUP:
+  Skills:
+  - velocity{m=set;x=0;y=0.6;z=0} @self
+  
+  
+SummonWF:
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=20000} @self
+  - potion{type=DAMAGE_RESISTANCE;duration=2000;level=100} @self
+  - summon{t=Wildfire} @self
+  - setAI{ai=false} @self
+  
+  
+WFDeath:
+  Skills:
+  - clearpotion{} @parent
+  - setAI{ai=True} @parent
+  - gcd{ticks=10} @self
+  
+BlazielCharge:
+  TargetConditions:
+  - distance{d=5to100}
+  skills:
+  - sound{s=ENTITY_WARDEN_ROAR} @self
+  - delay 20
+  - skill{s=BzlLunge} @self
+  
+#on the ground
+BzlLunge:
+  Skills:
+  - projectile{onTick=BzlLungeTick;onHit=BzlLungeHit;onEnd=BzlLungeHit;hp=true;hs=true;v=20;i=1;hR=3;vR=3;mr=50;} @target
+
+BzlLungeTick:
+  Skills:
+  - teleport{spreadh=0;spreadv=0} @origin
+  - look{headOnly=false;immediately=true} @Target
+
+BzlLungeHit:
+  Skills:
+  - effect:explosion @self
+  - effect:sound{s=entity.zombie.break_wooden_door;v=3;p=0.5} @self
+  - damage{a=100} @PIR{r=6}
+  - throw{velocity=25;velocityY=1} @PlayersInRadius{r=6}
+  - effect:bloodyScreen{d=25} @PIR{r=15}
+  - blockwave{duration=100;material=MAGMA_Block;radius=7;radiusY=5;velocity=2;shape=sphere;hs=false} @selflocation
+  - setspeed{speed=1;type=walking} @self
+  
+PillarThrow:
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{ticks=100} @self
+  - state{s=attack} @self
+  - partvisibility{m=blaziel;p=pillar;v=false;em=false} @self
+  - projectile{bulletType=MOB;mob=blazielpillar;oE=PillarHit;oH=PillarHit;oT=PillarTick;i=1;v=15;ho=0;se=true;sB=true;hnp=true;} @PlayersInRadius{r=30;limit=1;sort=NEAREST}
+  - projectile{bulletType=MOB;mob=blazielpillar;oE=PillarHit;oH=PillarHit;oT=PillarTick;i=1;v=15;ho=90;se=true;sB=true;hnp=true;} @PlayersInRadius{r=30;limit=1;sort=NEAREST}
+  - projectile{bulletType=MOB;mob=blazielpillar;oE=PillarHit;oH=ShieldHit;oT=PillarTick;i=1;v=15;ho=180;se=true;sB=true;hnp=true;} @PlayersInRadius{r=30;limit=1;sort=NEAREST}
+  - projectile{bulletType=MOB;mob=blazielpillar;oE=PillarHit;oH=ShieldHit;oT=PillarTick;i=1;v=15;ho=270;se=true;sB=true;hnp=true;} @PlayersInRadius{r=30;limit=1;sort=NEAREST}
+  - delay 100
+  - partvisibility{m=blaziel;p=pillar;v=true;em=false} @self
+  
+PillarHit:
+  Skills:
+  - damage{a=30} @PIR{r=5}
+  - explosion{yield=7} @origin
+  - effect:particle{p=smoke;amount=10;hs=2;vs=.1} @Origin
+  - effect:particle{p=lava;amount=10;hs=2;vs=.1} @Origin
+  - effect:bloodyScreen{d=20} @PIR{r=5}
+  - summon{type=blazielpillarreturner;amount=1;radius=0} @origin
+  
+PillarTick:
+  Skills:
+  - effect:particle{p=smoke;amount=10;hs=.1;vs=.5} @Origin
+  - effect:particle{p=lava;amount=10;hs=.1;vs=.5} @Origin
+  
+ReturnPillar:
+  Skills:
+  - delay 3
+  - projectile{bulletType=MOB;mob=blazielpillar;i=1;v=15;ho=0;se=true;sb=false;hnp=true;} @Parent
+  
+Meteor:
+  Condition:
+  - offgcd
+  Skills:
+  - sound{s=entity.ravager.roar} @self
+  - delay 20
+  - projectile{oH=MeteorHit;type=METEOR;i=2;hR=3;vR=3;d=300;v=10;hfs=40;hn=1} @PIR{r=20}
+  
+MeteorHit:
+  Skills:
+  - explosion{yield=15;ft=true} @origin
+  - throw{velocity=10;velocityY=7} @PIR{r=3}
+  - damage{a=125} @PIR{r=3}
+  
+Leap:
+  Condition:
+  - offgcd
+  Skills:
+  - effect:enderbeam{d=60;y=2} @target
+  - delay 30
+  - leap{velocity=200} @target
+  - delay 20
+  - jump{velocity=-100}
+  - effect:explosion @self
+  - damagepercent{percent=.4} @EntitiesInRadius{r=5}
+  - throw{velocity=15;velocityY=5} @PlayersInRadius{r=5}
+  - potion{type=NAUSEAU;duration=160;level=4}
+  - stun{d=60;f=true} @target
+  
+  
+Trap:
+  Condition:
+  - offgcd
+  Skills:
+  - effect:particlesphere{particle=reddust;amount=200;radius=5} @self
+  - delay 30
+  - prison{material=MAGMA_BLOCK;duration=140;breakable=false} @self
+  - summon{type=WITHER_SKELETON;amount=5;radius=1} @self
+  - summon{type=BLAZE;amount=10;radius=1} @self
+  - delay 10
+  - swap @NearestPlayer{r=30}
+  - explosion{yield=10} @target
+  - damagepercent{percent=.6} @target
+  
+SpinBalls:
+  Condition:
+  - offgcd
+  Skills:
+  - gcd(ticks=100) @self
+  - effect:particlesphere{particle=smoke;amount=200;radius=5} @self
+  - delay 40
+  - setrotation{relative=false;yaw=0} @self
+  - shootfireball{y=5;v=5;type=small} @Forward{f=10;y=0.0;sideOffset=0.0}
+  - delay 5
+  - setrotation{relative=false;yaw=20} @self
+  - shootfireball{y=5;v=5;type=small} @Forward{f=10;y=0.0;sideOffset=0.0}
+  - delay 5
+  - setrotation{relative=false;yaw=40} @self
+  - shootfireball{y=5;v=5;type=small} @Forward{f=10;y=0.0;sideOffset=0.0}
+  - delay 5
+  - setrotation{relative=false;yaw=60} @self
+  - shootfireball{y=5;v=5;type=small} @Forward{f=10;y=0.0;sideOffset=0.0}
+  - delay 5
+  - setrotation{relative=false;yaw=80} @self
+  - shootfireball{y=5;v=5;type=small} @Forward{f=10;y=0.0;sideOffset=0.0}
+  - delay 5
+  - setrotation{relative=false;yaw=100} @self
+  - shootfireball{y=5;v=5;type=small} @Forward{f=10;y=0.0;sideOffset=0.0}
+  - delay 5
+  - setrotation{relative=false;yaw=120} @self
+  - shootfireball{y=5;v=5;type=small} @Forward{f=10;y=0.0;sideOffset=0.0}
+  - delay 5
+  - setrotation{relative=false;yaw=140} @self
+  - shootfireball{y=5;v=5;type=small} @Forward{f=10;y=0.0;sideOffset=0.0}
+  - delay 5
+  - setrotation{relative=false;yaw=160} @self
+  - shootfireball{y=5;v=5;type=small} @Forward{f=10;y=0.0;sideOffset=0.0}
+  - delay 5
+  - setrotation{relative=false;yaw=180} @self
+  - shootfireball{y=5;v=5;type=small} @Forward{f=10;y=0.0;sideOffset=0.0}
+  - delay 5
+  - setrotation{relative=false;yaw=200} @self
+  - shootfireball{y=5;v=5;type=small} @Forward{f=10;y=0.0;sideOffset=0.0}
+  - delay 5
+  - setrotation{relative=false;yaw=220} @self
+  - shootfireball{y=5;v=5;type=small} @Forward{f=10;y=0.0;sideOffset=0.0}
+  - delay 5
+  - setrotation{relative=false;yaw=240} @self
+  - shootfireball{y=5;v=5;type=small} @Forward{f=10;y=0.0;sideOffset=0.0}
+  - delay 5
+  - setrotation{relative=false;yaw=260} @self
+  - shootfireball{y=5;v=5;type=small} @Forward{f=10;y=0.0;sideOffset=0.0}
+  - delay 5
+  - setrotation{relative=false;yaw=280} @self
+  - shootfireball{y=5;v=5;type=small} @Forward{f=10;y=0.0;sideOffset=0.0}
+  - delay 5
+  - setrotation{relative=false;yaw=300} @self
+  - shootfireball{y=5;v=5;type=small} @Forward{f=10;y=0.0;sideOffset=0.0}
+  - delay 5
+  - setrotation{relative=false;yaw=320} @self
+  - shootfireball{y=5;v=5;type=small} @Forward{f=10;y=0.0;sideOffset=0.0}
+  - delay 5
+  - setrotation{relative=false;yaw=340} @self
+  - shootfireball{y=5;v=5;type=small} @Forward{f=10;y=0.0;sideOffset=0.0}
+  - delay 5
+  - setrotation{relative=false;yaw=360} @self
+  - shootfireball{y=5;v=5;type=small} @Forward{f=10;y=0.0;sideOffset=0.0}
+  - delay 4=5
+
+  

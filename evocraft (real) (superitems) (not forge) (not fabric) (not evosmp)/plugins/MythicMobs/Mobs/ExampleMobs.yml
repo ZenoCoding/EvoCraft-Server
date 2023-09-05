@@ -1,0 +1,103 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#  
+
+SkeletalKnight:
+  Type: WITHER_SKELETON
+  Display: '&aSkeletal Knight'
+  Health: 40
+  Damage: 8
+  Equipment:
+  - IRON_HELMET HEAD
+  - IRON_CHESTPLATE CHEST
+  - IRON_LEGGINGS LEGS
+  - IRON_BOOTS FEET
+  - IRON_SWORD HAND
+  - SHIELD OFFHAND
+  Drops:
+  - GOLD_NUGGET{display="Gold Coin"} 1to2 0.5
+  LevelModifiers:
+  - health 5
+  - damage 0.5
+  Options:
+    MovementSpeed: 0.1
+    
+Pizel:
+  Type: ZOMBIFIED_PIGLIN
+  Display: '&6Pizel'
+  Health: 50
+  Damage: 10
+  Faction: Blazeborn
+  Skills:
+  - setname{name=<caster.name>;delay=2} @self ~onDamaged  
+  - setname{name=<caster.name>;delay=2} @self ~onTimer:10 ?incombat{}
+  AIGoalSelectors:
+  - clear # Clears the mob's base AI
+  - meleeattack
+  - randomstroll # Randomly walks
+  - float # Randomly floats
+  AITargetSelectors:
+  - clear # Clears the mob's base AI
+  - players # Firstly targets players
+  - attacker # Targets whatever attacks it
+  - specificfaction good # Targets mobs from the faction "good"
+  Options:
+    MovementSpeed: 0.2
+    PreventOtherDrops: true
+    KnockbackResistance: 0.7
+WitherSpectre:
+  Type: WITHER_SKELETON
+  Display: '&0Wither Spectre'
+  Health: 60
+  Damage: 2
+  Faction: Blazeborn
+  AIGoalSelectors:
+  - clear # Clears the mob's base AI
+  - fleeplayers
+  - randomstroll # Randomly walks
+  - float # Randomly floats
+  AITargetSelectors:
+  - clear # Clears the mob's base AI
+  - players # Firstly targets players
+  - attacker # Targets whatever attacks it
+  - specificfaction good # Targets mobs from the faction "good"
+  Skills:
+  - setname{name=<caster.name>;delay=2} @self ~onDamaged  
+  - setname{name=<caster.name>;delay=2} @self ~onTimer:10 ?incombat{}
+  - shootskull{y=1;v=4;ps=true} ~onTimer:50 @target 0.2
+#  - missile{ot=SpectreMissile_TICK;oh=SpectreMissile_HIT;v=7;i=1;hR=1;vR=1;in=3} ~onTimer:40 @target 0.2 @target
+  Equipment:
+  - NETHER_STAR HAND
+  Options:
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    
+SkeletonKing:
+  Type: WITHER_SKELETON
+  Display: '&6Skeleton King'
+  Health: 300
+  Damage: 10
+  Skills:
+  - speak{m="None may challenge the Skeleton King!";cooldown=20} @PlayersInRadius{r=40}
+    ~onCombat >0 0.2
+  - speak{m="Ahahahahah! Die, <trigger.name>!"} @PlayersInRadius{r=40} ~onPlayerKill
+    >0 1
+  - skill{s=SummonSkeletons} @self 0.1
+  - skill{s=SmashAttack} @target >0 0.2
+  Equipment:
+  - KingsCrown HEAD
+  - SkeletonKingSword HAND
+  Drops:
+  - SkeletonKingDrops
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.2
+    MaxCombatDistance: 25
+    PreventOtherDrops: true
+SkeletalMinion:
+  Type: SKELETON
+  Display: '&2Skeletal Minion'
+  Health: 10
+  Damage: 2
+  Options:
+    MovementSpeed: 0.1

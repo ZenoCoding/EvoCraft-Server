@@ -1,0 +1,28 @@
+playername: AppleCommunity
+lang: en_US
+minerate-full-mined: 205429
+minerate:
+  diamond: 24
+  gold: 4
+  iron: 58
+  coal: 134
+  ancient debris: 0
+better-click: 24
+cheats:
+  fastladder: 1
+  regen: 2
+  forcefield: 1
+  noslowdown: 1
+  speed: 1
+  timer: 5
+  inventorymove: 1
+  fly: 1
+  nuker: 2
+  airplace: 4
+  airjump: 2
+  step: 5
+  fastplace: 1
+  nofall: 6
+  spider: 1
+  faststairs: 1
+creation-time: 1658891764257

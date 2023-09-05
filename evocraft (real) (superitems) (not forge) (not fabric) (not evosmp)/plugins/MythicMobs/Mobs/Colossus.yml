@@ -1,0 +1,95 @@
+Colossus:
+  Type: HUSK
+  Display: '&c<&lb>BOSS<&rb> &7&lColossus'
+  Health: 1500
+  Damage: 15
+  Faction: Colossus
+  AIGoalSelectors:
+  - clear # Clears the mob's base AI
+  - movetowardstarget
+  - randomstroll # Randomly walks
+  AITargetSelectors:
+  - clear # Clears the mob's base AI
+  - players # Firstly targets players
+  - attacker # Targets whatever attacks it
+  - specificfaction Volken # Targets mobs from the faction "good"
+  KillMessages:
+  - '<target.name> &fwas crushed under a boulder'
+  - '<target.name> &fwas put between a rock and a hard place'
+  - '<target.name> &fwas smooshed'
+  Skills:
+  - skill{s=ColossusSpawn} @self ~onSpawn
+  - setmodeltag{m=colossus;bone=tag_nametag;tag=<caster.name> &c<&heart> &f<caster.hp>&8/&f<caster.mhp>} @self ~onDamaged
+  - setmodeltag{m=colossus;bone=tag_nametag;tag=<caster.name> &c<&heart> &f<caster.hp>&8/&f<caster.mhp>} @self ~onTimer:10 ?incombat{}
+  
+  # Active Skills
+  - skill{s=ColossusPunch} @target ~onTimer:50 0.3
+  - skill{s=ColossusAmethystUppercut} @target ~onTimer:40 0.3
+  - skill{s=ColossusCrystalBarrage} @target ~onTimer:70 0.4
+  - skill{s=ColossusRockRoll} @target ~onTimer:70 0.2
+  - skill{s=ColossusSmash} @target ~onTimer:80 0.3
+  - skill{s=ColossusCrystalStrike} @target ~onTimer:60 0.4
+  - skill{s=ColossusCrystalSpikeSkill} @target ~onTimer:60 0.3
+  DamageModifiers:
+  - FIRE_TICK 0
+  - FIRE 0
+  - PROJECTILE 0.5
+  BossBar:
+    Enabled: true
+    Title: '&c<&lb>BOSS<&rb> &7&lColossus'
+    Range: 40
+    Color: RED
+    Style: SEGMENTED_4
+    DarkenSky: true
+  Modules:
+#If enabled, the mob will track damage from different sources and assign more weight to targets that deal more damage (to prevent kite).
+    ThreatTable: true
+#If enabled, the mob will be able to be attacked by multiple players through damage immunity.
+    ImmunityTable: true
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.3
+    MaxCombatDistance: 50
+    PreventOtherDrops: true
+    Glowing: false
+    KnockbackResistance: 0.9
+    RepeatAllSkills: true
+    DigOutOfGround: true
+    Silent: true
+    Despawn: false
+    
+ColossusAmethystProjectile:
+  Type: ARMOR_STAND
+  Display: ''
+  Disguise: FALLING_BLOCK AMETHYST_CLUSTER
+  KillMessages:
+  - '<target.name> &fwas killed by a rock'
+  Options:
+    Invincible: true
+    Invisible: true
+    
+ColossusLargeAmethystProjectile:
+  Type: ARMOR_STAND
+  Display: ''
+  KillMessages:
+  - '<target.name> &fwas blown up by a crystal-infused bomb'
+  Skills:
+  - model{m=amethystball} @self ~onSpawn
+  Options:
+    Invincible: true
+    Invisible: true
+  
+ColossusCrystalSpike:
+  Type: ARMOR_STAND
+  Display: ''
+  KillMessages:
+  - '<target.name> &fwas impaled by a shiny rock'
+  Skills:
+  - model{m=crystalspike} @self ~onSpawn
+  - state{s=spawn} @self ~onSpawn
+  - skill{s=ColossusCrystalSpikeRaiseSkill;delay=10} @self ~onSpawn
+  - skill{s=ColossusCrystalSpikeEnd;delay=40} @self ~onSpawn
+  - remove{delay=200} @self ~onSpawn
+  Options:
+    Invincible: true
+    Invisible: true

@@ -1,0 +1,7 @@
+FirePixieTick:
+  Skills:
+  - effect:particles{p=reddust;color=#fdaf38;amount=1;vs=0.2;hs=0.2;y=0.2;} 
+  - effect:particles{p=reddust;color=#ff0000;amount=3;vs=0.2;hs=0.2;y=0.2;} 
+  - effect:particles{p=reddust;color=#ff6600;amount=5;vs=0.2;hs=0.2;y=0.2;}
+  - effect:particles{p=flame;amount=1;vs=0.2;hs=0.2;y=0.2} 
+  - effect:particles{p=mobSpell;color=#ff6600;amount=1;vs=0.1;hs=0.1;y=0.2} 

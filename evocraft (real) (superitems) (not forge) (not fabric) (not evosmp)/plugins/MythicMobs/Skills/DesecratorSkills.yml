@@ -1,0 +1,24 @@
+Shockwave:
+  TargetConditions:
+  - distance{d=5to30} true
+  Skills:
+  - jump{v=0.5}
+  - delay 40
+  - projectile{onTick=Shockwave-Tick;onHit=Shockwave-Hit;interval=3;duration=300;oy=1.2;v=12;hfs=1;hs=true;ac=0.8;hR=3;vR=4;} @NearestPlayer{r=30}
+
+Shockwave-Tick:
+  Skills:
+  - particles{p=block_crack;amount=10;speed=1;hS=1;vS=1;audience=World}
+  - blockwave{duration=50;material=stone;radius=3;radiusY=5;velocity=2;hs=false;noise=1}
+  
+Shockwave-Hit:
+  Skills:
+  - damage{a=35}
+  - delay 5
+  - throw{v=5;vy=10}
+  - particles{p=block_crack;amount=30;speed=1;hS=1;vS=1;audience=World}
+  
+Charge:
+  Skills:
+  - lunge{velocity=5;velocityY=0.2} @Self
+  

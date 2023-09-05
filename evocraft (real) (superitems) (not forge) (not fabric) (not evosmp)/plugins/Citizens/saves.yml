@@ -1,0 +1,1100 @@
+# Citizens NPC Storage
+
+last-created-npc-id: 94
+npc:
+  '0':
+    metadata:
+      cached-skin-uuid: 170355f5-beee-4c90-afc7-0dcfabaf3846
+      cached-skin-uuid-name: c47452a6-e2d6-4488-a890-413900b7afbf
+    name: §e[NPC] Fisherman
+    uuid: 163589b3-6a64-4920-8784-333bf1da2b5b
+    traits:
+      type: PLAYER
+      spawned: true
+      age:
+        age: 0
+        locked: true
+      skintrait:
+        fetchDefaultSkin: true
+        signature: DWxM+Pq8U3IgvuJtcDKAw4UfRHiN32cbhZO37AlLqkiJiZqx872oYY6ZAW59PYo6NXHtqmppJsx3DYzVg8zbaTw2e02JORQwk5wTHMzHd5fuZ/8ziTpS4Tskk32llqJzcdNALw1ONdzBnwxDoTU5IL+UtcuBuKnVnZLdlp0GDIBdtBpG4EeVpsXtJ9TkxzQzgfcW5/o70wKZWWhgw71Wux57l7xm+ipyC2/CG+e6oYQuHwcaIbO1vOi9ji7XkHNJHVt9dvmBnj5CzssKT4ertwe9+HXZA6XGABwlYbCKOOT5wv3quW1MQWVnj1sBULiQWc18D6m9cxvagzsLYzS8LeuLQjynKaaQ/zc9Ssp0qA91fuLZUlRxNpwnWTGTxZ76ZAM4Fx/Z174quDZE95XoXpXilUrlbzEpzVKkywk2Ztji0nYcBsfdFnyAz0Y8ofyTIrhyASL0tb1ZmpSOvQwzschiX/LCcjUEqcnoV9vCSUtZYlbGVRqZhwsAgcDbhtup+EF+8uHhs/3vKQgfIOIDGgpOLnwWafFJoS5He8Iah/C0Phmra+pg0BQzUSsYsqnFBM8S7r2dNqiACXquai1xP6GgQOt6Nw5VV1v6CsSiVIDbQ6EGxU5nDvHY352GIPIIl6mriiUz6n3h/1jG03qQFjJQquPbM20Af+eOiVKTOTY=
+        skinName: c47452a6-e2d6-4488-a890-413900b7afbf
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTU4OTgxMjA4MjYwMywKICAicHJvZmlsZUlkIiA6ICJlM2I0NDVjODQ3ZjU0OGZiOGM4ZmEzZjFmN2VmYmE4ZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJNaW5pRGlnZ2VyVGVzdCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS80MzBjMzhlNWY0NjA0Y2ZiZmU5YTM2YTE1ZWFkMzIzYmYwZjUzMzkxZjM5NjQwZmFiMzBlYWJkNzhiNTg5OTM3IgogICAgfQogIH0KfQ==
+        updateSkins: false
+      lookclose:
+        range: '5.0'
+        disablewhilenavigating: true
+        enabled: true
+        enableRandomLook: false
+        randomLookDelay: 60
+        realisticlooking: false
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      text:
+        delay: 1
+        talk-close: false
+        random-talker: false
+        realistic-looking: false
+        range: '4.0'
+        talkitem: default
+        speech-bubbles: true
+        text:
+          '0': '&e[NPC] Fisherman:&f Hello there! You must be new!'
+          '1': '&e[NPC] Fisherman: &fHere in &bEvo&aCraft &fwe have a custom &bfishing
+            &fsystem!'
+          '2': '&e[NPC] Fisherman]: &fYou can catch custom fish, with different rarities,
+            and then sell them to the shop for coins!'
+          '3': '&e[NPC] Fisherman: &fWe even have competitions!'
+          '4': '&e[NPC] Fisherman: &fI hope to see you at the pier! Happy fishing!'
+      owner:
+        uuid: 5b7a1960-578e-40f9-8690-505da4df0c56
+      hologramtrait:
+        direction: BOTTOM_UP
+        lineHeight: -1.0
+      location:
+        bodyYaw: -77.65729
+        world: flat
+        x: '-221.2547'
+        y: '70.0'
+        z: '-589.7313'
+        yaw: '-77.6573'
+        pitch: '16.1229'
+      speech: chat
+      inventory:
+        '0':
+          type_namespace: minecraft
+          type_key: fishing_rod
+          amount: 1
+          durability: 4
+          meta:
+            encoded-meta: rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGphdmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAkU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2YWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAACHQAAj09dAAJbWV0YS10eXBldAAEbG9yZXQACUl0ZW1GbGFnc3QAC1VuYnJlYWthYmxldAAGRGFtYWdldAAIaW50ZXJuYWx0ABJQdWJsaWNCdWtraXRWYWx1ZXN1cQB+AAYAAAAIdAAISXRlbU1ldGF0AApVTlNQRUNJRklDc3IANmNvbS5nb29nbGUuY29tbW9uLmNvbGxlY3QuSW1tdXRhYmxlTGlzdCRTZXJpYWxpemVkRm9ybQAAAAAAAAAAAgABWwAIZWxlbWVudHN0ABNbTGphdmEvbGFuZy9PYmplY3Q7eHB1cQB+AAYAAAABdACVeyJleHRyYSI6W3siYm9sZCI6dHJ1ZSwiaXRhbGljIjpmYWxzZSwiY29sb3IiOiJ3aGl0ZSIsInRleHQiOiJDT01NT04ifSx7ImJvbGQiOnRydWUsIml0YWxpYyI6ZmFsc2UsImNvbG9yIjoid2hpdGUiLCJ0ZXh0IjoiIEZJU0hJTkcgUk9EIn1dLCJ0ZXh0IjoiIn1zcgATamF2YS51dGlsLkFycmF5TGlzdHiB0h2Zx2GdAwABSQAEc2l6ZXhwAAAAA3cEAAAAA3QADUhJREVfRU5DSEFOVFN0AA9ISURFX0FUVFJJQlVURVN0ABBISURFX1VOQlJFQUtBQkxFeHNyABFqYXZhLmxhbmcuQm9vbGVhbs0gcoDVnPruAgABWgAFdmFsdWV4cAFzcgARamF2YS5sYW5nLkludGVnZXIS4qCk94GHOAIAAUkABXZhbHVleHIAEGphdmEubGFuZy5OdW1iZXKGrJUdC5TgiwIAAHhwAAAABHQAYEg0c0lBQUFBQUFBQS8rTmlZT0JpNEVrdFM4M0x6UzlLVGNzc3p1QmdFRWpOVGROTkxDakl5VXhOMFUxS3pDeGg0QXpPS01yTUxiQXlNMlZnQUFDZTR0NEFNZ0FBQUE9PXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAAHdAATc3VwZXJpdGVtczp2YXJfdHlwZXQBwFtCOy04NEIsLTE5QiwwQiw1QiwxMjZCLDExNEIsMEIsNDFCLDEwOUIsMTAxQiw0NkIsMTIyQiwxMDFCLDExMEIsMTExQiwxMjBCLDQ2QiwxMTVCLDExN0IsMTEyQiwxMDFCLDExNEIsMTA1QiwxMTZCLDEwMUIsMTA5QiwxMTVCLDQ2QiwxMDVCLDExNkIsMTAxQiwxMDlCLDQ2Qiw2N0IsMTExQiwxMDlCLDExMkIsMTA4QiwxMDFCLDEyMEIsNzNCLDExNkIsMTAxQiwxMDlCLDM2Qiw4NEIsMTIxQiwxMTJCLDEwMUIsMEIsMEIsMEIsMEIsMEIsMEIsMEIsMEIsMThCLDBCLDBCLDEyMEIsMTE0QiwwQiwxNEIsMTA2Qiw5N0IsMTE4Qiw5N0IsNDZCLDEwOEIsOTdCLDExMEIsMTAzQiw0NkIsNjlCLDExMEIsMTE3QiwxMDlCLDBCLDBCLDBCLDBCLDBCLDBCLDBCLDBCLDE4QiwwQiwwQiwxMjBCLDExMkIsMTE2QiwwQiwxMUIsNzBCLDczQiw4M0IsNzJCLDczQiw3OEIsNzFCLDk1Qiw4MkIsNzlCLDY4Ql10ABJzdXBlcml0ZW1zOmFiaWxpdHl0APpbQjstODRCLC0xOUIsMEIsNUIsMTE1QiwxMTRCLDBCLDE5QiwxMDZCLDk3QiwxMThCLDk3Qiw0NkIsMTE3QiwxMTZCLDEwNUIsMTA4Qiw0NkIsNjVCLDExNEIsMTE0Qiw5N0IsMTIxQiw3NkIsMTA1QiwxMTVCLDExNkIsMTIwQiwtMTI3QiwtNDZCLDI5QiwtMTAzQiwtNTdCLDk3QiwtOTlCLDNCLDBCLDFCLDczQiwwQiw0QiwxMTVCLDEwNUIsMTIyQiwxMDFCLDEyMEIsMTEyQiwwQiwwQiwwQiwwQiwxMTlCLDRCLDBCLDBCLDBCLDBCLDEyMEJddAAUc3VwZXJpdGVtczpzdXBlcml0ZW10AAtmaXNoaW5nX3JvZHQAGnN1cGVyaXRlbXM6Y29tcGxleGVuY2hhbnRzdAFWW0I7LTg0QiwtMTlCLDBCLDVCLDExNUIsMTE0QiwwQiwxN0IsMTA2Qiw5N0IsMTE4Qiw5N0IsNDZCLDExN0IsMTE2QiwxMDVCLDEwOEIsNDZCLDcyQiw5N0IsMTE1QiwxMDRCLDc3Qiw5N0IsMTEyQiw1Qiw3QiwtMzhCLC02M0IsLTYxQiwyMkIsOTZCLC00N0IsM0IsMEIsMkIsNzBCLDBCLDEwQiwxMDhCLDExMUIsOTdCLDEwMEIsNzBCLDk3Qiw5OUIsMTE2QiwxMTFCLDExNEIsNzNCLDBCLDlCLDExNkIsMTA0QiwxMTRCLDEwMUIsMTE1QiwxMDRCLDExMUIsMTA4QiwxMDBCLDEyMEIsMTEyQiw2M0IsNjRCLDBCLDBCLDBCLDBCLDBCLDBCLDExOUIsOEIsMEIsMEIsMEIsMTZCLDBCLDBCLDBCLDBCLDEyMEJddAAVc3VwZXJpdGVtczphdHRyaWJ1dGVzdAD6W0I7LTg0QiwtMTlCLDBCLDVCLDExNUIsMTE0QiwwQiwxOUIsMTA2Qiw5N0IsMTE4Qiw5N0IsNDZCLDExN0IsMTE2QiwxMDVCLDEwOEIsNDZCLDY1QiwxMTRCLDExNEIsOTdCLDEyMUIsNzZCLDEwNUIsMTE1QiwxMTZCLDEyMEIsLTEyN0IsLTQ2QiwyOUIsLTEwM0IsLTU3Qiw5N0IsLTk5QiwzQiwwQiwxQiw3M0IsMEIsNEIsMTE1QiwxMDVCLDEyMkIsMTAxQiwxMjBCLDExMkIsMEIsMEIsMEIsMEIsMTE5Qiw0QiwwQiwwQiwwQiwwQiwxMjBCXXQAFXN1cGVyaXRlbXM6dmFyX3Jhcml0eXQBtFtCOy04NEIsLTE5QiwwQiw1QiwxMjZCLDExNEIsMEIsNDNCLDEwOUIsMTAxQiw0NkIsMTIyQiwxMDFCLDExMEIsMTExQiwxMjBCLDQ2QiwxMTVCLDExN0IsMTEyQiwxMDFCLDExNEIsMTA1QiwxMTZCLDEwMUIsMTA5QiwxMTVCLDQ2QiwxMDVCLDExNkIsMTAxQiwxMDlCLDQ2Qiw2N0IsMTExQiwxMDlCLDExMkIsMTA4QiwxMDFCLDEyMEIsNzNCLDExNkIsMTAxQiwxMDlCLDM2Qiw4MkIsOTdCLDExNEIsMTA1QiwxMTZCLDEyMUIsMEIsMEIsMEIsMEIsMEIsMEIsMEIsMEIsMThCLDBCLDBCLDEyMEIsMTE0QiwwQiwxNEIsMTA2Qiw5N0IsMTE4Qiw5N0IsNDZCLDEwOEIsOTdCLDExMEIsMTAzQiw0NkIsNjlCLDExMEIsMTE3QiwxMDlCLDBCLDBCLDBCLDBCLDBCLDBCLDBCLDBCLDE4QiwwQiwwQiwxMjBCLDExMkIsMTE2QiwwQiw2Qiw2N0IsNzlCLDc3Qiw3N0IsNzlCLDc4Ql10AA9zdXBlcml0ZW1zOmdsb3d0AAIwaXg=
+      equipment:
+        hand:
+          type_namespace: minecraft
+          type_key: fishing_rod
+          amount: 1
+          durability: 4
+          meta:
+            encoded-meta: rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGphdmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAkU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2YWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAACHQAAj09dAAJbWV0YS10eXBldAAEbG9yZXQACUl0ZW1GbGFnc3QAC1VuYnJlYWthYmxldAAGRGFtYWdldAAIaW50ZXJuYWx0ABJQdWJsaWNCdWtraXRWYWx1ZXN1cQB+AAYAAAAIdAAISXRlbU1ldGF0AApVTlNQRUNJRklDc3IANmNvbS5nb29nbGUuY29tbW9uLmNvbGxlY3QuSW1tdXRhYmxlTGlzdCRTZXJpYWxpemVkRm9ybQAAAAAAAAAAAgABWwAIZWxlbWVudHN0ABNbTGphdmEvbGFuZy9PYmplY3Q7eHB1cQB+AAYAAAABdACVeyJleHRyYSI6W3siYm9sZCI6dHJ1ZSwiaXRhbGljIjpmYWxzZSwiY29sb3IiOiJ3aGl0ZSIsInRleHQiOiJDT01NT04ifSx7ImJvbGQiOnRydWUsIml0YWxpYyI6ZmFsc2UsImNvbG9yIjoid2hpdGUiLCJ0ZXh0IjoiIEZJU0hJTkcgUk9EIn1dLCJ0ZXh0IjoiIn1zcgATamF2YS51dGlsLkFycmF5TGlzdHiB0h2Zx2GdAwABSQAEc2l6ZXhwAAAAA3cEAAAAA3QADUhJREVfRU5DSEFOVFN0AA9ISURFX0FUVFJJQlVURVN0ABBISURFX1VOQlJFQUtBQkxFeHNyABFqYXZhLmxhbmcuQm9vbGVhbs0gcoDVnPruAgABWgAFdmFsdWV4cAFzcgARamF2YS5sYW5nLkludGVnZXIS4qCk94GHOAIAAUkABXZhbHVleHIAEGphdmEubGFuZy5OdW1iZXKGrJUdC5TgiwIAAHhwAAAABHQAYEg0c0lBQUFBQUFBQS8rTmlZT0JpNEVrdFM4M0x6UzlLVGNzc3p1QmdFRWpOVGROTkxDakl5VXhOMFUxS3pDeGg0QXpPS01yTUxiQXlNMlZnQUFDZTR0NEFNZ0FBQUE9PXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAAHdAATc3VwZXJpdGVtczp2YXJfdHlwZXQBwFtCOy04NEIsLTE5QiwwQiw1QiwxMjZCLDExNEIsMEIsNDFCLDEwOUIsMTAxQiw0NkIsMTIyQiwxMDFCLDExMEIsMTExQiwxMjBCLDQ2QiwxMTVCLDExN0IsMTEyQiwxMDFCLDExNEIsMTA1QiwxMTZCLDEwMUIsMTA5QiwxMTVCLDQ2QiwxMDVCLDExNkIsMTAxQiwxMDlCLDQ2Qiw2N0IsMTExQiwxMDlCLDExMkIsMTA4QiwxMDFCLDEyMEIsNzNCLDExNkIsMTAxQiwxMDlCLDM2Qiw4NEIsMTIxQiwxMTJCLDEwMUIsMEIsMEIsMEIsMEIsMEIsMEIsMEIsMEIsMThCLDBCLDBCLDEyMEIsMTE0QiwwQiwxNEIsMTA2Qiw5N0IsMTE4Qiw5N0IsNDZCLDEwOEIsOTdCLDExMEIsMTAzQiw0NkIsNjlCLDExMEIsMTE3QiwxMDlCLDBCLDBCLDBCLDBCLDBCLDBCLDBCLDBCLDE4QiwwQiwwQiwxMjBCLDExMkIsMTE2QiwwQiwxMUIsNzBCLDczQiw4M0IsNzJCLDczQiw3OEIsNzFCLDk1Qiw4MkIsNzlCLDY4Ql10ABJzdXBlcml0ZW1zOmFiaWxpdHl0APpbQjstODRCLC0xOUIsMEIsNUIsMTE1QiwxMTRCLDBCLDE5QiwxMDZCLDk3QiwxMThCLDk3Qiw0NkIsMTE3QiwxMTZCLDEwNUIsMTA4Qiw0NkIsNjVCLDExNEIsMTE0Qiw5N0IsMTIxQiw3NkIsMTA1QiwxMTVCLDExNkIsMTIwQiwtMTI3QiwtNDZCLDI5QiwtMTAzQiwtNTdCLDk3QiwtOTlCLDNCLDBCLDFCLDczQiwwQiw0QiwxMTVCLDEwNUIsMTIyQiwxMDFCLDEyMEIsMTEyQiwwQiwwQiwwQiwwQiwxMTlCLDRCLDBCLDBCLDBCLDBCLDEyMEJddAAUc3VwZXJpdGVtczpzdXBlcml0ZW10AAtmaXNoaW5nX3JvZHQAGnN1cGVyaXRlbXM6Y29tcGxleGVuY2hhbnRzdAFWW0I7LTg0QiwtMTlCLDBCLDVCLDExNUIsMTE0QiwwQiwxN0IsMTA2Qiw5N0IsMTE4Qiw5N0IsNDZCLDExN0IsMTE2QiwxMDVCLDEwOEIsNDZCLDcyQiw5N0IsMTE1QiwxMDRCLDc3Qiw5N0IsMTEyQiw1Qiw3QiwtMzhCLC02M0IsLTYxQiwyMkIsOTZCLC00N0IsM0IsMEIsMkIsNzBCLDBCLDEwQiwxMDhCLDExMUIsOTdCLDEwMEIsNzBCLDk3Qiw5OUIsMTE2QiwxMTFCLDExNEIsNzNCLDBCLDlCLDExNkIsMTA0QiwxMTRCLDEwMUIsMTE1QiwxMDRCLDExMUIsMTA4QiwxMDBCLDEyMEIsMTEyQiw2M0IsNjRCLDBCLDBCLDBCLDBCLDBCLDBCLDExOUIsOEIsMEIsMEIsMEIsMTZCLDBCLDBCLDBCLDBCLDEyMEJddAAVc3VwZXJpdGVtczphdHRyaWJ1dGVzdAD6W0I7LTg0QiwtMTlCLDBCLDVCLDExNUIsMTE0QiwwQiwxOUIsMTA2Qiw5N0IsMTE4Qiw5N0IsNDZCLDExN0IsMTE2QiwxMDVCLDEwOEIsNDZCLDY1QiwxMTRCLDExNEIsOTdCLDEyMUIsNzZCLDEwNUIsMTE1QiwxMTZCLDEyMEIsLTEyN0IsLTQ2QiwyOUIsLTEwM0IsLTU3Qiw5N0IsLTk5QiwzQiwwQiwxQiw3M0IsMEIsNEIsMTE1QiwxMDVCLDEyMkIsMTAxQiwxMjBCLDExMkIsMEIsMEIsMEIsMEIsMTE5Qiw0QiwwQiwwQiwwQiwwQiwxMjBCXXQAFXN1cGVyaXRlbXM6dmFyX3Jhcml0eXQBtFtCOy04NEIsLTE5QiwwQiw1QiwxMjZCLDExNEIsMEIsNDNCLDEwOUIsMTAxQiw0NkIsMTIyQiwxMDFCLDExMEIsMTExQiwxMjBCLDQ2QiwxMTVCLDExN0IsMTEyQiwxMDFCLDExNEIsMTA1QiwxMTZCLDEwMUIsMTA5QiwxMTVCLDQ2QiwxMDVCLDExNkIsMTAxQiwxMDlCLDQ2Qiw2N0IsMTExQiwxMDlCLDExMkIsMTA4QiwxMDFCLDEyMEIsNzNCLDExNkIsMTAxQiwxMDlCLDM2Qiw4MkIsOTdCLDExNEIsMTA1QiwxMTZCLDEyMUIsMEIsMEIsMEIsMEIsMEIsMEIsMEIsMEIsMThCLDBCLDBCLDEyMEIsMTE0QiwwQiwxNEIsMTA2Qiw5N0IsMTE4Qiw5N0IsNDZCLDEwOEIsOTdCLDExMEIsMTAzQiw0NkIsNjlCLDExMEIsMTE3QiwxMDlCLDBCLDBCLDBCLDBCLDBCLDBCLDBCLDBCLDE4QiwwQiwwQiwxMjBCLDExMkIsMTE2QiwwQiw2Qiw2N0IsNzlCLDc3Qiw3N0IsNzlCLDc4Ql10AA9zdXBlcml0ZW1zOmdsb3d0AAIwaXg=
+          enchantments:
+            luck_of_the_sea: 10
+            lure: 10
+            unbreaking: 10
+      commandtrait:
+        cost: -1.0
+        executionMode: LINEAR
+        experienceCost: -1.0
+        hideErrorMessages: false
+    traitnames: inventory,location,equipment,skintrait,lookclose,scoreboardtrait,commandtrait,hologramtrait,text,age,type,mounttrait,spawned,smoothrotationtrait,owner,speech
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true
+  '57':
+    metadata:
+      minecraft-ai: true
+    name: §e[Pig] §6Dingle
+    uuid: 79f813e7-6367-4b12-b2dd-5e68028f01fa
+    traits:
+      spawned: true
+      type: PIG
+      location:
+        bodyYaw: 91.53662
+        world: flat
+        x: '-169.2295'
+        y: '75.0'
+        z: '-655.4865'
+        yaw: '11.5494'
+        pitch: '0.0'
+      lookclose:
+        range: '5.0'
+        disablewhilenavigating: true
+        enabled: true
+        enableRandomLook: false
+        randomLookDelay: 60
+        realisticlooking: false
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      owner:
+        uuid: 5b7a1960-578e-40f9-8690-505da4df0c56
+      age:
+        age: 0
+        locked: true
+    traitnames: location,age,lookclose,type,mounttrait,spawned,scoreboardtrait,owner
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true
+  '56':
+    metadata:
+      minecraft-ai: true
+    name: §e[Pig] §6Quandale
+    uuid: 044ad3ab-705e-4e0d-a707-fbd9818748d4
+    traits:
+      spawned: true
+      type: PIG
+      location:
+        bodyYaw: 271.8809
+        world: flat
+        x: '-167.7821'
+        y: '75.0'
+        z: '-651.5138'
+        yaw: '21.2506'
+        pitch: '0.0'
+      lookclose:
+        range: '5.0'
+        disablewhilenavigating: true
+        enabled: true
+        enableRandomLook: false
+        randomLookDelay: 60
+        realisticlooking: false
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      owner:
+        uuid: 5b7a1960-578e-40f9-8690-505da4df0c56
+      age:
+        age: 0
+        locked: true
+    traitnames: location,age,lookclose,type,mounttrait,spawned,scoreboardtrait,owner
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true
+  '55':
+    metadata:
+      cached-skin-uuid: 45116804-608a-47d7-ac25-9103c63e75f0
+      cached-skin-uuid-name: zelenuk_
+    name: §e[NPC] Farmer
+    uuid: 60ec5bd5-22a1-4bbd-bfbd-47a16de713f1
+    traits:
+      skintrait:
+        fetchDefaultSkin: true
+        signature: X3Di44zepR3vdPcjfiK0VJFD0g5D80kZ3eiVAKxd2SuffiJUrBazEpq3B7mn5w1XcE5c0np48G0BfFkUVJJnFW/pDy6QxZjIh1HwUmSOT2/Mg8HnfCCc86I0sDzb9gjW/4sLOwxxqo2E+uVR5h4t/oJBZ4pcGwoXDwTOk/AyTUygHtARZWY1tidtZqoGsrXpBY/uKX1YXjX9VLGdyONeRJLCZp4sJ8XxAC/OO5MHQY99XU+AgwVpBdb8PtXB0xkitKJX5se2LADzZUrmnl86tkFWUvUJlGm7V7VWNkYw38w2Rj2TllAc+aw4kbXN+lfAqIpoP0KToUqilmPeMWI2AUcGVzYL7WrOxUPbQdZOlhYEO/he+JngcUX8PirU32MjQCafZ5yMj+Hx0y3N8lEUJR37TAUNFlVm4RQsZUNZ9LZr8jhBzXLHcEZfQh6q7V0JBUE12m46tOs4Fl4Bh4LO481tKYm++48mbuY2DKSelptj8YnPp9MqSLcMV4g6Vvt8GgGffbfDFhGW9DDd2PuyJwAnI7x/hHALnhLZ+QwDUc/DnzkytYr8xrk+sQBSm78rNJ7ABLphAkl5J+hXT0F1JUFHf3gF0ahYriiWat8GWAc1vwNwJqGl/zcaqc9SqquW467aCJf8DQ6OJ3LsJDxQeHCdM/t1U+OemCc+do49nCg=
+        skinName: Zelenuk_
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTY2MjE5MTQ5MTM2OCwKICAicHJvZmlsZUlkIiA6ICI0NTExNjgwNDYwOGE0N2Q3YWMyNTkxMDNjNjNlNzVmMCIsCiAgInByb2ZpbGVOYW1lIiA6ICJaZWxlbnVrXyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS81ZmQyN2EwMGQ4YjUwNGY5MzJhMTVjMjVlMTRiZTM5Zjg4NTZhNTU0ZDU4NWYxZjcyN2IwYjc5YzJiYTZiOTJiIiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0sCiAgICAiQ0FQRSIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjlhNzY1Mzc2NDc5ODlmOWEwYjZkMDAxZTMyMGRhYzU5MWMzNTllOWU2MWEzMWY0Y2UxMWM4OGYyMDdmMGFkNCIKICAgIH0KICB9Cn0=
+        updateSkins: false
+      spawned: true
+      type: PLAYER
+      location:
+        bodyYaw: 120.88858
+        world: flat
+        x: '-173.3'
+        y: '75.0'
+        z: '-657.0886'
+        yaw: '155.8886'
+        pitch: '-2.9031'
+      lookclose:
+        range: '5.0'
+        disablewhilenavigating: true
+        enabled: true
+        enableRandomLook: false
+        randomLookDelay: 60
+        realisticlooking: false
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      owner:
+        uuid: 5b7a1960-578e-40f9-8690-505da4df0c56
+      age:
+        age: 0
+        locked: true
+    traitnames: inventory,location,skintrait,age,lookclose,type,mounttrait,spawned,smoothrotationtrait,scoreboardtrait,owner
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true
+  '54':
+    metadata:
+      cached-skin-uuid-name: 432b7151-4cc9-42f7-9eba-d54b5eaf7bfb
+    name: §e[NPC] Fish Merchant
+    uuid: e2ab1288-a7a6-4f96-a9c6-eec9a5f718d6
+    traits:
+      speech: chat
+      text:
+        delay: -1
+        talk-close: false
+        random-talker: false
+        realistic-looking: false
+        range: '5.0'
+        talkitem: default
+        speech-bubbles: false
+        text:
+          '0': '&e[NPC] Fish Merchant&f: Nice day for fishin, ain''t it?'
+      location:
+        bodyYaw: -3.5936432
+        world: flat
+        x: '-211.3149'
+        y: '71.5'
+        z: '-584.4987'
+        yaw: '-3.5936'
+        pitch: '6.4782'
+      age:
+        age: 0
+        locked: true
+      skintrait:
+        fetchDefaultSkin: true
+        signature: bVrJSidtTHa2CLBWyK9JRFZeE8LpfUnpOGBVvqxFELssy83o1xcoRRzJ7YGrkjKOTYF250fAohOQ0eIIOXutllzrpkH8aVJHFPGbDURmQToEHjkZmThm0uzTJ6bVHI+JrWjijv6Qb13X2wMqPzBvx8HIwGTN63sYJUs6yreOW/FlA4/fifP9S4GL89qXgK4IpJVpUjAzL+78lCEYHOezVtOnPWtSfj0Cq4vyzXPktyd3t6n7lVcOvlhoGZgfSP53u6P94pRhw4KMJ3ukln1t/MwqR2/lx8knVa95UbcVyrPCs/hBMsPWBfKN3UKisCneCM1Kk8keSm6pGnMtb3DLYPRcpwuT+uAURaahj4PXgPuECrgFNo6gEVBuWd9W24fe6aY3mHYCJ37MPg5uMezW3NDWHqWZrHp6xy9tJ+CDupML6/0hE/3fSeyFJEG4G/50bUKkvkSryHwsiRBwwJxqTWpZLPWpxPt6e7J/Vuhl8PNgJJIimHp3ztuyABo/7RLL6QLGIuiUJ29dgR+eB5aeIG6NVB2sIv68RT5GRmrgT5ZjxmEO1Ca8wizy25L6jpaAANZp0RcKcj5g1ufCPEA/DCqUHL8Likm+Ay0lWwXdyyLGJTIqJOlM5X7Q/yiE4Mr6L5zKxvbOo+maAN2zGkbbDrKHKgGcyYTlf+KD0oZqceM=
+        skinName: 432b7151-4cc9-42f7-9eba-d54b5eaf7bfb
+        textureRaw: eyJ0aW1lc3RhbXAiOjE1NzA3Mjk4NzE5MTcsInByb2ZpbGVJZCI6ImVkNTNkZDgxNGY5ZDRhM2NiNGViNjUxZGNiYTc3ZTY2IiwicHJvZmlsZU5hbWUiOiJGb3J5eExPTCIsInNpZ25hdHVyZVJlcXVpcmVkIjp0cnVlLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWRmYmE1YzJjYzMxZDZiZTk1ZDA4MTgzMGFjYjE1MzEyMDdiMGMyNWFmN2I3MjQ1YmNiNWNjMGIxNWY4ODk5NiJ9fX0=
+        updateSkins: false
+      spawned: true
+      type: PLAYER
+      commandtrait:
+        cost: -1.0
+        executionMode: LINEAR
+        experienceCost: -1.0
+        hideErrorMessages: false
+        commands:
+          '0':
+            command: sudo %player% emf shop
+            hand: LEFT
+            player: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+          '1':
+            command: sudo %player% emf shop
+            hand: RIGHT
+            player: false
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+      lookclose:
+        range: '5.0'
+        disablewhilenavigating: true
+        enabled: true
+        enableRandomLook: false
+        randomLookDelay: 60
+        realisticlooking: false
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      hologramtrait:
+        direction: BOTTOM_UP
+        lineHeight: -1.0
+      owner:
+        uuid: 5b7a1960-578e-40f9-8690-505da4df0c56
+    traitnames: inventory,location,skintrait,lookclose,scoreboardtrait,commandtrait,text,hologramtrait,age,type,mounttrait,spawned,smoothrotationtrait,owner,speech
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true
+  '59':
+    metadata:
+      minecraft-ai: true
+    name: §e[COW] §fRockerfeller
+    uuid: b496fbba-4889-4ba8-bab1-89ab888eebee
+    traits:
+      spawned: true
+      type: COW
+      location:
+        bodyYaw: 268.54617
+        world: flat
+        x: '-179.8007'
+        y: '75.0'
+        z: '-655.4887'
+        yaw: '-79.8375'
+        pitch: '0.0'
+      lookclose:
+        range: '5.0'
+        disablewhilenavigating: true
+        enabled: false
+        enableRandomLook: false
+        randomLookDelay: 60
+        realisticlooking: false
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      owner:
+        uuid: 5b7a1960-578e-40f9-8690-505da4df0c56
+      age:
+        age: 0
+        locked: true
+    traitnames: location,age,lookclose,type,mounttrait,spawned,scoreboardtrait,owner
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true
+  '58':
+    metadata:
+      minecraft-ai: true
+    name: §e[COW] §fTheodore
+    uuid: b8903f4a-a317-44fd-ad61-42193a42cbd9
+    traits:
+      spawned: true
+      type: COW
+      location:
+        bodyYaw: 1.1832962
+        world: flat
+        x: '-181.4899'
+        y: '75.0'
+        z: '-651.843'
+        yaw: '-1132.6139'
+        pitch: '0.0'
+      owner:
+        uuid: 5b7a1960-578e-40f9-8690-505da4df0c56
+      age:
+        age: 0
+        locked: true
+    traitnames: location,age,type,mounttrait,spawned,scoreboardtrait,owner
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true
+  '64':
+    metadata:
+      flyable: true
+    name: §e[NPC] §6Blaze
+    uuid: 6f647830-3374-478d-b25b-9977e552f741
+    traits:
+      spawned: true
+      type: BLAZE
+      location:
+        bodyYaw: 147.53125
+        world: flat
+        x: '-53.5315'
+        y: '84.0006'
+        z: '-546.0645'
+        yaw: '147.5312'
+        pitch: '0.0'
+      gravity:
+        enabled: true
+      owner:
+        uuid: 5b7a1960-578e-40f9-8690-505da4df0c56
+      age:
+        age: 0
+        locked: true
+    traitnames: location,gravity,age,type,mounttrait,spawned,scoreboardtrait,owner
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true
+  '74':
+    name: Skeleton Horse
+    uuid: 70ea62f0-e148-4201-8274-74bc80ce3e93
+    traits:
+      spawned: true
+      type: SKELETON_HORSE
+      horsemodifiers:
+        carryingChest: false
+        color: CREAMY
+        style: NONE
+        armor:
+          type: ''
+        saddle:
+          type: ''
+      location:
+        bodyYaw: -48.09204
+        world: flat
+        x: '-88.8857'
+        y: '70.0'
+        z: '-620.3018'
+        yaw: '-48.092'
+        pitch: '0.0'
+      owner:
+        uuid: 2e4f1c59-6142-48a0-928e-5785a7226240
+      age:
+        age: 0
+        locked: true
+    traitnames: location,age,horsemodifiers,type,mounttrait,spawned,scoreboardtrait,owner
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true
+  '73':
+    name: Skeleton Horse
+    uuid: c100a0b9-1c93-426d-9736-a9af170b14ef
+    traits:
+      spawned: true
+      type: SKELETON_HORSE
+      horsemodifiers:
+        carryingChest: false
+        color: CREAMY
+        style: NONE
+        armor:
+          type: ''
+        saddle:
+          type: ''
+      location:
+        bodyYaw: -9.388306
+        world: flat
+        x: '-92.3018'
+        y: '70.0'
+        z: '-620.3018'
+        yaw: '-9.3883'
+        pitch: '0.0'
+      owner:
+        uuid: 2e4f1c59-6142-48a0-928e-5785a7226240
+      age:
+        age: 0
+        locked: true
+    traitnames: location,age,horsemodifiers,type,mounttrait,spawned,scoreboardtrait,owner
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true
+  '71':
+    name: §9 Enderman
+    uuid: ab88ab51-c9d0-4ea5-ad8b-a3b6a0538c61
+    traits:
+      spawned: true
+      type: ENDERMAN
+      location:
+        bodyYaw: -132.14746
+        world: flat
+        x: '-49.7'
+        y: '72.0'
+        z: '-553.3'
+        yaw: '-132.1475'
+        pitch: '0.0'
+      owner:
+        uuid: 2e4f1c59-6142-48a0-928e-5785a7226240
+      age:
+        age: 0
+        locked: true
+    traitnames: location,age,type,mounttrait,spawned,scoreboardtrait,owner
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true
+  '70':
+    name: §9 Enderman
+    uuid: 26a29932-3bce-4af3-b031-f6144c3c2331
+    traits:
+      spawned: true
+      type: ENDERMAN
+      location:
+        bodyYaw: 47.09912
+        world: flat
+        x: '-52.9817'
+        y: '72.0'
+        z: '-566.8464'
+        yaw: '47.0991'
+        pitch: '0.0'
+      owner:
+        uuid: 2e4f1c59-6142-48a0-928e-5785a7226240
+      age:
+        age: 0
+        locked: true
+    traitnames: location,age,type,mounttrait,spawned,scoreboardtrait,owner
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true
+  '69':
+    name: §9 Enderman
+    uuid: 208b1cee-1104-4349-881d-23d1d594228b
+    traits:
+      spawned: true
+      type: ENDERMAN
+      location:
+        bodyYaw: 84.44971
+        world: flat
+        x: '-67.3'
+        y: '72.0'
+        z: '-590.4081'
+        yaw: '84.4497'
+        pitch: '0.0'
+      owner:
+        uuid: 2e4f1c59-6142-48a0-928e-5785a7226240
+      age:
+        age: 0
+        locked: true
+    traitnames: location,age,type,mounttrait,spawned,scoreboardtrait,owner
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true
+  '68':
+    name: §9 Enderman
+    uuid: caf4ee20-dc76-4ee2-8005-b9a15e43fe8a
+    traits:
+      spawned: true
+      type: ENDERMAN
+      location:
+        bodyYaw: -9.583008
+        world: flat
+        x: '-31.933'
+        y: '72.0'
+        z: '-604.3285'
+        yaw: '-9.583'
+        pitch: '0.0'
+      owner:
+        uuid: 2e4f1c59-6142-48a0-928e-5785a7226240
+      age:
+        age: 0
+        locked: true
+    traitnames: location,age,type,mounttrait,spawned,scoreboardtrait,owner
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true
+  '67':
+    name: §9 Enderman
+    uuid: 66fd69ff-371e-4a8d-9075-5b0a8081631d
+    traits:
+      spawned: true
+      type: ENDERMAN
+      location:
+        bodyYaw: -10.113525
+        world: flat
+        x: '-34.493'
+        y: '71.0'
+        z: '-599.7232'
+        yaw: '-10.1135'
+        pitch: '0.0'
+      owner:
+        uuid: 2e4f1c59-6142-48a0-928e-5785a7226240
+      age:
+        age: 0
+        locked: true
+    traitnames: location,age,type,mounttrait,spawned,scoreboardtrait,owner
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true
+  '66':
+    name: §9 Enderman
+    uuid: a150ff79-8958-4257-b0db-d9efdcf4dfdc
+    traits:
+      spawned: true
+      type: ENDERMAN
+      location:
+        bodyYaw: -30.060059
+        world: flat
+        x: '-66.0996'
+        y: '73.0'
+        z: '-587.5269'
+        yaw: '-30.0601'
+        pitch: '0.0'
+      owner:
+        uuid: 2e4f1c59-6142-48a0-928e-5785a7226240
+      age:
+        age: 0
+        locked: true
+    traitnames: location,age,type,mounttrait,spawned,scoreboardtrait,owner
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true
+  '78':
+    metadata:
+      flyable: true
+    name: §e[NPC] §6Blaze
+    uuid: 2110d557-f9c7-483f-b98e-1761fbd93a54
+    traits:
+      spawned: true
+      type: BLAZE
+      location:
+        bodyYaw: -166.3855
+        world: flat
+        x: '-70.618'
+        y: '73.1384'
+        z: '-530.8887'
+        yaw: '144.3772'
+        pitch: '0.0'
+      gravity:
+        enabled: true
+      owner:
+        uuid: 5b7a1960-578e-40f9-8690-505da4df0c56
+      age:
+        age: 0
+        locked: true
+    traitnames: location,gravity,age,type,mounttrait,spawned,scoreboardtrait,owner
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true
+  '77':
+    metadata:
+      flyable: true
+    name: §e[NPC] §6Blaze
+    uuid: 206203f7-dbc9-4097-bb34-584beaf30869
+    traits:
+      spawned: true
+      type: BLAZE
+      location:
+        bodyYaw: -166.3855
+        world: flat
+        x: '-82.8525'
+        y: '72.3964'
+        z: '-534.5827'
+        yaw: '-166.3855'
+        pitch: '0.0'
+      gravity:
+        enabled: true
+      owner:
+        uuid: 5b7a1960-578e-40f9-8690-505da4df0c56
+      age:
+        age: 0
+        locked: true
+    traitnames: location,gravity,age,type,mounttrait,spawned,scoreboardtrait,owner
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true
+  '79':
+    metadata:
+      cached-skin-uuid: fd363183-6ef5-418f-b8bf-257adb11cce5
+      cached-skin-uuid-name: wizard
+    name: §e[NPC] §5Wizard
+    uuid: 74c07d34-a8bc-4ccc-acf2-9e5403937cf4
+    traits:
+      skintrait:
+        fetchDefaultSkin: true
+        signature: TH/kkKdY1UXPIFyf61/oFpiFesRxVi3DCKF6TVzMnpySmWmAhrGCEkaiXoABZtGEI9GjiOAGgksP8ozpfvhn4X/x4BY3RpKcJ+ljS9GPiKLHsRA/0IPfZI5UK5yn+Ztd56pISJ1Ky3v8DDZUswgr7MvNNe3AidTMnyu/FTILdUe7PdTDPqviKC7rtQp2TkEnt3aX8C5d1R3qJWblB0OgyoKny2vCpeFiMh0ac0R65geAAkqugdZcRlVft5cb7EbY4UwnW5K05sjQQEg9zszyq0t90c3qeZVxk/TSwa1zwx3FSzIF4dNxDeGZZIHOn5tDBDkmJUhsHax8IiI9JZUao6AWSqYjqulRoYXG+IUFaOTrF0r2b7lzvLbaSPM3bxkOL0UU070I00l/7B+xqx2mYyL8RQR6TCOyu4s2XJSGDEaXYuuaUjDFrNV/8M/vND6eNUJkDVTfJr+8VP0CBq+/IZOuUGSy0613J4+xyY3cjIi2m+49ycbJ330vqhyN6KZPvQWYdWEOxM8PEI11iUGm3V4FzpK0W5mZOwbyTFD4hSVRB7RWUz9azi95wD6CgNuretgMMHhC0cSYaHSmuYQN4hjjp0+LpE1+iRAxaOytWWjVRAgPywRLRGUuEFMDPutRGvXLsPNpaoplgCv/ODJJo6uqH6lRS3wpXnuTQcNyUIk=
+        skinName: wizard
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTY2Mjk1NTE2NDQ1NiwKICAicHJvZmlsZUlkIiA6ICJmZDM2MzE4MzZlZjU0MThmYjhiZjI1N2FkYjExY2NlNSIsCiAgInByb2ZpbGVOYW1lIiA6ICJXaXphcmQiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTMxNWRjNzRiNTQxMDUxMTAxODhlZGQwYzU0MmQ4NjZhNjM3ZjE1NzUzNmNhZjAzNzhhMDZkNTRjNWI3ZWQ1MSIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9
+        updateSkins: false
+      spawned: true
+      type: PLAYER
+      location:
+        bodyYaw: 10.844902
+        world: flat
+        x: '44.665'
+        y: '110.0'
+        z: '-579.4253'
+        yaw: '10.8449'
+        pitch: '0.0'
+      lookclose:
+        range: '5.0'
+        disablewhilenavigating: true
+        enabled: true
+        enableRandomLook: false
+        randomLookDelay: 60
+        realisticlooking: false
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      hologramtrait:
+        direction: BOTTOM_UP
+        lineHeight: -1.0
+      owner:
+        uuid: 5b7a1960-578e-40f9-8690-505da4df0c56
+      age:
+        age: 0
+        locked: true
+    traitnames: inventory,location,age,skintrait,lookclose,type,mounttrait,spawned,smoothrotationtrait,scoreboardtrait,owner,hologramtrait
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true
+  '80':
+    name: §e[NPC] §bLift Operator
+    uuid: bc9bb73f-96a9-4726-80c1-b753300ec7a3
+    traits:
+      skintrait:
+        fetchDefaultSkin: true
+        updateSkins: false
+      spawned: true
+      type: PLAYER
+      location:
+        bodyYaw: 89.39642
+        world: flat
+        x: '-129.3'
+        y: '71.0'
+        z: '-604.7'
+        yaw: '100.7507'
+        pitch: '-15.2622'
+      lookclose:
+        range: '5.0'
+        disablewhilenavigating: true
+        enabled: true
+        enableRandomLook: false
+        randomLookDelay: 60
+        realisticlooking: false
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      hologramtrait:
+        direction: BOTTOM_UP
+        lineHeight: -1.0
+      owner:
+        uuid: 5b7a1960-578e-40f9-8690-505da4df0c56
+      age:
+        age: 0
+        locked: true
+    traitnames: inventory,location,skintrait,age,lookclose,type,mounttrait,spawned,smoothrotationtrait,scoreboardtrait,owner,hologramtrait
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true
+  '85':
+    name: '[NPC] Barterer'
+    uuid: a3e0875f-1053-40f4-8ebc-0e50c37f1499
+    traits:
+      spawned: true
+      type: PIGLIN_BRUTE
+      location:
+        bodyYaw: 179.7456
+        world: flat
+        x: '-220.6706'
+        y: '79.875'
+        z: '-682.3'
+        yaw: '179.7456'
+        pitch: '0.0'
+      owner:
+        uuid: 2e4f1c59-6142-48a0-928e-5785a7226240
+      age:
+        age: 0
+        locked: true
+    traitnames: location,age,type,mounttrait,spawned,scoreboardtrait,owner
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true
+  '83':
+    metadata:
+      cached-skin-uuid-name: e08c0bee-1425-4b97-8259-6738ddef007f
+      minecraft-ai: false
+    name: §e[NPC] §6Auction Master
+    uuid: 8f0e8acf-cad6-459f-8af2-147a933c1d3b
+    traits:
+      location:
+        bodyYaw: -30.152035
+        world: flat
+        x: '-219.5199'
+        y: '80.0'
+        z: '-690.4694'
+        yaw: '-30.152'
+        pitch: '5.896'
+      age:
+        age: 0
+        locked: true
+      skintrait:
+        fetchDefaultSkin: true
+        signature: M+bpWivMQHe+IxflRZoyaJwk4CC7fS+YatWL/Na4htQM/jTZanqJc9CfOxnVSOxGXC8ZUNiEFhgjgMyZdVnq8tswDEeEVWoYrSQRbgH9C2QDRRnbmc8xe0I0vMY9aBk9yd/dypmaSnsCdUtNtiCovgsc3lCohngokrw170m/ApUnpFDfwC/Bg4K+Qt7rEMI/XD2S/Y2O8q+Rmdh2piZdeUObmsNtFeuKBHmBUhWgR3o8qK79VnX9SB+y7OfPJoY//0cwJFaMiJKsZfJJU5ke1K5ig693l67nsT+CrCPewNT280vDP3VaqMFayMONwjnTmlsWGZ+Q8UTjJ918hx74ljBtPBoZzRZqc3ziIwgw/e+wjFKvg9/XlDBv5BM7XQycadYyaL2KOq1amCEOru12A97M45WLcMvcbrlWPTZh6e+qKa8wG7ULDinQD/rurjEqVWrVjGKCCi01T7r3PC1ur5B5ryLMflbySa/ySVCd4OCi1uQjYWNQ4byCaOPFnPQlagJu1/FysQUMXRg8p/3TVyUd1nIMsX+bifbs4EsbNOwZFUBcIgNlsWZ0GiczIUNEC4UDco7RmWoe8kEup7ngZBctwF0gi5IbXjzKr5OfDd3UZF+VaSJEtYBTEMQhX1mulqwqrexd09RVwha18ZsmgKuZW/oYq/ZxNvjzf0Kf/9k=
+        skinName: e08c0bee-1425-4b97-8259-6738ddef007f
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTY2MzM5NDcxNzAwOSwKICAicHJvZmlsZUlkIiA6ICJhYzIzZmEzNzRhMmM0YjU2YmYzYzU2ZTVhODY3NjIzNCIsCiAgInByb2ZpbGVOYW1lIiA6ICJxdWVlbnNoYW5pd2EiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjIxY2RmMDc3NWVjYjQ0NTA1NTUzZWRiMTUxNGE3MjYyZThiM2Q2MTE2NWZmNjVlODhkYzQ0MmFlNTNjYjcxOCIKICAgIH0KICB9Cn0=
+        updateSkins: false
+      spawned: true
+      type: PLAYER
+      commandtrait:
+        cost: -1.0
+        executionMode: LINEAR
+        experienceCost: -1.0
+        hideErrorMessages: false
+        commands:
+          '1':
+            command: ah
+            hand: RIGHT
+            player: true
+            op: false
+            cooldown: 0
+            globalcooldown: 0
+            n: -1
+            delay: 0
+      lookclose:
+        range: '5.0'
+        disablewhilenavigating: true
+        enabled: true
+        enableRandomLook: false
+        randomLookDelay: 60
+        realisticlooking: false
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      hologramtrait:
+        direction: BOTTOM_UP
+        lineHeight: -1.0
+      owner:
+        uuid: 5b7a1960-578e-40f9-8690-505da4df0c56
+      anchors:
+        list:
+          '0': ahmaster;flat;-219.50138489556346;80.0;-690.4843456521327
+    traitnames: inventory,location,skintrait,lookclose,scoreboardtrait,commandtrait,hologramtrait,age,anchors,type,mounttrait,spawned,smoothrotationtrait,owner
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true
+  '81':
+    name: '[NPC] Bidder'
+    uuid: 1623f149-e683-4669-8da4-4f7cb83cff68
+    traits:
+      spawned: true
+      type: VILLAGER
+      location:
+        bodyYaw: 90.66968
+        world: flat
+        x: '-213.0275'
+        y: '79.0'
+        z: '-690.5388'
+        yaw: '-87.0254'
+        pitch: '0.0'
+      owner:
+        uuid: 2e4f1c59-6142-48a0-928e-5785a7226240
+      age:
+        age: 0
+        locked: true
+    traitnames: location,age,type,mounttrait,spawned,scoreboardtrait,owner
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true
+  '89':
+    metadata:
+      cached-skin-uuid: fd363183-6ef5-418f-b8bf-257adb11cce5
+      cached-skin-uuid-name: c1428559-557b-4e43-a178-0666638d6fc7
+    name: §e[NPC] §cSahara
+    uuid: f8dd1086-a195-400d-9349-331cc6304b92
+    traits:
+      location:
+        bodyYaw: 146.34715
+        world: flat
+        x: '51.4457'
+        y: '71.0625'
+        z: '-561.5823'
+        yaw: '132.8614'
+        pitch: '-38.9077'
+      lookclose:
+        range: '5.0'
+        disablewhilenavigating: true
+        enabled: true
+        enableRandomLook: false
+        randomLookDelay: 60
+        realisticlooking: false
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      spawned: true
+      type: PLAYER
+      age:
+        age: 0
+        locked: true
+      owner:
+        uuid: 5b7a1960-578e-40f9-8690-505da4df0c56
+      skintrait:
+        fetchDefaultSkin: true
+        signature: lFwrFMDhOsp3vwoiH8L3LjD7IwYQhS8x02qn3MI++FiaM/4UcE3lufKMfyO7Zk91/AMhIrLiQOoDfIPCYW+WFv34Pygck9GuZREGCqZhfv8VcQfwVF8F6xGid3K2BOP7LRgKWx10faBmVO1Js3mO3GxbbEhBG3nYURE+Lgl6Sz1z45EWaWFB0OVJQjJdlleoS5dMyUnlxNhYb5A1X/zJhEYUsPqCTB7zO7L1gQSQlMkvXl0DBOuLtIHe42VeUK8GWjKp0SfQO2da1lJjGTnyQlRp0AkxIm0cqslUjHd7/ZxnvDMWu11uzSGt9dFh8AOOvbKIQOCkLviazUeeA12NAl09QaGLsMK5oDcHN04ppwwGhnVI6ICVZD2j1nYTdOSYaiIwVfvZNzGg39eAVl6tKizq610pTFP/NjTpFw3GPTKOp2XDGLdG0KAMeebSN7aTKqVhHdVoyp0KZ5JCPNPi95998wResSV0mLNCwfL2bgciS62RuHbcnR0A5MQZ0MH1cnM84A2PypODC0C8dNZqDGtJie4wVLzLv8WqnJzFiqh3JNSXQMOdn6qFSxLOaSr7B4QBG7zMFwMw3AAuEg++wiNIXvYIDcNnRiwC8HG+uCuUpDTIa25IG3n7ItXmNcd2DTcQ3dE2SRZtm+teuJIhnLrK/xdzhEZ35cDOCcW7Rs4=
+        skinName: c1428559-557b-4e43-a178-0666638d6fc7
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTY2ODIwMjcyNTgzNSwKICAicHJvZmlsZUlkIiA6ICIwOWQ3YmJjNGYxZmU0ZjlkYjRiZmE1MTY2NDA3OTcyYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJlemtkIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzNjZTdhNDBjNTdlMThjMTgzYzFmMjc3N2RjMGUxMDdkZjUzY2E2YzdlMWQxNmJmNTY2NjM4OGU2YzRiZTE4N2QiCiAgICB9CiAgfQp9
+        updateSkins: false
+    traitnames: inventory,location,skintrait,age,lookclose,type,mounttrait,spawned,smoothrotationtrait,scoreboardtrait,owner
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true
+  '91':
+    metadata:
+      cached-skin-uuid: 451f1c3c-cb1f-4b9a-86a8-820a47efd97e
+      cached-skin-uuid-name: priestes
+      nameplate-visible: 'true'
+    name: §e[NPC] §bPenelope
+    uuid: 622a3703-d260-435b-8d99-e8400dcbd1fe
+    traits:
+      owner:
+        uuid: 5b7a1960-578e-40f9-8690-505da4df0c56
+      skintrait:
+        fetchDefaultSkin: true
+        signature: Cl9vQLCn7uHx8H6FbG6TrZg1QN6gpkbuq5Oc4Rogw1krEZdQs8UbH8ICsZ4jDTYMSmpWZ+GOu3Jb5eIu9XSgFHCTHJFsdyTwuTeC0I4X3PZEpanz32e3i5U1bqwHQTgFpw2mzKTzcCU+enk2nrY8DQ1NFolPW6eBteCS/+s7L2iPkxnNMEUTNOLoED/1J/dUs5w32qh78jXdKWx6u9AGQjbo1AQW0oVwQ+ZzIp/58jw4A67LDvUicVwg1IvlNkNg0pWQLDUNTwRjDUcZgsGWemllUx68GezPaTnRx6BVkd0m17qjywmO5wTsvm27orfD4PSDYKU48zdTYWCYKCga60b8XlJf/N55CeHbWmc6GOrSkt7NH0lP7xvYNzTfDr9vYSVLCi8neE2yZDH85q16XCvrLWtEiXAKbUPsK1nz71MyJBOYZgwIRp6UnQ3tvKm02hcH/d+GNSoJ2puSgc/iVX+8i/DxH5AlmpD/vD9uU4zy+lePjzs74QMbwxP+NFbH9bd3XczvoSn894RvgI/9IGkVjYPe6pyJOl59kgZNbQaZHgxhRupWNJ3eRtIZzQ/uAhMHvToJZkug8fM/4wztUXT3mt2bid6V4nM8Y0pDkcfl+vtqnX5f740ocOL2vU+AEOZuRU/Yq7t5JNE1mN5Fij7SPH79tkf2a25RtPeGts8=
+        skinName: priestes
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTY3MTI2ODQwNzMwMiwKICAicHJvZmlsZUlkIiA6ICI0NTFmMWMzY2NiMWY0YjlhODZhODgyMGE0N2VmZDk3ZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJQcmllc3RlcyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS82ZDgwNTQ5YTI1MmNjMjg4MmE0NTEwNzg1NTExM2ExODQ3MmU2YjVhNWM2MTZiMjg1NzZiOTgyNWM0NTNkYzNlIiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0=
+        updateSkins: false
+      spawned: true
+      location:
+        bodyYaw: 43.042023
+        world: flat
+        x: '-343.4482'
+        y: '-60.0'
+        z: '-508.4204'
+        yaw: '43.042'
+        pitch: '0.0'
+      age:
+        age: 0
+        locked: true
+      hologramtrait:
+        direction: BOTTOM_UP
+        lineHeight: -1.0
+      type: PLAYER
+      lookclose:
+        range: '5.0'
+        disablewhilenavigating: true
+        enabled: true
+        enableRandomLook: false
+        randomLookDelay: 60
+        realisticlooking: false
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+    traitnames: inventory,location,skintrait,age,lookclose,type,mounttrait,spawned,smoothrotationtrait,scoreboardtrait,owner,hologramtrait
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true
+  '92':
+    metadata:
+      cached-skin-uuid: fd355664-03be-4752-9326-942f32648f95
+      cached-skin-uuid-name: 65a79c8f-ebc7-484e-bd0b-1b4398ef79cc
+    name: §e[NPC] §5Arcius
+    uuid: be9221d5-d23f-45db-a392-a0a326d5c79f
+    traits:
+      lookclose:
+        range: '5.0'
+        disablewhilenavigating: true
+        enabled: true
+        enableRandomLook: false
+        randomLookDelay: 60
+        realisticlooking: false
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      skintrait:
+        fetchDefaultSkin: true
+        signature: RjZRQ42GWfzdroYxTPbgriT9ZrLabk1u7yTlT+Em+G7RvBzo42dAHANunvHPKw1ImO4POtB6BCz0KUD0F7OEXOLRkplCytvoqAMKsDMhNGsExU8pryWhdU3g0prhrl7QIA45w0qjH4dyisgA5XEMCL2Xq7q/K1sD7uORU7SMSntc6jmWb4bb8W3qvSAQ3tSaTe8I4cKvM6KPTr+zFhSsjUeLlN+aFl47Vo/I1lqPy4otDqelOBk3E3zP3Bw0tfD5IF1TrwcIgP5paLaHjDUoiorshUf7uKv6NcnRpLJyY82SHQcvw5gslBrUPEa3gs+RTYn2LP1RPoMw6rKN+BNOBH6mNv8m8blfi6vPFASl2dvquyTVYCXD//EIBOfq1wTcIeACoJrU6BwPxRlfo1r8hFqerVS9cI9BukBZPGNqTLlXu+FNRb5g3nx3PatH3nY6TWnqF/nSDM5ECVKZveF/qgj5AzxpLS5X3PNl19ncG8SPPthFF5A2yLdOhrIonS9yIyHiKsuLQicNBsUXu3k2+uUOsCT1eHMIadUJ+CxFwnPAV4J2JRWszd+wPm8kKEwRHasm3LFabF+4z5bduHw8fkgVamCxlS9B3cK+a6g5QTHAtu9d+ZkFdjFh616TUGSIDc/gATI/qx8vWlgN9xfDY4XKAhHRSh6DImVWXJQkZCA=
+        skinName: 65a79c8f-ebc7-484e-bd0b-1b4398ef79cc
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTY0ODA1Mjg4NzkxNiwKICAicHJvZmlsZUlkIiA6ICJjMDNlZTUxNjIzZTU0ZThhODc1NGM1NmVhZmJjZDA4ZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJsYXltYW51ZWwiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjA1NzcyMTIyM2EzYzRjYTViMDMxMzZhZTQ2ZWIxNjVkMDBlM2M2OTJiMjA5MjdhNzQ3YmFkYzFmMDY2NGNlOSIKICAgIH0KICB9Cn0=
+        updateSkins: false
+      spawned: true
+      age:
+        age: 0
+        locked: true
+      type: PLAYER
+      location:
+        bodyYaw: 110.00305
+        world: flat
+        x: '-323.3507'
+        y: '-60.0'
+        z: '-507.503'
+        yaw: '135.7694'
+        pitch: '-2.3817'
+      owner:
+        uuid: 5b7a1960-578e-40f9-8690-505da4df0c56
+    traitnames: inventory,location,skintrait,age,lookclose,type,mounttrait,spawned,smoothrotationtrait,scoreboardtrait,owner
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true
+  '93':
+    metadata:
+      cached-skin-uuid: 451f1c3c-cb1f-4b9a-86a8-820a47efd97e
+      cached-skin-uuid-name: priestes
+    name: §e[NPC] Ancient Penelope
+    uuid: 13f29f20-9882-4c71-a110-24e1d1623ae8
+    traits:
+      lookclose:
+        range: '5.0'
+        disablewhilenavigating: true
+        enabled: true
+        enableRandomLook: false
+        randomLookDelay: 60
+        realisticlooking: false
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      skintrait:
+        fetchDefaultSkin: true
+        signature: tmsFvlcSoy+aJ6qTXT/5Fx3ZaEGlcGVUKunuZyrw09NE0m5A+rDrywZQ+TKZTp8eNwDVHyEWg+rRwViwtdVdwXkT9Mj2tfk0Q9HB58oaqPwA7jvyL8EAlHuTENjFUd1y70/l20QksObdBHNLmpnqfIKsJkU3noPReyzfvRRAC2x0ChUHErevavGB0gGpaYj5doXnMCdxlxlM16rKI9+FQv+kpVukOnj6J6g0gXStzPGc3IyTC3V9QplUYH4Drw4Dl6iVoZhRqZYRPnoGyxeG0u5FQbP2SzscCVGvPqCgyTI6oFFBdIPj4qr6/Hczn17p9E9KZLylnH9+whPOrZk+0VTUhBkvK9FoB/6jJKPowg+llbHBIedPHpMlwsuV87qdi15wA4iGaAFdm2NQQIEMH04wMRP2KNLIb+LQBv9qAsFkw+d3uiMyUJgXO7YM16tdwFe0RL+RZk76ex3MDk+95vqcdoiSFwDP3/m4waNHjAcLharJMilh6FAoijrYlUfrSmpSkKU5y3kcyQmoZYZwyLvkVwT/ZbT7UU87TQJW7wrnIagfOqoh+P2/dWikFdffP1VpxsC842nfR10YySlzXpBl6eEBYlOi8zppKNtPyH6v1jfRWpmpkTt2vktO7JkhnxygbAYbXZTzlJUvEtsLZumuYp4JdlarpQO/Rj3M+xo=
+        skinName: priestes
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTY3MTQyMDYyMjM3MywKICAicHJvZmlsZUlkIiA6ICI0NTFmMWMzY2NiMWY0YjlhODZhODgyMGE0N2VmZDk3ZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJQcmllc3RlcyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS82ZDgwNTQ5YTI1MmNjMjg4MmE0NTEwNzg1NTExM2ExODQ3MmU2YjVhNWM2MTZiMjg1NzZiOTgyNWM0NTNkYzNlIiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0=
+        updateSkins: false
+      spawned: true
+      age:
+        age: 0
+        locked: true
+      type: PLAYER
+      location:
+        bodyYaw: -168.53616
+        world: flat
+        x: '-371.567'
+        y: '-60.0'
+        z: '-570.5043'
+        yaw: '-168.5362'
+        pitch: '0.0'
+      owner:
+        uuid: 5b7a1960-578e-40f9-8690-505da4df0c56
+      hologramtrait:
+        direction: BOTTOM_UP
+        lineHeight: -1.0
+    traitnames: inventory,location,age,skintrait,lookclose,type,mounttrait,spawned,smoothrotationtrait,scoreboardtrait,owner,hologramtrait
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true
+  '94':
+    name: §e[NPC] §bMerchant
+    uuid: f3571ca3-4f10-4438-afa8-e2fff2c7a7ce
+    traits:
+      lookclose:
+        range: '5.0'
+        disablewhilenavigating: true
+        enabled: true
+        enableRandomLook: false
+        randomLookDelay: 60
+        realisticlooking: false
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      skintrait:
+        fetchDefaultSkin: true
+        updateSkins: false
+      type: PLAYER
+      location:
+        bodyYaw: -3.6694794
+        world: flat
+        x: '-128.8216'
+        y: '70.0'
+        z: '-570.3913'
+        yaw: '-3.6695'
+        pitch: '-12.1081'
+      owner:
+        uuid: 5b7a1960-578e-40f9-8690-505da4df0c56
+      spawned: true
+      hologramtrait:
+        direction: BOTTOM_UP
+        lineHeight: -1.0
+      age:
+        age: 0
+        locked: true
+    traitnames: inventory,location,age,skintrait,lookclose,type,mounttrait,spawned,smoothrotationtrait,scoreboardtrait,owner,hologramtrait
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: true
